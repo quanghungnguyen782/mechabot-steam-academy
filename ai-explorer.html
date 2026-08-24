@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Explorer | MechaBot STEAM Academy</title>
+    <meta
+      name="description"
+      content="AI Explorer (12–18 tuổi) tại MechaBot STEAM Academy — Khám phá trí tuệ nhân tạo qua thị giác máy tính, robot tự hành và tự huấn luyện mô hình AI trên board chuyên dụng ELF AIoT K210."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/mechabot-logo.svg" />
+  </head>
+  <body>
+    <header id="siteHeader">
+      <div class="nav-wrap">
+        <a href="index.html" class="logo">
+          <img class="mark" src="assets/mechabot-logo.svg" alt="MechaBot logo" />
+          <span class="logo-text">Mecha<span class="bot-accent">Bot</span><span class="tagline">STEAM ACADEMY</span></span>
+        </a>
+        <button class="burger" id="burger" aria-label="Mở menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav-links" id="navLinks">
+          <a href="index.html">Trang chủ</a>
+          <a href="about.html">Giới thiệu</a>
+          <div class="nav-item-dropdown">
+            <a href="programs.html" class="active">Chương trình</a>
+            <div class="nav-dropdown nav-dropdown-mega">
+              <div class="mega-col">
+                <span class="mega-col-title">🌱 Nền tảng</span>
+                <a href="steam-explorer.html">STEAM Explorer</a>
+                <a href="young-maker.html">Young Maker</a>
+                <a href="robotics-builder.html">Robotics Builder</a>
+              </div>
+              <div class="mega-col">
+                <span class="mega-col-title mega-col-title-blue">💡 Phát triển</span>
+                <a href="aiot-smart-systems.html">IoT &amp; Smart Systems</a>
+                <a href="ai-explorer.html">AI Explorer</a>
+              </div>
+              <div class="mega-col">
+                <span class="mega-col-title mega-col-title-orange">🏆 Thi đấu</span>
+                <a href="programs.html#track-competition">VEX IQ</a>
+                <a href="programs.html#track-competition">VEX V5</a>
+                <a href="programs.html#track-competition">WhalesBot</a>
+                <a href="programs.html#track-competition">Weeemake</a>
+              </div>
+            </div>
+          </div>
+          <a href="maker-space.html">Maker Space</a>
+          <a href="projects.html">Dự án</a>
+          <a href="library.html">Thư viện</a>
+          <a href="faq.html">Hỏi đáp</a>
+          <a href="contact.html">Liên hệ</a>
+        </nav>
+        <div class="nav-cta">
+          <a href="index.html#booking" class="btn btn-primary">Đăng ký học thử</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section-pad page-top course-hero course-hero-light">
+        <div class="container">
+          <nav class="course-breadcrumb" aria-label="breadcrumb">
+            <a href="index.html">Trang chủ</a><span>›</span>
+            <a href="programs.html">Chương trình</a><span>›</span>
+            <span>AI Explorer</span>
+          </nav>
+          <div class="course-hero-grid">
+            <div class="course-hero-inner">
+              <h1>AI Explorer</h1>
+              <p class="course-hero-tagline">Không bắt đầu bằng những dòng code khó — bắt đầu bằng việc khám phá, thử nghiệm và tạo ra sản phẩm của chính mình.</p>
+              <p class="course-hero-desc">AI Explorer là chương trình dành cho học viên 12–18 tuổi, giúp các em bước vào thế giới Trí tuệ nhân tạo &amp; Robotics thông qua phương pháp học trực quan, thực hành và thân thiện với lứa tuổi. Thay vì bắt đầu bằng những dòng code phức tạp, học viên tiếp cận AI thông qua lập trình kéo-thả trực quan, nơi mỗi khối lệnh đại diện cho một hành động cụ thể — từng bước hình thành tư duy lập trình trước khi làm quen với MicroPython và code thực tế.</p>
+              <p class="course-hero-desc">Trên board AI chuyên dụng ELF AIoT K210, học viên từng bước khám phá cách máy tính nhìn, nhận diện và tương tác với thế giới xung quanh — từ nhận diện màu sắc, vật thể, khuôn mặt và giọng nói đến việc kết hợp AI với robot để tạo ra những hệ thống có khả năng quan sát, theo dõi và tự điều chỉnh chuyển động.</p>
+              <p class="course-hero-desc">Khi đã có nền tảng, học viên tiến xa hơn với Machine Learning: tìm hiểu cách AI học từ dữ liệu, tự thu thập và chuẩn bị dữ liệu, huấn luyện mô hình AI của riêng mình và đưa mô hình vào thiết bị để kiểm tra trong thực tế. 🚀 Từ kéo-thả dễ hiểu → lập trình thực tế → kiến tạo AI: <strong>Lập trình kéo-thả → AI Vision → AI Robotics → Machine Learning</strong>. Kết thúc chương trình, mỗi học viên hoàn thiện dự án AI tốt nghiệp và xây dựng portfolio công nghệ cá nhân.</p>
+
+              <div class="stat-row">
+                <div class="stat-chip reveal">
+                  <span class="stat-ico">🚀</span>
+                  <span class="stat-value">4+</span>
+                  <span class="stat-label">Dự án AI thực tế</span>
+                </div>
+                <div class="stat-chip reveal">
+                  <span class="stat-ico">👥</span>
+                  <span class="stat-value">10</span>
+                  <span class="stat-label">Học viên</span>
+                </div>
+                <div class="stat-chip reveal">
+                  <span class="stat-ico">⏰</span>
+                  <span class="stat-value">24</span>
+                  <span class="stat-label">Buổi</span>
+                </div>
+                <div class="stat-chip reveal">
+                  <span class="stat-ico">👁️</span>
+                  <span class="stat-value">Computer</span>
+                  <span class="stat-label">Vision</span>
+                </div>
+                <div class="stat-chip reveal">
+                  <span class="stat-ico">🧠</span>
+                  <span class="stat-value">Train</span>
+                  <span class="stat-label">Your Own AI</span>
+                </div>
+              </div>
+
+              <div class="course-hero-actions">
+                <a href="index.html#booking" class="btn btn-primary">Đăng ký khóa học ngay</a>
+              </div>
+            </div>
+            <div class="course-hero-media">
+              <div class="course-hero-media-glow" aria-hidden="true"></div>
+              <img
+                src="https://images.unsplash.com/photo-1603354351149-e97b9124020d?w=700&q=80&auto=format&fit=crop"
+                alt="Học sinh lập trình AI và thị giác máy tính cho robot"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad">
+        <div class="container">
+          <div class="course-detail">
+            <div class="course-section reveal">
+              <div class="course-section-title">🚀 Lộ trình học</div>
+              <h2 class="course-block-heading">24 buổi học – 4 Module chinh phục</h2>
+              <p class="course-block-tagline">"Từ giác quan AI đầu tiên đến một bộ não biết tự học — mỗi module là một bước tiến trên hành trình trở thành kỹ sư AI tương lai."</p>
+
+              <div class="module-list">
+                <div class="module-timeline-track" aria-hidden="true"></div>
+                <div class="module-timeline-fill" aria-hidden="true"></div>
+                <div class="module-card reveal">
+                  <div class="module-rail"><div class="module-num">1</div></div>
+                  <div class="module-body">
+                    <div class="module-text">
+                      <div class="module-eyebrow">👁️ Module 1 – AI Vision &amp; Giác Quan Thông Minh</div>
+                      <h3 class="module-title">Dạy AI biết nhìn, nhận diện và tương tác với thế giới xung quanh</h3>
+                      <p class="module-desc">Học viên làm quen với board AI ELF AIoT K210, camera, màn hình, microphone và các công cụ lập trình AI. Từ những bài thực hành đơn giản, học viên từng bước giúp hệ thống nhìn thấy hình ảnh, nhận biết màu sắc, ký hiệu và vật thể, đồng thời làm quen với khả năng nhận diện giọng nói.</p>
+                      <p class="module-desc">Sau module này, học viên hiểu được cách một thiết bị AI "nhìn" thế giới thông qua camera và bắt đầu xây dựng các ứng dụng AI tương tác đơn giản.</p>
+                      <div class="module-meta">
+                        <div class="module-projects">
+                          <span class="module-meta-label">Học viên sẽ được học</span>
+                          <div class="module-chips">
+                            <span>🔌 Làm quen board AI &amp; thiết bị: camera, màn hình, mic, speaker</span><span>🖼️ Xử lý hình ảnh từ camera</span><span>📷 Lập trình chụp &amp; hiển thị hình ảnh</span><span>🎨 Nhận diện và theo dõi màu sắc</span><span>🏷️ Nhận diện ký hiệu/Tag</span><span>🔍 Nhận diện nhiều loại vật thể bằng AI</span><span>🎙️ Nhận diện giọng nói &amp; điều khiển bằng từ khóa</span><span>🔊 Kết hợp camera, màn hình, âm thanh tạo ứng dụng AI tương tác</span>
+                          </div>
+                        </div>
+                        <div class="module-projects">
+                          <span class="module-meta-label">Dự án tiêu biểu</span>
+                          <div class="module-chips">
+                            <span>🤖 AI Smart Assistant – Trợ lý AI mini nhìn qua camera và phản hồi bằng màn hình/âm thanh</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="module-photo">
+                      <img src="https://images.unsplash.com/photo-1532330393533-443990a51d10?w=500&q=80&auto=format&fit=crop" alt="Camera AI nhận diện vật thể trên board ELF AIoT K210" loading="lazy" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="module-card reveal">
+                  <div class="module-rail"><div class="module-num">2</div></div>
+                  <div class="module-body">
+                    <div class="module-text">
+                      <div class="module-eyebrow">🤖 Module 2 – Robot Tự Hành Thông Minh</div>
+                      <h3 class="module-title">Ghép AI vào robot để robot biết quan sát và tự điều chỉnh chuyển động</h3>
+                      <p class="module-desc">Sau khi làm quen với AI Vision, học viên đưa "đôi mắt AI" lên robot. Các em lắp ráp và lập trình robot 4 bánh và robot bánh Mecanum, sau đó kết hợp camera với động cơ để robot có thể phản ứng với những gì camera nhìn thấy.</p>
+                      <p class="module-desc">Sau module này, học viên hiểu cách kết hợp AI, Camera, Robot và Động cơ để biến một robot thông thường thành một robot có khả năng quan sát và phản ứng với môi trường.</p>
+                      <div class="module-meta">
+                        <div class="module-projects">
+                          <span class="module-meta-label">Học viên sẽ được học</span>
+                          <div class="module-chips">
+                            <span>🔧 Lắp ráp và làm quen với cấu tạo robot di động</span><span>🕹️ Điều khiển động cơ: tiến, lùi, rẽ trái/phải, điều chỉnh tốc độ</span><span>↔️ Làm quen với robot Mecanum di chuyển đa hướng</span><span>📷 Kết hợp camera AI với robot</span><span>📍 Nhận biết vị trí của vật thể trong hình ảnh</span><span>🧭 Lập trình robot điều chỉnh hướng dựa trên vị trí vật thể</span><span>🎯 Xây dựng chức năng bám theo vật thể bằng camera</span><span>🚗 Xây dựng robot di chuyển dựa trên dữ liệu hình ảnh</span><span>🛣️ Làm quen với Visual Patrol – nhận biết đường đi bằng camera</span>
+                          </div>
+                        </div>
+                        <div class="module-projects">
+                          <span class="module-meta-label">Dự án tiêu biểu</span>
+                          <div class="module-chips">
+                            <span>🤖 AI Object Tracking Robot – Robot tự động bám mục tiêu: Nhìn → Nhận diện → Xác định vị trí → Điều chỉnh hướng → Di chuyển</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="module-photo">
+                      <img src="https://images.unsplash.com/photo-1701448150058-43d6d199b103?w=500&q=80&auto=format&fit=crop" alt="Robot tự hành bám vật thể bằng camera AI" loading="lazy" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="module-card reveal">
+                  <div class="module-rail"><div class="module-num">3</div></div>
+                  <div class="module-body">
+                    <div class="module-text">
+                      <div class="module-eyebrow">🧠 Module 3 – Tự Xây Dựng Model AI Của Riêng Mình</div>
+                      <h3 class="module-title">Từ sử dụng AI có sẵn đến hiểu cách một AI Model được tạo ra</h3>
+                      <p class="module-desc">Ở module này, học viên bắt đầu bước vào thế giới Machine Learning. Thay vì chỉ sử dụng những mô hình AI đã được chuẩn bị sẵn, học viên tìm hiểu quy trình để tạo ra một mô hình AI từ dữ liệu.</p>
+                      <p class="module-desc">Sau module này, học viên hiểu được một AI Model không phải "tự nhiên mà có", mà được xây dựng từ dữ liệu → huấn luyện → kiểm tra → triển khai → cải thiện.</p>
+                      <div class="module-meta">
+                        <div class="module-projects">
+                          <span class="module-meta-label">Học viên sẽ được học</span>
+                          <div class="module-chips">
+                            <span>📊 Hiểu AI cần dữ liệu để học như thế nào</span><span>🗂️ Làm quen với quy trình xây dựng một mô hình AI</span><span>📸 Thu thập dữ liệu hình ảnh</span><span>🧹 Chuẩn bị và phân loại dữ liệu</span><span>🏷️ Gán nhãn dữ liệu để máy tính biết mỗi hình ảnh thuộc nhóm nào</span><span>☁️ Sử dụng nền tảng huấn luyện model</span><span>🧠 Huấn luyện mô hình AI nhận diện đối tượng</span><span>✅ Kiểm tra độ chính xác của mô hình</span><span>📤 Đưa model lên board AI</span><span>📷 Kiểm tra model bằng camera trong điều kiện thực tế</span><span>🔎 Quan sát sự khác biệt giữa dữ liệu huấn luyện và kết quả nhận diện thực tế</span>
+                          </div>
+                        </div>
+                        <div class="module-projects">
+                          <span class="module-meta-label">Dự án tiêu biểu</span>
+                          <div class="module-chips">
+                            <span>🔍 My Own AI Model – AI nhận diện của riêng tôi: tự xây dựng model, đưa lên thiết bị và kiểm tra bằng camera</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="module-photo">
+                      <img src="https://images.unsplash.com/photo-1619768470847-f7db55f5d72e?w=500&q=80&auto=format&fit=crop" alt="Học viên tự huấn luyện mô hình AI qua nền tảng MaixHub" loading="lazy" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="module-card reveal">
+                  <div class="module-rail"><div class="module-num">4</div></div>
+                  <div class="module-body">
+                    <div class="module-text">
+                      <div class="module-eyebrow">📐 Module 4 – Capstone: Bí Mật Toán Học Của Trí Tuệ Nhân Tạo</div>
+                      <h3 class="module-title">Hiểu điều gì khiến AI có thể "học" và tự cải thiện</h3>
+                      <p class="module-desc">Đây là module tổng kết, đưa học viên từ việc sử dụng AI đến việc hiểu những nguyên lý cơ bản phía sau quá trình AI học. Thông qua các ví dụ trực quan và mô phỏng, học viên khám phá cách máy tính sử dụng dữ liệu, trọng số và sai số để từng bước cải thiện kết quả dự đoán.</p>
+                      <p class="module-desc">Học viên tổng hợp các sản phẩm đã thực hiện trong chương trình — AI Vision, AI Robotics, AI Model và Machine Learning — thành một portfolio dự án công nghệ cá nhân, thể hiện quá trình học tập và khả năng xây dựng sản phẩm AI của mình.</p>
+                      <p class="module-desc">Sau module này, học viên không chỉ biết "dùng AI", mà bắt đầu hiểu AI học như thế nào, tại sao AI có thể dự đoán và làm thế nào AI cải thiện kết quả.</p>
+                      <div class="module-meta">
+                        <div class="module-projects">
+                          <span class="module-meta-label">Học viên sẽ được học</span>
+                          <div class="module-chips">
+                            <span>📚 AI "học" từ dữ liệu như thế nào</span><span>⚖️ Khái niệm trọng số (Weight) trong một mô hình đơn giản</span><span>🎯 Hiểu dự đoán và sai số</span><span>🔁 Cách AI điều chỉnh trọng số khi dự đoán chưa chính xác</span><span>🐢 Làm quen với Learning Rate – mức độ điều chỉnh trong quá trình học</span><span>📉 Tìm hiểu MSE (Mean Squared Error) đo mức độ sai lệch</span><span>📈 Quan sát mối quan hệ giữa trọng số và sai số</span><span>🧮 Sử dụng nhiều mẫu dữ liệu để tìm giá trị phù hợp hơn</span><span>💻 Lập trình mô phỏng quá trình AI liên tục điều chỉnh để cải thiện kết quả</span>
+                          </div>
+                        </div>
+                        <div class="module-projects">
+                          <span class="module-meta-label">Dự án tiêu biểu</span>
+                          <div class="module-chips">
+                            <span>🧠 AI Learning Brain – Bộ não AI tự học: Nhận dữ liệu → Đưa ra dự đoán → Tính sai số → Điều chỉnh → Dự đoán lại</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="module-photo">
+                      <img src="https://images.unsplash.com/photo-1671490290886-c89f63f22a8f?w=500&q=80&auto=format&fit=crop" alt="Mô phỏng đồ thị AI tự điều chỉnh trọng số để học từ dữ liệu" loading="lazy" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="module-outcome reveal">
+                <div class="module-outcome-title">🎯 Kết quả sau khóa học</div>
+                <p class="module-outcome-sub">Sau 24 buổi học, học viên sẽ:</p>
+                <ul class="module-outcome-list">
+                  <li><span class="emoji">👁️</span>Sử dụng thành thạo các model AI có sẵn để nhận diện vật thể, khuôn mặt, giọng nói và mã QR.</li>
+                  <li><span class="emoji">🤖</span>Thiết kế robot tự hành có khả năng bám vật thể, bám khuôn mặt và tự dò đường bằng camera AI.</li>
+                  <li><span class="emoji">🧩</span>Tự thu thập dữ liệu, gán nhãn và huấn luyện một mô hình AI nhận diện vật thể của riêng mình.</li>
+                  <li><span class="emoji">📤</span>Triển khai (deploy) mô hình AI tự train lên board và kiểm tra hoạt động thực tế.</li>
+                  <li><span class="emoji">📐</span>Hiểu và giải thích được nguyên lý toán học đằng sau việc AI "học" từ dữ liệu.</li>
+                  <li><span class="emoji">🚀</span>Hoàn thành dự án tốt nghiệp — mô phỏng một AI tự điều chỉnh để tìm ra đáp án đúng.</li>
+                  <li><span class="emoji">🎓</span>Portfolio công nghệ cá nhân với 4 dự án AI thực tế, sẵn sàng cho định hướng nghề nghiệp.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="course-section reveal">
+              <div class="course-section-title">🎯 Giá trị nhận được</div>
+              <h2 class="course-block-heading">Con sẽ đạt được gì sau khóa học?</h2>
+              <div class="outcome-split">
+                <ul class="outcome-list">
+                  <li class="reveal">
+                    <span class="outcome-ico">👁️</span>
+                    <div><h3>Làm chủ AI thị giác máy tính</h3><p>Ứng dụng các model AI có sẵn để nhận diện vật thể, khuôn mặt, màu sắc và giọng nói.</p></div>
+                  </li>
+                  <li class="reveal">
+                    <span class="outcome-ico">🤖</span>
+                    <div><h3>Robot tự hành thông minh</h3><p>Kết hợp camera AI với robot 4 bánh và Mecanum để tạo chuyển động tự động.</p></div>
+                  </li>
+                  <li class="reveal">
+                    <span class="outcome-ico">🧠</span>
+                    <div><h3>Tự huấn luyện AI của riêng mình</h3><p>Thu thập dữ liệu, gán nhãn và huấn luyện model qua nền tảng MaixHub.</p></div>
+                  </li>
+                  <li class="reveal">
+                    <span class="outcome-ico">🎓</span>
+                    <div><h3>Hiểu bản chất của Machine Learning</h3><p>Giải thích được vì sao AI học được, qua dự án tốt nghiệp tự lập trình.</p></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="course-section reveal">
+              <div class="course-section-title">🤖 Dự án thực hành</div>
+              <h2 class="course-block-heading">Học qua những dự án AI thực tế</h2>
+              <div class="project-grid">
+                <div class="project-card reveal"><span class="project-ico">🎙️</span><span class="project-name">Trợ lý AI mini</span><p class="project-takeaway">Nhận diện vật thể, mã QR và phát giọng nói</p></div>
+                <div class="project-card reveal"><span class="project-ico">🚗</span><span class="project-name">AI Object Tracking Robot</span><p class="project-takeaway">Robot tự động bám mục tiêu bằng camera AI</p></div>
+                <div class="project-card reveal"><span class="project-ico">🔍</span><span class="project-name">AI nhận diện của riêng tôi</span><p class="project-takeaway">Tự train model qua MaixHub và triển khai lên board</p></div>
+                <div class="project-card reveal"><span class="project-ico">🧮</span><span class="project-name">Bộ não AI tự học</span><p class="project-takeaway">Mô phỏng cách máy tính tự điều chỉnh để học từ dữ liệu</p></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="programs-cta reveal center" style="margin-top:48px;">
+            <a href="programs.html">← Xem tất cả chương trình</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad bg-paper">
+        <div class="container">
+          <div class="section-head reveal center">
+            <h2>Lộ trình phát triển</h2>
+          </div>
+          <div class="career-path reveal">
+            <a class="career-step" href="steam-explorer.html">
+              <span class="career-step-name">STEAM Explorer</span>
+              <span class="career-step-age">4–8 tuổi</span>
+            </a>
+            <span class="career-arrow">→</span>
+            <a class="career-step" href="young-maker.html">
+              <span class="career-step-name">Young Maker</span>
+              <span class="career-step-age">8–10 tuổi</span>
+            </a>
+            <span class="career-arrow">→</span>
+            <a class="career-step" href="robotics-builder.html">
+              <span class="career-step-name">Robotics Builder</span>
+              <span class="career-step-age">9–15 tuổi</span>
+            </a>
+            <span class="career-arrow">→</span>
+            <a class="career-step" href="aiot-smart-systems.html">
+              <span class="career-step-name">IoT &amp; Smart Systems</span>
+              <span class="career-step-age">9–16 tuổi</span>
+            </a>
+            <span class="career-arrow">→</span>
+            <div class="career-step current">
+              <span class="career-step-name">AI Explorer</span>
+              <span class="career-step-age">12–18 tuổi</span>
+            </div>
+            <span class="career-arrow">→</span>
+            <a class="career-step" href="programs.html#track-competition">
+              <span class="career-step-name">Competition Academy</span>
+              <span class="career-step-age">10–18 tuổi</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="reveal">
+      <div class="container">
+        <div class="foot-top">
+          <div class="foot-brand">
+            <a href="index.html" class="logo foot-logo">
+              <img class="mark" src="assets/mechabot-logo.svg" alt="MechaBot logo" />
+              <span class="logo-text">Mecha<span class="bot-accent">Bot</span><span class="tagline">STEAM ACADEMY</span></span>
+            </a>
+            <p class="foot-brand-desc">MechaBot STEAM Academy là trung tâm đào tạo STEM thực hành cho trẻ 4–18 tuổi. <a href="index.html#booking">Đăng ký học thử</a> hoặc <a href="contact.html">liên hệ tư vấn</a> ngay hôm nay!</p>
+          </div>
+          <div class="foot-cols">
+            <div class="foot-col-links">
+              <span class="foot-col-title">Khám phá</span>
+              <a href="about.html">Giới thiệu</a>
+              <a href="programs.html">Chương trình</a>
+              <a href="projects.html">Dự án</a>
+              <a href="library.html">Thư viện</a>
+            </div>
+            <div class="foot-col-links">
+              <span class="foot-col-title">Hỗ trợ</span>
+              <a href="maker-space.html">Maker Space</a>
+              <a href="faq.html">Hỏi đáp</a>
+              <a href="contact.html">Liên hệ</a>
+              <a href="index.html#booking">Đăng ký học thử</a>
+            </div>
+            <div class="foot-col-social">
+              <span class="foot-col-title">Kết nối cùng MechaBot</span>
+              <div class="foot-social">
+                <a class="social-ico social-fb" href="#" aria-label="Facebook" target="_blank" rel="noopener"><span>f</span></a>
+                <a class="social-ico social-yt" href="#" aria-label="YouTube" target="_blank" rel="noopener"><span>▶</span></a>
+                <a class="social-ico social-tiktok" href="#" aria-label="TikTok" target="_blank" rel="noopener"><span>TT</span></a>
+                <a class="social-ico social-zalo" href="#" aria-label="Zalo OA" target="_blank" rel="noopener"><span>Z</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="foot-contact-row">
+          <div><b>Địa chỉ</b>Cơ sở 1: Chúc Sơn, Chương Mỹ, Hà Nội<br />Cơ sở 2: Biển Xanh 49, Vinhomes Ocean Park 2, Văn Giang, Hưng Yên</div>
+          <div><b>Điện thoại liên hệ</b><span class="foot-copy" data-copy="0362 750 092"><a href="tel:0362750092">0362 750 092</a><span class="foot-copy-tooltip">Đã sao chép!</span></span></div>
+          <div><b>Email</b><span class="foot-copy" data-copy="mechabot4702@gmail.com"><a href="mailto:mechabot4702@gmail.com">mechabot4702@gmail.com</a><span class="foot-copy-tooltip">Đã sao chép!</span></span></div>
+        </div>
+
+        <div class="foot-bottom">
+          <span>© 2026 MechaBot STEAM Academy. All rights reserved.</span>
+          <div class="foot-legal">
+            <a href="terms.html">Điều khoản sử dụng</a><span class="foot-legal-sep">|</span>
+            <a href="privacy.html">Quyền riêng tư</a><span class="foot-legal-sep">|</span>
+            <a href="refund.html">Chính sách hoàn phí</a>
+          </div>
+        </div>
+      </div>
+      <button class="scroll-top" id="scrollTopBtn" type="button" aria-label="Lên đầu trang">↑</button>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

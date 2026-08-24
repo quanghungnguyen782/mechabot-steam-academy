@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MECHABOT STEAM Academy — Học viện Robotics &amp; IoT</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpolygon points='186,100 143,25.5 57,25.5 14,100 57,174.5 143,174.5' fill='%230B1220' stroke='%235B8DEF' stroke-width='8'/%3E%3Cpath d='M50 140 L50 65 L100 110 L150 65 L150 140' stroke='%235B8DEF' stroke-width='19' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='50' cy='140' r='12' fill='%23F97316'/%3E%3Ccircle cx='150' cy='140' r='12' fill='%2322C55E'/%3E%3Ccircle cx='100' cy='110' r='14' fill='%23EAF1FE'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header id="siteHeader">
+  <div class="nav-wrap">
+    <a href="#home" class="logo">
+      <svg class="mark" viewBox="0 0 200 200" fill="none">
+        <defs>
+          <linearGradient id="hexBorder-nav" x1="14" y1="25.5" x2="186" y2="174.5">
+            <stop offset="0" stop-color="#5B8DEF"/>
+            <stop offset="1" stop-color="#2563EB"/>
+          </linearGradient>
+          <linearGradient id="traceGrad-nav" x1="50" y1="65" x2="150" y2="140">
+            <stop offset="0" stop-color="#5B8DEF"/>
+            <stop offset="1" stop-color="#2563EB"/>
+          </linearGradient>
+          <filter id="coreGlow-nav" x="-80%" y="-80%" width="260%" height="260%">
+            <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#5B8DEF" flood-opacity="0.85"/>
+          </filter>
+        </defs>
+        <polygon points="186,100 143,25.5 57,25.5 14,100 57,174.5 143,174.5" fill="#0B1220" stroke="url(#hexBorder-nav)" stroke-width="3"/>
+        <circle cx="150" cy="40" r="10" stroke="#5B8DEF" stroke-width="1.6" fill="none" opacity="0.9"/>
+        <circle cx="160" cy="34" r="3.2" fill="#5B8DEF"/>
+        <path d="M50 140 L50 65 L100 110 L150 65 L150 140" stroke="url(#traceGrad-nav)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="50" cy="140" r="7.5" fill="#F97316"/>
+        <circle cx="150" cy="140" r="7.5" fill="#22C55E"/>
+        <circle cx="100" cy="110" r="9.5" fill="#5B8DEF" filter="url(#coreGlow-nav)" class="node-pulse"/>
+        <circle cx="100" cy="110" r="3.6" fill="#EAF1FE"/>
+      </svg>
+      <div class="logo-text">MECHA<span class="bot-accent">BOT</span><span class="tagline">STEAM ACADEMY</span></div>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Trang chủ</a>
+      <a href="#about">Giới thiệu</a>
+      <a href="#programs">Chương trình</a>
+      <a href="#projects">Dự án</a>
+      <a href="#gallery">Thư viện</a>
+      <a href="#faq">Hỏi đáp</a>
+      <a href="#contact">Liên hệ</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-primary">Đặt lịch học thử</a>
+      <button class="burger" id="burger" aria-label="Mở menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <svg class="pcb-bg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+    <g stroke="#1E3A66" stroke-width="1.4" fill="none" opacity="0.5">
+      <path d="M0 120 H300 V220 H600 V90 H1200"/>
+      <path d="M0 660 H260 V560 H700 V700 H1200"/>
+      <path d="M150 0 V150"/>
+      <path d="M950 0 V180"/>
+    </g>
+    <g fill="#5B8DEF">
+      <circle class="node-pulse" cx="300" cy="120" r="4"/>
+      <circle class="node-pulse" cx="900" cy="500" r="4" style="animation-delay:.8s"/>
+      <circle class="node-pulse" cx="260" cy="660" r="4" style="animation-delay:.2s"/>
+    </g>
+  </svg>
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow" style="color:#F97316">Robotics · IoT · Maker Education</p>
+      <h1>Robotics, AI, IoT<br>qua dự án<br><span class="accent">thực chiến.</span></h1>
+      <p class="lead">Từ Scratch đến Robotics, AI và IoT, học sinh được tự tay thiết kế, lập trình và hoàn thiện những sản phẩm công nghệ thực tế. Phương pháp Project-Based Learning giúp biến kiến thức thành kỹ năng thông qua từng dự án.</p>
+      <ul class="hero-trust">
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#22C55E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Lớp tối đa 8 học viên</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#22C55E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>100% thực hành</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#22C55E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Giảng viên giàu kinh nghiệm Robotics</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#22C55E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Bộ kit thực hành riêng cho từng học viên</li>
+      </ul>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Đăng ký học thử miễn phí</a>
+        <a href="#programs" class="btn btn-ghost">Xem chương trình đào tạo</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>40</b><span>Buổi học / khóa</span></div>
+        <div><b>15+</b><span>Dự án STEM</span></div>
+        <div><b>6–18</b><span>Tuổi học viên</span></div>
+        <div><b>8</b><span>Học viên / lớp</span></div>
+      </div>
+      <div class="hero-tech">
+        <span>Công nghệ giảng dạy</span>
+        <b>Scratch</b><i></i><b>Arduino</b><i></i><b>ESP32</b><i></i><b>LEGO</b>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <svg viewBox="30 30 360 360" width="100%">
+        <defs>
+          <radialGradient id="heroGlow" cx="50%" cy="46%" r="55%">
+            <stop offset="0" stop-color="#2563EB" stop-opacity="0.5"/>
+            <stop offset="1" stop-color="#2563EB" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <circle cx="210" cy="210" r="175" fill="url(#heroGlow)"/>
+        <circle cx="210" cy="210" r="190" fill="none" stroke="#1E3A66" stroke-width="1"/>
+        <circle cx="210" cy="210" r="150" fill="none" stroke="#1E3A66" stroke-width="1" stroke-dasharray="4 8"/>
+
+        <!-- orbiting STEM badges: robotics / electronics / ai / iot -->
+        <g class="node-pulse">
+          <circle cx="96" cy="96" r="22" fill="#121B2E" stroke="#5B8DEF" stroke-width="2"/>
+          <path transform="translate(85,85) scale(0.92)" fill="#5B8DEF" d="M12 8.4a3.6 3.6 0 1 0 0 7.2 3.6 3.6 0 0 0 0-7.2Zm9.4 2.2-1.9-.3a7.4 7.4 0 0 0-.6-1.5l1.2-1.5a.6.6 0 0 0-.1-.8l-1.4-1.4a.6.6 0 0 0-.8-.1L16.3 6a7.4 7.4 0 0 0-1.5-.6l-.3-1.9a.6.6 0 0 0-.6-.5h-2a.6.6 0 0 0-.6.5l-.3 1.9a7.4 7.4 0 0 0-1.5.6L8 4.6a.6.6 0 0 0-.8.1L5.8 6.1a.6.6 0 0 0-.1.8L6.9 8.4a7.4 7.4 0 0 0-.6 1.5l-1.9.3a.6.6 0 0 0-.5.6v2a.6.6 0 0 0 .5.6l1.9.3a7.4 7.4 0 0 0 .6 1.5l-1.2 1.5a.6.6 0 0 0 .1.8l1.4 1.4a.6.6 0 0 0 .8.1L9.7 18a7.4 7.4 0 0 0 1.5.6l.3 1.9a.6.6 0 0 0 .6.5h2a.6.6 0 0 0 .6-.5l.3-1.9a7.4 7.4 0 0 0 1.5-.6l1.5 1.2a.6.6 0 0 0 .8-.1l1.4-1.4a.6.6 0 0 0 .1-.8L18 14.3a7.4 7.4 0 0 0 .6-1.5l1.9-.3a.6.6 0 0 0 .5-.6v-2a.6.6 0 0 0-.5-.6Z"/>
+        </g>
+        <g class="node-pulse" style="animation-delay:.5s">
+          <circle cx="324" cy="96" r="22" fill="#121B2E" stroke="#F97316" stroke-width="2"/>
+          <rect x="312" y="84" width="24" height="24" rx="4" fill="none" stroke="#F97316" stroke-width="1.8"/>
+          <path d="M312 90h-5M312 96h-5M312 102h-5M336 90h5M336 96h5M336 102h5" stroke="#F97316" stroke-width="1.8" stroke-linecap="round"/>
+        </g>
+        <g class="node-pulse" style="animation-delay:1s">
+          <circle cx="96" cy="324" r="22" fill="#121B2E" stroke="#22C55E" stroke-width="2"/>
+          <path d="M99 313 90 325h6l-1 8 9-12h-6l1-8Z" stroke="#22C55E" stroke-width="1.8" stroke-linejoin="round"/>
+        </g>
+        <g class="node-pulse" style="animation-delay:1.5s">
+          <circle cx="324" cy="324" r="22" fill="#121B2E" stroke="#5B8DEF" stroke-width="2"/>
+          <path d="M314 330a14 14 0 0 1 20 0M318.5 334.5a7.5 7.5 0 0 1 11 0" stroke="#5B8DEF" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+          <circle cx="324" cy="338" r="2" fill="#5B8DEF"/>
+        </g>
+
+        <!-- simple robot head illustration -->
+        <rect x="120" y="130" width="180" height="150" rx="24" fill="#121B2E" stroke="#2563EB" stroke-width="2.5"/>
+        <circle cx="165" cy="195" r="14" fill="#5B8DEF"/>
+        <circle cx="255" cy="195" r="14" fill="#F97316"/>
+        <rect x="150" y="235" width="120" height="14" rx="7" fill="#22C55E"/>
+        <rect x="195" y="90" width="30" height="45" rx="6" fill="#121B2E" stroke="#2563EB" stroke-width="2.5"/>
+        <circle cx="210" cy="82" r="9" fill="#F97316" class="node-pulse"/>
+        <rect x="70" y="185" width="45" height="18" rx="9" fill="#121B2E" stroke="#2563EB" stroke-width="2"/>
+        <rect x="305" y="185" width="45" height="18" rx="9" fill="#121B2E" stroke="#2563EB" stroke-width="2"/>
+
+        <!-- wrench, held near the robot's right side -->
+        <g transform="translate(300,250) rotate(-25)">
+          <rect x="-4" y="-30" width="8" height="42" rx="4" fill="#F97316"/>
+          <circle cx="0" cy="-32" r="10" fill="none" stroke="#F97316" stroke-width="4.5"/>
+          <rect x="-10" y="-37" width="20" height="9" rx="2" fill="#121B2E"/>
+        </g>
+      </svg>
+
+      <div class="hero-photo-box">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="#5B8DEF" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="14" r="3.4" stroke="#5B8DEF" stroke-width="1.6"/></svg>
+        <span>Ảnh học viên &amp; lớp học thực tế — thêm ảnh của trung tâm tại đây</span>
+      </div>
+      <a href="#gallery" class="hero-projects">
+        <span>Dự án học viên đã hoàn thành</span>
+        <b>Robot dò line</b><b>Smart Home</b><b>Robot Arm</b><span class="more">xem tất cả →</span>
+      </a>
+    </div>
+  </div>
+  <div class="scroll-cue"><span>SCROLL</span><span class="line"></span></div>
+</section>
+
+<!-- ================= WHY CHOOSE US / ABOUT ================= -->
+<section class="section-pad" id="about">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Vì sao chọn Mechabot</p>
+      <h2>Không chỉ học lập trình – Học cách trở thành người tạo ra công nghệ</h2>
+      <p>Tại Mechabot, chúng tôi tin rằng trẻ em học tốt nhất khi được trực tiếp khám phá và sáng tạo. Thay vì chỉ học lý thuyết, học viên sẽ tự tay lắp ráp robot, lập trình và giải quyết các bài toán thực tế thông qua dự án.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="ico" style="background:#E9FBF0;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 19V9l7-5 7 5v10" stroke="#22C55E" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 19v-6h6v6" stroke="#22C55E" stroke-width="1.8"/></svg>
+        </div>
+        <h3>Học theo dự án</h3>
+        <p>Mỗi buổi học đều gắn với một dự án thực tế, giúp học viên hiểu bản chất và ứng dụng ngay kiến thức vừa học.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="ico" style="background:#EAF1FE;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="8" cy="8" r="3" stroke="#2563EB" stroke-width="1.8"/><circle cx="16" cy="8" r="3" stroke="#2563EB" stroke-width="1.8"/><path d="M3 20c0-3 2.5-5 5-5s5 2 5 5M11 20c0-3 2.5-5 5-5s5 2 5 5" stroke="#2563EB" stroke-width="1.8"/></svg>
+        </div>
+        <h3>Lớp học quy mô nhỏ</h3>
+        <p>Tối đa 8 học viên mỗi lớp để giảng viên có thể theo sát từng em trong suốt quá trình học.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="ico" style="background:#FFF1E7;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#F97316" stroke-width="1.8"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="#F97316" stroke-width="1.8"/></svg>
+        </div>
+        <h3>Giảng viên giàu kinh nghiệm</h3>
+        <p>Đội ngũ kỹ sư Robotics và AI trực tiếp giảng dạy, đồng hành cùng học viên từ những bài học đầu tiên đến các dự án nâng cao.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="ico" style="background:#F2EEFF;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="3" stroke="#7C6EF6" stroke-width="1.8"/><circle cx="9" cy="10" r="1.4" fill="#7C6EF6"/><circle cx="15" cy="10" r="1.4" fill="#7C6EF6"/><path d="M8 15c1.5 1.4 6.5 1.4 8 0" stroke="#7C6EF6" stroke-width="1.8"/></svg>
+        </div>
+        <h3>Bộ kit thực hành</h3>
+        <p>Mỗi học viên được tiếp cận bộ kit Arduino, ESP32, cảm biến và robot để tự tay chế tạo sản phẩm.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="ico" style="background:#FFF0F3;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 4h9l3 3v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Z" stroke="#F43F5E" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 12h8M8 16h5" stroke="#F43F5E" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Xây dựng Portfolio</h3>
+        <p>Sau mỗi module, học viên hoàn thành một sản phẩm công nghệ và lưu lại thành hồ sơ năng lực cá nhân.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="ico" style="background:#EAFBFF;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" stroke="#0EA5E9" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Định hướng tương lai</h3>
+        <p>Trang bị nền tảng Robotics, AI và IoT để sẵn sàng tham gia các cuộc thi STEM và phát triển lâu dài.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROGRAMS ================= -->
+<section class="section-pad bg-paper" id="programs">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Chương trình nổi bật</p>
+      <h2>Lộ trình học từ cơ bản đến nâng cao</h2>
+      <p>Chương trình được thiết kế theo từng cấp độ giúp học viên phát triển tư duy lập trình, kỹ năng kỹ thuật và khả năng sáng tạo thông qua các dự án thực tế.</p>
+    </div>
+    <div class="programs-grid">
+      <div class="prog-card reveal">
+        <div class="prog-top"><span class="age">MODULE 01</span><h3>Scratch &amp; Computational Thinking</h3></div>
+        <div class="prog-body">
+          <p>Học tư duy lập trình bằng Scratch, làm game và hoạt hình tương tác.</p>
+          <span class="prog-link">Xem chi tiết →</span>
+        </div>
+      </div>
+      <div class="prog-card reveal">
+        <div class="prog-top"><span class="age">MODULE 02</span><h3>Arduino &amp; Electronics</h3></div>
+        <div class="prog-body">
+          <p>Lập trình Arduino, điều khiển LED, cảm biến và xây dựng các hệ thống điện tử thông minh.</p>
+          <span class="prog-link">Xem chi tiết →</span>
+        </div>
+      </div>
+      <div class="prog-card reveal">
+        <div class="prog-top"><span class="age">MODULE 03</span><h3>Robotics Engineering</h3></div>
+        <div class="prog-body">
+          <p>Thiết kế và lập trình robot dò line, robot tránh vật cản, robot điều khiển từ xa.</p>
+          <span class="prog-link">Xem chi tiết →</span>
+        </div>
+      </div>
+      <div class="prog-card reveal">
+        <div class="prog-top"><span class="age">MODULE 04</span><h3>IoT &amp; Smart Systems</h3></div>
+        <div class="prog-body">
+          <p>Xây dựng Smart Home, IoT Dashboard, điều khiển thiết bị qua Internet và ứng dụng AI.</p>
+          <span class="prog-link">Xem chi tiết →</span>
+        </div>
+      </div>
+    </div>
+    <div class="programs-cta reveal"><a href="#projects">Xem chi tiết chương trình →</a></div>
+
+    <!-- SIGNATURE: circuit-board learning path -->
+    <div class="path-wrap reveal">
+      <div class="path-title">
+        <p class="eyebrow">Learning Path</p>
+        <h2>Mạch tiến bộ — mỗi trạm là một kỹ năng mới</h2>
+      </div>
+      <div class="circuit">
+        <svg viewBox="0 0 1080 90" fill="none">
+          <path d="M40 45 H1040" stroke="#26406B" stroke-width="2"/>
+          <path d="M40 45 H1040" stroke="#2563EB" stroke-width="2" stroke-dasharray="6 10" opacity=".6"/>
+          <g id="chipNodes"></g>
+        </svg>
+        <div class="circuit-labels">
+          <div><span class="chip">01</span><b>Programming</b></div>
+          <div><span class="chip">02</span><b>Electronics</b></div>
+          <div><span class="chip">03</span><b>Arduino</b></div>
+          <div><span class="chip">04</span><b>Robotics</b></div>
+          <div><span class="chip">05</span><b>IoT</b></div>
+          <div><span class="chip">06</span><b>AI</b></div>
+          <div><span class="chip">07</span><b>Competition</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS / GALLERY ================= -->
+<section class="section-pad" id="projects">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Dự án học viên</p>
+      <h2 id="gallery">Học thông qua những sản phẩm thật</h2>
+      <p>Trong suốt khóa học, mỗi học viên sẽ hoàn thành nhiều dự án để xây dựng Portfolio cá nhân.</p>
+    </div>
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">Tất cả</button>
+      <button class="filter-btn" data-filter="arduino">Arduino</button>
+      <button class="filter-btn" data-filter="robotics">Robotics</button>
+      <button class="filter-btn" data-filter="ai">AI</button>
+      <button class="filter-btn" data-filter="iot">IoT</button>
+    </div>
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="gal-item reveal" data-cat="robotics" style="background:linear-gradient(135deg,#2563EB,#0B1220)"><span class="tag">Robotics</span><div class="cap"><b>Robot dò line</b><div class="gal-meta"><span>Arduino</span><span>Cơ bản</span><span>4 buổi</span></div></div></div>
+      <div class="gal-item reveal" data-cat="iot" style="background:linear-gradient(135deg,#22C55E,#083D1D)"><span class="tag">IoT</span><div class="cap"><b>Smart Home</b><div class="gal-meta"><span>ESP32</span><span>Nâng cao</span><span>8 buổi</span></div></div></div>
+      <div class="gal-item reveal" data-cat="robotics" style="background:linear-gradient(135deg,#2563EB,#1B3FAE)"><span class="tag">Robotics</span><div class="cap"><b>Robot Arm</b><div class="gal-meta"><span>Servo, Arduino</span><span>Nâng cao</span><span>6 buổi</span></div></div></div>
+      <div class="gal-item reveal" data-cat="robotics" style="background:linear-gradient(135deg,#1B3FAE,#0B1220)"><span class="tag">Robotics</span><div class="cap"><b>Xe tránh vật cản</b><div class="gal-meta"><span>Arduino, siêu âm</span><span>Cơ bản</span><span>3 buổi</span></div></div></div>
+      <div class="gal-item reveal" data-cat="iot" style="background:linear-gradient(135deg,#0F7A3C,#0B1220)"><span class="tag">IoT</span><div class="cap"><b>Máy tưới cây tự động</b><div class="gal-meta"><span>ESP32, độ ẩm</span><span>Trung bình</span><span>4 buổi</span></div></div></div>
+      <div class="gal-item reveal" data-cat="arduino" style="background:linear-gradient(135deg,#F97316,#3A1C05)"><span class="tag">Arduino</span><div class="cap"><b>Đồng hồ thông minh</b><div class="gal-meta"><span>Arduino, OLED</span><span>Trung bình</span><span>5 buổi</span></div></div></div>
+      <div class="gal-item reveal" data-cat="ai" style="background:linear-gradient(135deg,#7C6EF6,#0B1220)"><span class="tag">AI</span><div class="cap"><b>AI Camera</b><div class="gal-meta"><span>Python, Computer Vision</span><span>Nâng cao</span><span>6 buổi</span></div></div></div>
+      <div class="gal-item reveal" data-cat="robotics" style="background:linear-gradient(135deg,#2563EB,#0B1220)"><span class="tag">Robotics</span><div class="cap"><b>Robot Soccer</b><div class="gal-meta"><span>Arduino, động cơ</span><span>Nâng cao</span><span>8 buổi</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CLASSROOM MEDIA ================= -->
+<section class="section-pad">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Hình ảnh lớp học</p>
+      <h2>Môi trường học tập hiện đại và truyền cảm hứng</h2>
+      <p>Những khoảnh khắc học viên tự tay lắp ráp robot, lập trình và trình bày sản phẩm là minh chứng rõ nhất cho phương pháp học tại Mechabot.</p>
+    </div>
+    <div class="media-grid">
+      <div class="media-placeholder reveal">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="#94A3B8" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="14" r="3.4" stroke="#94A3B8" stroke-width="1.6"/></svg>
+        <span>Ảnh lớp học</span>
+      </div>
+      <div class="media-placeholder reveal">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="14" height="14" rx="2" stroke="#94A3B8" stroke-width="1.6"/><path d="m17 10 4-2v8l-4-2" stroke="#94A3B8" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        <span>Video hoạt động</span>
+      </div>
+      <div class="media-placeholder reveal">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="#94A3B8" stroke-width="1.6"/><circle cx="12" cy="8" r="4" stroke="#94A3B8" stroke-width="1.6"/><path d="M2 16c1-2 2.5-3 3.5-3.3M22 16c-1-2-2.5-3-3.5-3.3" stroke="#94A3B8" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <span>Workshop</span>
+      </div>
+      <div class="media-placeholder reveal">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M8 21h8M12 17v4M6 4h12v5a6 6 0 0 1-12 0V4Z" stroke="#94A3B8" stroke-width="1.6" stroke-linejoin="round"/><path d="M6 6H3v2a3 3 0 0 0 3 3M18 6h3v2a3 3 0 0 1-3 3" stroke="#94A3B8" stroke-width="1.6"/></svg>
+        <span>Cuộc thi</span>
+      </div>
+      <div class="media-placeholder reveal">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M16 16l2 2M18 6l-2 2M8 16l-2 2" stroke="#94A3B8" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="12" r="4" stroke="#94A3B8" stroke-width="1.6"/></svg>
+        <span>Maker Space</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FACILITIES ================= -->
+<section class="section-pad bg-paper">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Cơ sở vật chất</p>
+      <h2>Không gian chế tạo thực thụ</h2>
+      <p>Phòng học được trang bị như một xưởng maker chuyên nghiệp, không phải lớp học truyền thống.</p>
+    </div>
+    <div class="fac-grid">
+      <div class="fac-card big fac1 reveal"><h4>Maker Space</h4><p>Khu vực mở để học viên tự do thử nghiệm ý tưởng và lắp ráp sản phẩm.</p></div>
+      <div class="fac-col">
+        <div class="fac-card fac2 reveal"><h4>Robotics Lab</h4><p>Hệ thống robot mẫu và bộ Arduino/ESP32 đầy đủ.</p></div>
+        <div class="fac-card fac3 reveal"><h4>3D Printer &amp; Laser Cutter</h4><p>In và cắt chi tiết cho các dự án thực tế.</p></div>
+      </div>
+      <div class="fac-card fac4 reveal" style="grid-column:1/-1;"><h4>Electronics Lab</h4><p>Bàn thực hành mạch điện tử, hàn linh kiện và đo lường chuyên dụng.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STATS ================= -->
+<section class="stats-band">
+  <div class="container stats-grid">
+    <div class="reveal"><b>300+</b><span>Projects Completed</span></div>
+    <div class="reveal"><b>50+</b><span>Robotics Lessons</span></div>
+    <div class="reveal"><b>95%</b><span>Hands-on Learning</span></div>
+    <div class="reveal"><b>100%</b><span>Project Based</span></div>
+  </div>
+</section>
+
+<!-- ================= TEAM ================= -->
+<section class="section-pad">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Đội ngũ giảng dạy</p>
+      <h2>Kỹ sư thật, đứng lớp thật</h2>
+      <p>Giảng viên là những kỹ sư và cựu thí sinh thi đấu robot, không chỉ là người dạy lý thuyết.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal">
+        <div class="team-photo">
+          <svg width="60" height="60" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#5B8DEF" stroke-width="1.5"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="#5B8DEF" stroke-width="1.5"/></svg>
+        </div>
+        <div class="team-info">
+          <h4>Nguyễn Văn Chính</h4>
+          <p class="role">Robotics Engineer</p>
+          <div class="tag-row"><span>Arduino</span><span>ROS2</span><span>Embedded</span></div>
+        </div>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-photo">
+          <svg width="60" height="60" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#F97316" stroke-width="1.5"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="#F97316" stroke-width="1.5"/></svg>
+        </div>
+        <div class="team-info">
+          <h4>Trần Minh Anh</h4>
+          <p class="role">AI &amp; IoT Instructor</p>
+          <div class="tag-row"><span>Python</span><span>Computer Vision</span><span>ESP32</span></div>
+        </div>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-photo">
+          <svg width="60" height="60" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#22C55E" stroke-width="1.5"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="#22C55E" stroke-width="1.5"/></svg>
+        </div>
+        <div class="team-info">
+          <h4>Lê Thị Hoa</h4>
+          <p class="role">Competition Coach</p>
+          <div class="tag-row"><span>Robocon</span><span>WRO</span><span>FLL</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="test-wrap">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow" style="color:#F97316">Cảm nhận</p>
+      <h2 style="color:#fff">Phụ huynh và học viên nói gì về Mechabot</h2>
+    </div>
+    <div class="test-grid">
+      <div class="test-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Con mình trước đây rất ngại công nghệ, nhưng sau vài tháng học đã có thể tự lập trình robot và rất hào hứng mỗi tuần đến lớp."</p>
+        <div class="test-who"><div class="test-avatar"></div><div><b>Phụ huynh học viên</b><span>Lớp Robotics</span></div></div>
+      </div>
+      <div class="test-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Giảng viên rất nhiệt tình, lớp ít học viên nên con luôn được hỗ trợ khi gặp khó khăn."</p>
+        <div class="test-who"><div class="test-avatar" style="background:#22C55E"></div><div><b>Phụ huynh học viên</b></div></div>
+      </div>
+      <div class="test-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Khóa học giúp con rèn luyện tư duy logic và tự tin hơn khi thuyết trình dự án."</p>
+        <div class="test-who"><div class="test-avatar" style="background:#5B8DEF"></div><div><b>Phụ huynh học viên</b></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section-pad" id="faq">
+  <div class="container" style="max-width:800px;">
+    <div class="section-head center reveal" style="text-align:center;">
+      <p class="eyebrow" style="justify-content:center;">Hỏi đáp</p>
+      <h2>Câu hỏi thường gặp</h2>
+    </div>
+    <div style="margin-top:40px;">
+      <div class="faq-item reveal">
+        <div class="faq-q">Học từ mấy tuổi? <span class="plus">+</span></div>
+        <div class="faq-a">Mechabot nhận học viên từ 6 đến 18 tuổi, học theo lộ trình 4 module từ cơ bản đến nâng cao phù hợp với từng trình độ.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">Có cần biết lập trình trước không? <span class="plus">+</span></div>
+        <div class="faq-a">Không cần. Module 1 bắt đầu từ lập trình kéo-thả Scratch, phù hợp với học viên chưa từng lập trình.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">Có cấp chứng chỉ không? <span class="plus">+</span></div>
+        <div class="faq-a">Có. Học viên hoàn thành mỗi chương trình sẽ nhận chứng chỉ kèm hồ sơ dự án đã thực hiện.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">Có học thử không? <span class="plus">+</span></div>
+        <div class="faq-a">Có một buổi học thử miễn phí để học viên và phụ huynh trải nghiệm trước khi đăng ký khóa học chính thức.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section-pad bg-paper" id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Liên hệ</p>
+      <h2>Đặt lịch học thử miễn phí</h2>
+      <p>Để lại thông tin, đội ngũ Mechabot sẽ liên hệ tư vấn lộ trình phù hợp cho con bạn.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <ul class="contact-info">
+          <li><div class="ico2"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11Z" stroke="#2563EB" stroke-width="1.6"/><circle cx="12" cy="10" r="2.4" stroke="#2563EB" stroke-width="1.6"/></svg></div><div><b>Địa chỉ</b><span>123 Đường Sáng Tạo, Quận 1, TP.HCM</span></div></li>
+          <li><div class="ico2"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 5h3l2 5-2 1a11 11 0 0 0 6 6l1-2 5 2v3a2 2 0 0 1-2 2C10 22 2 14 2 7a2 2 0 0 1 2-2Z" stroke="#F97316" stroke-width="1.6"/></svg></div><div><b>Điện thoại</b><span>0909 000 000</span></div></li>
+          <li><div class="ico2"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#22C55E" stroke-width="1.6"/><path d="m3 7 9 6 9-6" stroke="#22C55E" stroke-width="1.6"/></svg></div><div><b>Email</b><span>hello@mechabot.edu.vn</span></div></li>
+        </ul>
+        <div class="social-row">
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Zalo">ZL</a>
+          <a href="#" aria-label="YouTube">YT</a>
+          <a href="#" aria-label="TikTok">TT</a>
+        </div>
+      </div>
+      <div class="map-box reveal">[ Bản đồ Google Maps ]</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="final-cta">
+  <div class="container final-cta-inner reveal">
+    <h2>Sẵn sàng để con bắt đầu hành trình khám phá Robotics và AI?</h2>
+    <p>Đăng ký buổi học thử miễn phí để trải nghiệm phương pháp học theo dự án và gặp gỡ đội ngũ giảng viên của Mechabot.</p>
+    <div class="final-cta-actions">
+      <a href="#contact" class="btn btn-primary">Đăng ký học thử miễn phí</a>
+      <a href="#contact" class="btn btn-ghost">Liên hệ tư vấn</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="logo" style="margin-bottom:12px;">
+          <svg class="mark" viewBox="0 0 200 200" fill="none">
+            <defs>
+              <linearGradient id="hexBorder-foot" x1="14" y1="25.5" x2="186" y2="174.5">
+                <stop offset="0" stop-color="#5B8DEF"/>
+                <stop offset="1" stop-color="#2563EB"/>
+              </linearGradient>
+              <linearGradient id="traceGrad-foot" x1="50" y1="65" x2="150" y2="140">
+                <stop offset="0" stop-color="#5B8DEF"/>
+                <stop offset="1" stop-color="#2563EB"/>
+              </linearGradient>
+            </defs>
+            <polygon points="186,100 143,25.5 57,25.5 14,100 57,174.5 143,174.5" fill="#0B1220" stroke="url(#hexBorder-foot)" stroke-width="3"/>
+            <circle cx="150" cy="40" r="10" stroke="#5B8DEF" stroke-width="1.6" fill="none" opacity="0.9"/>
+            <circle cx="160" cy="34" r="3.2" fill="#5B8DEF"/>
+            <path d="M50 140 L50 65 L100 110 L150 65 L150 140" stroke="url(#traceGrad-foot)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="50" cy="140" r="7.5" fill="#F97316"/>
+            <circle cx="150" cy="140" r="7.5" fill="#22C55E"/>
+            <circle cx="100" cy="110" r="9.5" fill="#5B8DEF"/>
+            <circle cx="100" cy="110" r="3.6" fill="#EAF1FE"/>
+          </svg>
+          <div class="logo-text">MECHA<span class="bot-accent">BOT</span><span class="tagline">STEAM ACADEMY</span></div>
+        </div>
+        <div class="logo-strap">EXPLORE &bull; BUILD &bull; INNOVATE</div>
+        <p style="font-size:14px; max-width:280px;">Đào tạo Robotics, AI &amp; IoT cho thế hệ kỹ sư tương lai qua các dự án thực chiến.</p>
+      </div>
+      <div>
+        <h5>Điều hướng</h5>
+        <ul><li><a href="#about">Giới thiệu</a></li><li><a href="#programs">Chương trình</a></li><li><a href="#projects">Dự án</a></li><li><a href="#contact">Liên hệ</a></li></ul>
+      </div>
+      <div>
+        <h5>Chương trình</h5>
+        <ul><li>Scratch &amp; Computational Thinking</li><li>Arduino &amp; Electronics</li><li>Robotics Engineering</li><li>IoT &amp; Smart Systems</li></ul>
+      </div>
+      <div>
+        <h5>Kết nối</h5>
+        <ul><li><a href="#">Facebook</a></li><li><a href="#">YouTube</a></li><li><a href="#">TikTok</a></li><li><a href="#">LinkedIn</a></li></ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Mechabot STEAM Academy. All rights reserved.</span>
+      <span>Build. Code. Create.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

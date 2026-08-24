@@ -1,0 +1,53 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MechaBot STEAM Academy logo">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1C2740" />
+      <stop offset="100%" stop-color="#0B1220" />
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5B8DEF" />
+      <stop offset="100%" stop-color="#2563EB" />
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FB923C" />
+      <stop offset="100%" stop-color="#F97316" />
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4ADE80" />
+      <stop offset="100%" stop-color="#22C55E" />
+    </linearGradient>
+    <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <g filter="url(#softShadow)">
+  <g fill="none" stroke-linecap="round">
+    <path d="M58 72H40V52" stroke="url(#blueGrad)" stroke-width="6" />
+    <circle cx="40" cy="52" r="6" fill="url(#blueGrad)" />
+    <path d="M58 124H40V146" stroke="url(#greenGrad)" stroke-width="6" />
+    <circle cx="40" cy="146" r="6" fill="url(#greenGrad)" />
+    <path d="M142 72H160V52" stroke="url(#blueGrad)" stroke-width="6" />
+    <circle cx="160" cy="52" r="6" fill="url(#blueGrad)" />
+    <path d="M142 124H160V146" stroke="url(#orangeGrad)" stroke-width="6" />
+    <circle cx="160" cy="146" r="6" fill="url(#orangeGrad)" />
+  </g>
+
+  <rect x="70" y="132" width="60" height="9" rx="4.5" fill="url(#orangeGrad)" />
+
+  <rect x="49" y="80" width="16" height="26" rx="8" fill="url(#blueGrad)" />
+  <rect x="135" y="80" width="16" height="26" rx="8" fill="url(#blueGrad)" />
+
+  <line x1="100" y1="62" x2="100" y2="42" stroke="#0B1220" stroke-width="7" stroke-linecap="round" />
+  <circle cx="100" cy="38" r="8" fill="url(#orangeGrad)" />
+
+  <rect x="62" y="60" width="76" height="62" rx="21" fill="#F5F8FF" stroke="#D7E2FA" stroke-width="2.5" />
+
+  <circle cx="85" cy="94" r="10" fill="#0B1220" />
+  <circle cx="115" cy="94" r="10" fill="#0B1220" />
+  <circle cx="81.5" cy="90.5" r="3" fill="#5B8DEF" />
+  <circle cx="111.5" cy="90.5" r="3" fill="#5B8DEF" />
+
+  <rect x="87" y="112" width="26" height="8" rx="4" fill="#0B1220" opacity=".85" />
+  </g>
+</svg>

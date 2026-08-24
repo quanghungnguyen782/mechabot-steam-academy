@@ -1,0 +1,17 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Node / Python
+node_modules/
+venv/
+.env
+
+# Claude Code local settings
+.claude/
+
+# Lock files
+*.lock
+
+# VSCode browse database (huge, regenerable, machine-local)
+.vscode/browse.vc.db*

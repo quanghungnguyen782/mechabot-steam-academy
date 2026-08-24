@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STEAM Explorer | MechaBot STEAM Academy</title>
+    <meta
+      name="description"
+      content="STEAM Explorer (4–8 tuổi) tại MechaBot STEAM Academy — chương trình nền tảng giúp trẻ khám phá khoa học, công nghệ và robot qua lắp ráp mô hình và lập trình trực quan."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/mechabot-logo.svg" />
+  </head>
+  <body>
+    <header id="siteHeader">
+      <div class="nav-wrap">
+        <a href="index.html" class="logo">
+          <img class="mark" src="assets/mechabot-logo.svg" alt="MechaBot logo" />
+          <span class="logo-text">Mecha<span class="bot-accent">Bot</span><span class="tagline">STEAM ACADEMY</span></span>
+        </a>
+        <button class="burger" id="burger" aria-label="Mở menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav-links" id="navLinks">
+          <a href="index.html">Trang chủ</a>
+          <a href="about.html">Giới thiệu</a>
+          <div class="nav-item-dropdown">
+            <a href="programs.html" class="active">Chương trình</a>
+            <div class="nav-dropdown nav-dropdown-mega">
+              <div class="mega-col">
+                <span class="mega-col-title">🌱 Nền tảng</span>
+                <a href="steam-explorer.html">STEAM Explorer</a>
+                <a href="young-maker.html">Young Maker</a>
+                <a href="robotics-builder.html">Robotics Builder</a>
+              </div>
+              <div class="mega-col">
+                <span class="mega-col-title mega-col-title-blue">💡 Phát triển</span>
+                <a href="aiot-smart-systems.html">IoT &amp; Smart Systems</a>
+                <a href="ai-explorer.html">AI Explorer</a>
+              </div>
+              <div class="mega-col">
+                <span class="mega-col-title mega-col-title-orange">🏆 Thi đấu</span>
+                <a href="programs.html#track-competition">VEX IQ</a>
+                <a href="programs.html#track-competition">VEX V5</a>
+                <a href="programs.html#track-competition">WhalesBot</a>
+                <a href="programs.html#track-competition">Weeemake</a>
+              </div>
+            </div>
+          </div>
+          <a href="maker-space.html">Maker Space</a>
+          <a href="projects.html">Dự án</a>
+          <a href="library.html">Thư viện</a>
+          <a href="faq.html">Hỏi đáp</a>
+          <a href="contact.html">Liên hệ</a>
+        </nav>
+        <div class="nav-cta">
+          <a href="index.html#booking" class="btn btn-primary">Đăng ký học thử</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section-pad page-top course-hero course-hero-light">
+        <div class="container">
+          <nav class="course-breadcrumb" aria-label="breadcrumb">
+            <a href="index.html">Trang chủ</a><span>›</span>
+            <a href="programs.html">Chương trình</a><span>›</span>
+            <span>STEAM Explorer</span>
+          </nav>
+          <div class="course-hero-grid">
+            <div class="course-hero-inner">
+              <h1>STEAM Explorer</h1>
+              <p class="course-hero-tagline">Nơi trẻ bắt đầu hành trình trở thành nhà sáng tạo công nghệ.</p>
+              <p class="course-hero-desc">STEAM Explorer là chương trình nền tảng dành cho trẻ từ 4–8 tuổi, giúp các em khám phá khoa học, công nghệ và robot thông qua những câu chuyện dẫn dắt lôi cuốn, lắp ráp mô hình và lập trình trực quan. Mỗi buổi học thiết kế theo phương pháp Project-Based Learning, giúp trẻ phát triển tư duy logic, khả năng sáng tạo và sự tự tin giải quyết vấn đề.</p>
+
+              <div class="stat-row">
+                <div class="stat-chip reveal">
+                  <span class="stat-ico">🚀</span>
+                  <span class="stat-value">20+</span>
+                  <span class="stat-label">Dự án</span>
+                </div>
+                <div class="stat-chip reveal">
+                  <span class="stat-ico">👥</span>
+                  <span class="stat-value">10</span>
+                  <span class="stat-label">Học viên</span>
+                </div>
+                <div class="stat-chip reveal">
+                  <span class="stat-ico">⏰</span>
+                  <span class="stat-value">20</span>
+                  <span class="stat-label">Buổi</span>
+                </div>
+                <div class="stat-chip reveal">
+                  <span class="stat-ico">📘</span>
+                  <span class="stat-value">Giáo trình</span>
+                  <span class="stat-label">Độc quyền</span>
+                </div>
+                <div class="stat-chip reveal">
+                  <span class="stat-ico">🧩</span>
+                  <span class="stat-value">Coding</span>
+                  <span class="stat-label">Không màn hình</span>
+                </div>
+              </div>
+
+              <div class="course-hero-actions">
+                <a href="index.html#booking" class="btn btn-primary">Đăng ký khóa học ngay</a>
+              </div>
+            </div>
+            <div class="course-hero-media">
+              <div class="course-hero-media-glow" aria-hidden="true"></div>
+              <img
+                src="assets/race.png"
+                alt="Robot Race Car lắp ráp trong khóa STEAM Explorer"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad">
+        <div class="container">
+          <div class="course-detail">
+            <div class="course-section reveal">
+              <div class="course-section-title">🚀 Lộ trình học</div>
+              <h2 class="course-block-heading">20 buổi học – 4 Module chinh phục</h2>
+              <p class="course-block-tagline">"Từ những mô hình đầu tiên đến những ý tưởng sáng tạo – mỗi buổi học là một bước tiến trên hành trình trở thành Nhà phát minh nhí."</p>
+
+              <div class="module-list">
+                <div class="module-timeline-track" aria-hidden="true"></div>
+                <div class="module-timeline-fill" aria-hidden="true"></div>
+                <div class="module-card reveal">
+                  <div class="module-rail"><div class="module-num">1</div></div>
+                  <div class="module-body">
+                    <div class="module-text">
+                      <div class="module-eyebrow">🚀 Module 1 – Khởi Đầu Cùng Robot</div>
+                      <h3 class="module-title">Làm quen với Robot và Lập trình kéo thả</h3>
+                      <p class="module-desc">Học viên bước vào thế giới Robotics thông qua những mô hình đầu tiên. Các em làm quen với linh kiện, động cơ, đèn LED và lập trình Block Coding để điều khiển robot thực hiện các chuyển động cơ bản.</p>
+                      <div class="module-meta">
+                        <div class="module-projects">
+                          <span class="module-meta-label">Dự án tiêu biểu</span>
+                          <div class="module-chips">
+                            <span>🚚 Magic Truck – Hành trình bắt đầu!</span><span>🏎️ Race Car – Về đích thôi!</span><span>🚙 Off-Road Car – Không bao giờ mắc kẹt!</span><span>🚦 Traffic Light – Đèn đỏ hay đèn xanh?</span>
+                          </div>
+                        </div>
+                        <div class="module-projects">
+                          <span class="module-meta-label">Nội dung chính</span>
+                          <div class="module-chips">
+                            <span>Làm quen robot</span><span>Block Coding</span><span>LED</span><span>Motor</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="module-photo contain">
+                      <img src="assets/mechabot-magic-truck.png" alt="Robot Magic Truck lắp ráp trong Module 1" loading="lazy" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="module-card reveal">
+                  <div class="module-rail"><div class="module-num">2</div></div>
+                  <div class="module-body">
+                    <div class="module-text">
+                      <div class="module-eyebrow">⚙️ Module 2 – Khám Phá Chuyển Động</div>
+                      <h3 class="module-title">Hiểu cách Robot hoạt động</h3>
+                      <p class="module-desc">Học viên khám phá cách robot tạo ra chuyển động thông qua bánh răng, động cơ và các cơ cấu cơ khí đơn giản. Trẻ học cách kết hợp lắp ráp với lập trình để điều khiển robot thực hiện nhiều nhiệm vụ khác nhau.</p>
+                      <div class="module-meta">
+                        <div class="module-projects">
+                          <span class="module-meta-label">Dự án tiêu biểu</span>
+                          <div class="module-chips">
+                            <span>🏍️ Motorcycle – Băng qua khu rừng!</span><span>⛏️ Drilling Car – Phá đá tiến lên!</span>
+                          </div>
+                        </div>
+                        <div class="module-projects">
+                          <span class="module-meta-label">Nội dung chính</span>
+                          <div class="module-chips">
+                            <span>Chuyển động robot</span><span>Bánh răng cơ bản</span><span>Cơ cấu đơn giản</span><span>Điều khiển nhiều động cơ</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="module-photo contain">
+                      <img src="assets/mechabot-drill-car.png" alt="Cơ cấu bánh răng và trục truyền động robot trong Module 2" loading="lazy" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="module-card reveal">
+                  <div class="module-rail"><div class="module-num">3</div></div>
+                  <div class="module-body">
+                    <div class="module-text">
+                      <div class="module-eyebrow">🤖 Module 3 – Robot Thông Minh</div>
+                      <h3 class="module-title">Nâng cao tư duy lập trình và điều khiển</h3>
+                      <p class="module-desc">Học viên sử dụng các khối lệnh nâng cao để tạo nên những robot có khả năng phản hồi và thực hiện nhiều hành động thú vị. Đây là giai đoạn phát triển mạnh tư duy logic và sáng tạo.</p>
+                      <div class="module-meta">
+                        <div class="module-projects">
+                          <span class="module-meta-label">Dự án tiêu biểu</span>
+                          <div class="module-chips">
+                            <span>💃 Dancing Robot – Chào những người bạn mới!</span><span>🦆 Little Duck – Quạc! Quạc!</span>
+                          </div>
+                        </div>
+                        <div class="module-projects">
+                          <span class="module-meta-label">Nội dung chính</span>
+                          <div class="module-chips">
+                            <span>Điều kiện (If)</span><span>Vòng lặp (Loop)</span><span>Animation</span><span>Âm thanh</span><span>LED</span><span>Nhiều hành vi của robot</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="module-photo contain">
+                      <img src="assets/dancing_robot.png" alt="Robot Dancing Robot lắp ráp trong Module 3" loading="lazy" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="module-card reveal">
+                  <div class="module-rail"><div class="module-num">4</div></div>
+                  <div class="module-body">
+                    <div class="module-text">
+                      <div class="module-eyebrow">🌟 Module 4 – Nhà Phát Minh Nhí</div>
+                      <h3 class="module-title">Sáng tạo, cải tiến và trình bày ý tưởng</h3>
+                      <p class="module-desc">Học viên vận dụng toàn bộ kiến thức đã học để thiết kế hoặc cải tiến mô hình theo ý tưởng của riêng mình. Các em hoàn thiện sản phẩm, vượt qua thử thách và tự tin thuyết trình trước thầy cô, bạn bè và gia đình.</p>
+                      <div class="module-meta">
+                        <div class="module-projects">
+                          <span class="module-meta-label">Dự án tiêu biểu</span>
+                          <div class="module-chips">
+                            <span>🚁 Helicopter</span><span>🎨 Dự án cải tiến theo ý tưởng riêng của học viên</span>
+                          </div>
+                        </div>
+                        <div class="module-projects">
+                          <span class="module-meta-label">Nội dung chính</span>
+                          <div class="module-chips">
+                            <span>Dự án sáng tạo</span><span>Học sinh tự cải tiến mô hình</span><span>Thử thách</span><span>Thuyết trình sản phẩm</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="module-photo contain">
+                      <img src="assets/helicopter.png" alt="Robot Helicopter lắp ráp trong Module 4" loading="lazy" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="module-outcome reveal">
+                <div class="module-outcome-title">🎯 Kết quả sau khóa học</div>
+                <p class="module-outcome-sub">Sau 20 buổi học, học viên sẽ:</p>
+                <ul class="module-outcome-list">
+                  <li><span class="emoji">🤖</span>Hoàn thành 20+ mô hình Robotics.</li>
+                  <li><span class="emoji">💻</span>Làm quen với lập trình kéo thả (Block Coding).</li>
+                  <li><span class="emoji">⚙️</span>Hiểu các nguyên lý cơ khí và chuyển động cơ bản.</li>
+                  <li><span class="emoji">🧠</span>Phát triển tư duy logic, sáng tạo và giải quyết vấn đề.</li>
+                  <li><span class="emoji">🤝</span>Rèn luyện kỹ năng làm việc nhóm và giao tiếp.</li>
+                  <li><span class="emoji">🎤</span>Tự tin giới thiệu và thuyết trình sản phẩm của mình.</li>
+                  <li><span class="emoji">🚀</span>Sẵn sàng bước lên các chương trình Robotics nâng cao với cảm biến và AI.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="course-section reveal">
+              <div class="course-section-title">🎯 Giá trị nhận được</div>
+              <h2 class="course-block-heading">Con sẽ đạt được gì sau khóa học?</h2>
+              <div class="outcome-split">
+                <ul class="outcome-list">
+                  <li class="reveal">
+                    <span class="outcome-ico">🤖</span>
+                    <div><h3>Tự tay lắp ráp &amp; vận hành robot đầu tiên</h3><p>Con làm quen với động cơ, cảm biến, đèn LED và hoàn thiện mô hình robot của riêng mình.</p></div>
+                  </li>
+                  <li class="reveal">
+                    <span class="outcome-ico">🕹️</span>
+                    <div><h3>Lập trình trực quan, không hại mắt</h3><p>Thao tác qua khối lệnh kéo thả và điều khiển bằng thẻ/nút bấm — dễ hiểu ngay từ những buổi đầu.</p></div>
+                  </li>
+                  <li class="reveal">
+                    <span class="outcome-ico">🧠</span>
+                    <div><h3>Tư duy logic &amp; giải quyết vấn đề</h3><p>Mỗi thử thách robot là một bài toán nhỏ giúp con rèn tư duy logic và tự tin trình bày ý tưởng.</p></div>
+                  </li>
+                  <li class="reveal">
+                    <span class="outcome-ico">🎓</span>
+                    <div><h3>Chứng nhận hoàn thành &amp; sẵn sàng cho Young Maker</h3><p>Hoàn thành hơn 20 dự án STEAM, nhận chứng nhận và sẵn sàng bước sang chặng học tiếp theo.</p></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="course-section reveal">
+              <div class="course-section-title">🤖 Dự án thực hành</div>
+              <h2 class="course-block-heading">Học qua những dự án robot thực tế</h2>
+              <div class="project-grid">
+                <div class="project-card photo-card reveal">
+                  <div class="project-photo-wrap"><img src="assets/c3_projects/magic-truck.jpg" alt="Mô hình Magic Truck lắp từ bộ kit WhalesBot C3" loading="lazy" /></div>
+                  <span class="project-name">Magic Truck</span><p class="project-takeaway">Lắp ráp cơ cấu chuyển động cơ bản</p>
+                </div>
+                <div class="project-card photo-card reveal">
+                  <div class="project-photo-wrap"><img src="assets/c3_projects/traffic-light.jpg" alt="Mô hình Traffic Light lắp từ bộ kit WhalesBot C3" loading="lazy" /></div>
+                  <span class="project-name">Traffic Light</span><p class="project-takeaway">Đèn đỏ hay đèn xanh?</p>
+                </div>
+                <div class="project-card photo-card reveal">
+                  <div class="project-photo-wrap"><img src="assets/c3_projects/dancing-robot.jpg" alt="Mô hình Dancing Robot lắp từ bộ kit WhalesBot C3" loading="lazy" /></div>
+                  <span class="project-name">Dancing Robot</span><p class="project-takeaway">Khối lệnh Loop &amp; Animation</p>
+                </div>
+                <div class="project-card photo-card reveal">
+                  <div class="project-photo-wrap"><img src="assets/c3_projects/race-car.jpg" alt="Mô hình Race Car lắp từ bộ kit WhalesBot C3" loading="lazy" /></div>
+                  <span class="project-name">Race Car</span><p class="project-takeaway">Bánh răng &amp; động cơ điều khiển</p>
+                </div>
+                <div class="project-card photo-card reveal">
+                  <div class="project-photo-wrap"><img src="assets/c3_projects/off-road-car.jpg" alt="Mô hình Off-Road Car lắp từ bộ kit WhalesBot C3" loading="lazy" /></div>
+                  <span class="project-name">Off-Road Car</span><p class="project-takeaway">Không bao giờ mắc kẹt!</p>
+                </div>
+                <div class="project-card photo-card reveal">
+                  <div class="project-photo-wrap"><img src="assets/c3_projects/little-duck.jpg" alt="Mô hình Little Duck lắp từ bộ kit WhalesBot C3" loading="lazy" /></div>
+                  <span class="project-name">Little Duck</span><p class="project-takeaway">Lập trình chuyển động &amp; âm thanh</p>
+                </div>
+                <div class="project-card photo-card reveal">
+                  <div class="project-photo-wrap"><img src="assets/c3_projects/drilling-car.jpg" alt="Mô hình Drilling Car lắp từ bộ kit WhalesBot C3" loading="lazy" /></div>
+                  <span class="project-name">Drilling Car</span><p class="project-takeaway">Phá đá tiến lên!</p>
+                </div>
+                <div class="project-card photo-card reveal">
+                  <div class="project-photo-wrap"><img src="assets/c3_projects/motorcycle.jpg" alt="Mô hình Motorcycle lắp từ bộ kit WhalesBot C3" loading="lazy" /></div>
+                  <span class="project-name">Motorcycle</span><p class="project-takeaway">Băng qua khu rừng!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="programs-cta reveal" style="margin-top:32px;">
+            <a href="programs.html">← Xem tất cả chương trình</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad bg-paper">
+        <div class="container">
+          <div class="section-head reveal center">
+            <h2>Lộ trình phát triển</h2>
+          </div>
+          <div class="career-path reveal">
+            <div class="career-step current">
+              <span class="career-step-name">STEAM Explorer</span>
+              <span class="career-step-age">4–8 tuổi</span>
+            </div>
+            <span class="career-arrow">→</span>
+            <a class="career-step" href="young-maker.html">
+              <span class="career-step-name">Young Maker</span>
+              <span class="career-step-age">8–10 tuổi</span>
+            </a>
+            <span class="career-arrow">→</span>
+            <a class="career-step" href="robotics-builder.html">
+              <span class="career-step-name">Robotics Builder</span>
+              <span class="career-step-age">9–15 tuổi</span>
+            </a>
+            <span class="career-arrow">→</span>
+            <a class="career-step" href="aiot-smart-systems.html">
+              <span class="career-step-name">IoT &amp; Smart Systems</span>
+              <span class="career-step-age">9–16 tuổi</span>
+            </a>
+            <span class="career-arrow">→</span>
+            <a class="career-step" href="ai-explorer.html">
+              <span class="career-step-name">AI Explorer</span>
+              <span class="career-step-age">12–18 tuổi</span>
+            </a>
+            <span class="career-arrow">→</span>
+            <a class="career-step" href="programs.html#track-competition">
+              <span class="career-step-name">Competition Academy</span>
+              <span class="career-step-age">10–18 tuổi</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="reveal">
+      <div class="container">
+        <div class="foot-top">
+          <div class="foot-brand">
+            <a href="index.html" class="logo foot-logo">
+              <img class="mark" src="assets/mechabot-logo.svg" alt="MechaBot logo" />
+              <span class="logo-text">Mecha<span class="bot-accent">Bot</span><span class="tagline">STEAM ACADEMY</span></span>
+            </a>
+            <p class="foot-brand-desc">MechaBot STEAM Academy là trung tâm đào tạo STEM thực hành cho trẻ 4–18 tuổi. <a href="index.html#booking">Đăng ký học thử</a> hoặc <a href="contact.html">liên hệ tư vấn</a> ngay hôm nay!</p>
+          </div>
+          <div class="foot-cols">
+            <div class="foot-col-links">
+              <span class="foot-col-title">Khám phá</span>
+              <a href="about.html">Giới thiệu</a>
+              <a href="programs.html">Chương trình</a>
+              <a href="projects.html">Dự án</a>
+              <a href="library.html">Thư viện</a>
+            </div>
+            <div class="foot-col-links">
+              <span class="foot-col-title">Hỗ trợ</span>
+              <a href="maker-space.html">Maker Space</a>
+              <a href="faq.html">Hỏi đáp</a>
+              <a href="contact.html">Liên hệ</a>
+              <a href="index.html#booking">Đăng ký học thử</a>
+            </div>
+            <div class="foot-col-social">
+              <span class="foot-col-title">Kết nối cùng MechaBot</span>
+              <div class="foot-social">
+                <a class="social-ico social-fb" href="#" aria-label="Facebook" target="_blank" rel="noopener"><span>f</span></a>
+                <a class="social-ico social-yt" href="#" aria-label="YouTube" target="_blank" rel="noopener"><span>▶</span></a>
+                <a class="social-ico social-tiktok" href="#" aria-label="TikTok" target="_blank" rel="noopener"><span>TT</span></a>
+                <a class="social-ico social-zalo" href="#" aria-label="Zalo OA" target="_blank" rel="noopener"><span>Z</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="foot-contact-row">
+          <div><b>Địa chỉ</b>Cơ sở 1: Chúc Sơn, Chương Mỹ, Hà Nội<br />Cơ sở 2: Biển Xanh 49, Vinhomes Ocean Park 2, Văn Giang, Hưng Yên</div>
+          <div><b>Điện thoại liên hệ</b><span class="foot-copy" data-copy="0362 750 092"><a href="tel:0362750092">0362 750 092</a><span class="foot-copy-tooltip">Đã sao chép!</span></span></div>
+          <div><b>Email</b><span class="foot-copy" data-copy="mechabot4702@gmail.com"><a href="mailto:mechabot4702@gmail.com">mechabot4702@gmail.com</a><span class="foot-copy-tooltip">Đã sao chép!</span></span></div>
+        </div>
+
+        <div class="foot-bottom">
+          <span>© 2026 MechaBot STEAM Academy. All rights reserved.</span>
+          <div class="foot-legal">
+            <a href="terms.html">Điều khoản sử dụng</a><span class="foot-legal-sep">|</span>
+            <a href="privacy.html">Quyền riêng tư</a><span class="foot-legal-sep">|</span>
+            <a href="refund.html">Chính sách hoàn phí</a>
+          </div>
+        </div>
+      </div>
+      <button class="scroll-top" id="scrollTopBtn" type="button" aria-label="Lên đầu trang">↑</button>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

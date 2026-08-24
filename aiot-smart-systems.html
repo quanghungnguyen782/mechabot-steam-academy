@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IoT &amp; Smart Systems | MechaBot STEAM Academy</title>
+    <meta
+      name="description"
+      content="IoT &amp; Smart Systems (9–16 tuổi) tại MechaBot STEAM Academy — Nâng cao năng lực IoT, kết nối và điều khiển các hệ thống thông minh quy mô lớn hơn."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/mechabot-logo.svg" />
+  </head>
+  <body>
+    <header id="siteHeader">
+      <div class="nav-wrap">
+        <a href="index.html" class="logo">
+          <img class="mark" src="assets/mechabot-logo.svg" alt="MechaBot logo" />
+          <span class="logo-text">Mecha<span class="bot-accent">Bot</span><span class="tagline">STEAM ACADEMY</span></span>
+        </a>
+        <button class="burger" id="burger" aria-label="Mở menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav-links" id="navLinks">
+          <a href="index.html">Trang chủ</a>
+          <a href="about.html">Giới thiệu</a>
+          <div class="nav-item-dropdown">
+            <a href="programs.html" class="active">Chương trình</a>
+            <div class="nav-dropdown nav-dropdown-mega">
+              <div class="mega-col">
+                <span class="mega-col-title">🌱 Nền tảng</span>
+                <a href="steam-explorer.html">STEAM Explorer</a>
+                <a href="young-maker.html">Young Maker</a>
+                <a href="robotics-builder.html">Robotics Builder</a>
+              </div>
+              <div class="mega-col">
+                <span class="mega-col-title mega-col-title-blue">💡 Phát triển</span>
+                <a href="aiot-smart-systems.html">IoT &amp; Smart Systems</a>
+                <a href="ai-explorer.html">AI Explorer</a>
+              </div>
+              <div class="mega-col">
+                <span class="mega-col-title mega-col-title-orange">🏆 Thi đấu</span>
+                <a href="programs.html#track-competition">VEX IQ</a>
+                <a href="programs.html#track-competition">VEX V5</a>
+                <a href="programs.html#track-competition">WhalesBot</a>
+                <a href="programs.html#track-competition">Weeemake</a>
+              </div>
+            </div>
+          </div>
+          <a href="maker-space.html">Maker Space</a>
+          <a href="projects.html">Dự án</a>
+          <a href="library.html">Thư viện</a>
+          <a href="faq.html">Hỏi đáp</a>
+          <a href="contact.html">Liên hệ</a>
+        </nav>
+        <div class="nav-cta">
+          <a href="index.html#booking" class="btn btn-primary">Đăng ký học thử</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section-pad page-top course-hero course-hero-light">
+        <div class="container">
+          <nav class="course-breadcrumb" aria-label="breadcrumb">
+            <a href="index.html">Trang chủ</a><span>›</span>
+            <a href="programs.html">Chương trình</a><span>›</span>
+            <span>IoT &amp; Smart Systems</span>
+          </nav>
+          <div class="course-hero-grid">
+            <div class="course-hero-inner">
+              <h1>IoT &amp; Smart Systems</h1>
+              <p class="course-hero-tagline">Nơi học viên xây dựng hệ thống thông minh kết nối vạn vật.</p>
+              <p class="course-hero-desc">IoT &amp; Smart Systems là chương trình nâng cao dành cho học sinh 9–16 tuổi, giúp các em từng bước làm chủ kỹ năng kết hợp cảm biến, xử lý dữ liệu và xây dựng các hệ thống thông minh kết nối Internet thông qua các dự án thực hành theo lộ trình từ cơ bản đến nâng cao. Mỗi buổi học là một thử thách mới, nơi học viên tự tay xây dựng các hệ thống IoT có khả năng vận hành và giám sát thực tế.</p>
+              <p class="course-hero-desc">Trong suốt khóa học, học viên sẽ khám phá cách ESP32, cảm biến, nền tảng Cloud và ứng dụng di động kết hợp để tạo nên những hệ thống có thể thu thập dữ liệu, cảnh báo và điều khiển từ xa. Thông qua hơn 20 dự án thực hành, các em phát triển tư duy hệ thống, khả năng xử lý dữ liệu thời gian thực và nền tảng IoT vững chắc để sẵn sàng chinh phục những chương trình công nghệ ở cấp độ cao hơn.</p>
+
+              <div class="course-hero-highlights">
+                <div class="hl-grid">
+                  <div class="hl-card reveal">
+                    <span class="hl-ico hl-ico-blue">📡</span>
+                    <b><span class="hl-num" data-target="20" data-suffix="+">20+</span> Hệ thống IoT</b>
+                    <span>Hoàn thành hơn 20 dự án IoT từ cảm biến đến điều khiển từ xa.</span>
+                  </div>
+                  <div class="hl-card reveal">
+                    <span class="hl-ico hl-ico-purple">👥</span>
+                    <b>Tối đa <span class="hl-num" data-target="10">10</span> học viên/lớp</b>
+                    <span>Giáo viên đồng hành sát sao trong từng buổi học.</span>
+                  </div>
+                  <div class="hl-card reveal">
+                    <span class="hl-ico hl-ico-orange">⏰</span>
+                    <b><span class="hl-num" data-target="20">20</span> buổi • 90 phút/buổi</b>
+                    <span>Lộ trình gồm 3 module với hơn 30 giờ thực hành.</span>
+                  </div>
+                  <div class="hl-card reveal">
+                    <span class="hl-ico hl-ico-slate">☁️</span>
+                    <b>Cloud &amp; ESP32</b>
+                    <span>Kết hợp vi điều khiển ESP32 với nền tảng Cloud để xây dựng hệ thống thông minh.</span>
+                  </div>
+                  <div class="hl-card reveal">
+                    <span class="hl-ico hl-ico-pink">📱</span>
+                    <b><span class="hl-num" data-target="100" data-suffix="%">100%</span> Project-Based Learning</b>
+                    <span>Học qua dự án, thực hành trên từng hệ thống IoT và giải quyết các thử thách thực tế.</span>
+                  </div>
+                  <div class="hl-card reveal">
+                    <span class="hl-ico hl-ico-green">🎓</span>
+                    <b>Chứng nhận hoàn thành</b>
+                    <span>Nhận chứng nhận và portfolio dự án IoT cá nhân sau khi hoàn thành khóa học.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="course-hero-actions">
+                <a href="index.html#booking" class="btn btn-primary">Đăng ký khóa học ngay</a>
+              </div>
+            </div>
+            <div class="course-hero-media">
+              <div class="course-hero-media-glow" aria-hidden="true"></div>
+              <img
+                src="assets/hero_Iot.png"
+                alt="Học sinh theo dõi dữ liệu hệ thống IoT trên máy tính"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad">
+        <div class="container">
+          <div class="course-detail">
+            <div class="course-section reveal">
+              <div class="course-section-title">🚀 Lộ trình học</div>
+              <h2 class="course-block-heading">20 buổi học – 3 Module chinh phục IoT</h2>
+              <p class="course-block-tagline">"Từ cảm biến đơn lẻ đến hệ thống IoT quy mô lớn – mỗi module là một bước tiến trên hành trình trở thành kỹ sư hệ thống thông minh."</p>
+
+              <div class="module-list">
+                <div class="module-timeline-track" aria-hidden="true"></div>
+                <div class="module-timeline-fill" aria-hidden="true"></div>
+                <div class="module-card reveal">
+                  <div class="module-rail"><div class="module-num">1</div></div>
+                  <div class="module-body">
+                    <div class="module-text">
+                      <div class="module-eyebrow">🚀 Module 1 – Smart Devices</div>
+                      <h3 class="module-title">Khám phá thiết bị thông minh – Tự tay tạo nên những sản phẩm đầu tiên</h3>
+                      <p class="module-desc">Đây là bước khởi đầu giúp học viên bước vào thế giới công nghệ thông qua việc tự tay lắp ráp, lập trình và điều khiển các thiết bị thông minh. Từ những linh kiện đơn giản, các em sẽ từng bước tạo ra những sản phẩm có thể phát sáng, chuyển động, phát âm thanh và tự động phản hồi với môi trường xung quanh.</p>
+                      <p class="module-desc">Thông qua mỗi dự án thực tế, học viên không chỉ học cách lập trình mà còn hiểu cách các thiết bị điện tử hoạt động và phối hợp với nhau để giải quyết những bài toán trong cuộc sống. Mỗi buổi học đều mang đến một sản phẩm hoàn chỉnh, giúp các em vừa học vừa khám phá niềm vui sáng tạo.</p>
+                      <p class="module-desc">Đây là giai đoạn xây dựng nền tảng về lập trình, điện tử và tư duy kỹ thuật, giúp học viên tự tin bước tiếp vào hành trình chinh phục Internet of Things (IoT).</p>
+                    </div>
+                    <div class="module-photo">
+                      <img src="assets/Module1_IOT.png" alt="Học sinh lắp ráp và lập trình thiết bị thông minh với Arduino" loading="lazy" />
+                    </div>
+                  </div>
+                  <div class="module-meta">
+                    <div class="module-projects">
+                      <span class="module-meta-label">Học viên sẽ khám phá</span>
+                      <div class="module-chips">
+                        <span>💻 Lập trình điều khiển các thiết bị thông minh</span><span>⚙️ Khám phá cách cảm biến và động cơ hoạt động</span><span>💡 Thiết kế các hệ thống có khả năng tự động phản hồi</span><span>🔍 Rèn luyện tư duy logic, sáng tạo và giải quyết vấn đề</span><span>🛠️ Phát triển kỹ năng thiết kế và hoàn thiện sản phẩm thực tế</span>
+                      </div>
+                    </div>
+                    <div class="module-projects">
+                      <span class="module-meta-label">Dự án tiêu biểu</span>
+                      <div class="module-chips">
+                        <span>💡 Đèn Cầu Vồng Đổi Màu – Đèn LED tự động đổi màu theo hiệu ứng</span><span>🌀 Quạt Thông Minh – Quạt tự động điều chỉnh theo cảm biến</span><span>🚪 Cổng Tự Động Nghe Lời – Cổng mở/đóng theo lệnh điều khiển</span><span>🌤️ Trạm Đo Thời Tiết Mini – Đo nhiệt độ, độ ẩm bằng cảm biến</span><span>🅿️ Hệ Thống Bãi Đỗ Xe Tự Động – Mô hình bãi đỗ xe tự động hóa</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="module-card reveal">
+                  <div class="module-rail"><div class="module-num">2</div></div>
+                  <div class="module-body">
+                    <div class="module-text">
+                      <div class="module-eyebrow">🌐 Module 2 – Connected Devices</div>
+                      <h3 class="module-title">Kết nối vạn vật – Biến thiết bị thông minh thành hệ thống IoT</h3>
+                      <p class="module-desc">Sau khi đã làm chủ việc thiết kế và lập trình các thiết bị thông minh, học viên sẽ bước sang giai đoạn kết nối thiết bị với Internet, mở ra thế giới của Internet of Things (IoT). Các em sẽ học cách sử dụng ESP32 để giúp những sản phẩm mình tạo ra có thể giao tiếp với điện thoại, máy tính và các thiết bị khác thông qua WiFi.</p>
+                      <p class="module-desc">Không chỉ điều khiển thiết bị từ xa, học viên còn được khám phá cách dữ liệu được thu thập, hiển thị trực quan trên Dashboard và xây dựng các ứng dụng giúp giám sát, quản lý hệ thống theo thời gian thực. Từ đây, các em sẽ hiểu cách những ngôi nhà thông minh, trang trại thông minh hay các hệ thống tự động hiện đại hoạt động trong thực tế.</p>
+                      <p class="module-desc">Đây là bước chuyển quan trọng từ một thiết bị hoạt động độc lập sang một hệ thống có khả năng kết nối và giao tiếp, giúp học viên tiếp cận những công nghệ đang được ứng dụng rộng rãi trong cuộc sống và công nghiệp 4.0.</p>
+                    </div>
+                    <div class="module-photo">
+                      <img src="assets/module2_IOT.png" alt="Thiết bị kết nối WiFi qua ESP32 gửi dữ liệu lên Cloud" loading="lazy" />
+                    </div>
+                  </div>
+                  <div class="module-meta">
+                    <div class="module-projects">
+                      <span class="module-meta-label">Học viên sẽ khám phá</span>
+                      <div class="module-chips">
+                        <span>📶 Kết nối thiết bị với WiFi bằng ESP32</span><span>📱 Điều khiển và giám sát thiết bị qua điện thoại</span><span>☁️ Lưu trữ và hiển thị dữ liệu trên nền tảng IoT</span><span>📊 Xây dựng Dashboard theo dõi dữ liệu theo thời gian thực</span><span>🌐 Tư duy thiết kế các hệ thống kết nối và giao tiếp thông minh</span>
+                      </div>
+                    </div>
+                    <div class="module-projects">
+                      <span class="module-meta-label">Dự án tiêu biểu</span>
+                      <div class="module-chips">
+                        <span>🗣️ Điều Khiển Đèn Bằng Giọng Nói – Bật/tắt đèn qua lệnh giọng nói</span><span>🔒 Khóa Cửa Mật Mã Thông Minh – Mở khóa từ xa qua mã số</span><span>🪟 Rèm Cửa Tự Động – Đóng/mở rèm theo lệnh điều khiển</span><span>❄️ Điều Hòa &amp; Máy Tạo Độ Ẩm Thông Minh – Điều khiển nhiệt độ, độ ẩm qua app</span><span>🚪 Điều Khiển Cửa &amp; Giải Trí Bằng Giọng Nói – Ra lệnh giọng nói cho nhiều thiết bị</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="module-card reveal">
+                  <div class="module-rail"><div class="module-num">3</div></div>
+                  <div class="module-body">
+                    <div class="module-text">
+                      <div class="module-eyebrow">🤖 Module 3 – Intelligent Systems</div>
+                      <h3 class="module-title">Xây dựng hệ thống thông minh – Kết nối, tự động hóa và sáng tạo</h3>
+                      <p class="module-desc">Đây là giai đoạn học viên tổng hợp toàn bộ kiến thức đã học để xây dựng một hệ thống IoT hoàn chỉnh. Thay vì lập trình từng thiết bị riêng lẻ, các em sẽ học cách kết nối nhiều thiết bị với nhau để tạo nên một hệ thống có khả năng tự động giám sát, điều khiển và phản hồi theo các tình huống thực tế.</p>
+                      <p class="module-desc">Thông qua các dự án thực hành, học viên sẽ từng bước hoàn thiện một mô hình Smart Home với nhiều tính năng như điều khiển đèn, quạt, cửa, theo dõi môi trường, chăm sóc cây xanh và cảnh báo an ninh. Mỗi tính năng đều được xây dựng từ chính những kiến thức đã học ở hai module trước, giúp các em hiểu cách một hệ thống thông minh được thiết kế và vận hành trong thực tế.</p>
+                      <p class="module-desc">Đây là giai đoạn giúp học viên phát triển tư duy thiết kế hệ thống, khả năng sáng tạo và giải quyết vấn đề, đồng thời hiểu cách các công nghệ IoT đang được ứng dụng trong nhà thông minh, nông nghiệp thông minh và nhiều lĩnh vực của cuộc sống.</p>
+                    </div>
+                    <div class="module-photo">
+                      <img src="assets/module3_IOT.png" alt="Hệ thống IoT Smart Home tích hợp nhiều thiết bị thông minh" loading="lazy" />
+                    </div>
+                  </div>
+                  <div class="module-meta">
+                    <div class="module-projects">
+                      <span class="module-meta-label">Học viên sẽ khám phá</span>
+                      <div class="module-chips">
+                        <span>🏠 Thiết kế và xây dựng hệ thống Smart Home</span><span>⚙️ Xây dựng các kịch bản tự động hóa thông minh</span><span>📡 Kết nối và quản lý nhiều thiết bị trong cùng một hệ thống</span><span>📱 Điều khiển và giám sát toàn bộ hệ thống trên điện thoại</span><span>🧠 Tư duy thiết kế giải pháp IoT cho các bài toán thực tế</span>
+                      </div>
+                    </div>
+                    <div class="module-projects">
+                      <span class="module-meta-label">Dự án tiêu biểu</span>
+                      <div class="module-chips">
+                        <span>🏠 Smart Home – Hệ thống nhà thông minh tích hợp</span><span>🚨 Cảnh Báo An Toàn Thông Minh – Hệ thống phát hiện và cảnh báo nguy cơ</span><span>🚗 Nhận Diện Biển Số Xe Tự Động – Camera AI nhận diện xe ra/vào</span><span>🌡️ Trạm Thời Tiết Thông Minh – Giám sát môi trường toàn diện</span><span>🔥 Robot Chữa Cháy Mini – Robot tự động phát hiện và xử lý cháy</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="course-section reveal">
+              <div class="course-section-title">🎯 Giá trị nhận được</div>
+              <h2 class="course-block-heading">Con sẽ đạt được gì sau khóa học?</h2>
+              <p class="course-block-tagline">Khóa học giúp học sinh từng bước làm chủ công nghệ Internet of Things (IoT) thông qua các dự án thực hành thực tế. Từ việc kết nối thiết bị với Internet đến xây dựng các hệ thống thông minh, học viên sẽ phát triển tư duy sáng tạo, khả năng giải quyết vấn đề và tự tin tạo ra những sản phẩm công nghệ của riêng mình.</p>
+              <div class="outcome-split">
+                <ul class="outcome-list">
+                  <li class="reveal">
+                    <span class="outcome-ico">🌐</span>
+                    <div><h3>Hiểu cách các thiết bị kết nối với Internet</h3><p>Học sinh biết cách sử dụng ESP32 để kết nối WiFi, truyền và nhận dữ liệu, từ đó tạo nên những thiết bị có thể giao tiếp và hoạt động từ xa.</p></div>
+                  </li>
+                  <li class="reveal">
+                    <span class="outcome-ico">📊</span>
+                    <div><h3>Xây dựng hệ thống giám sát thông minh</h3><p>Học viên biết cách hiển thị dữ liệu từ cảm biến lên Dashboard trực quan, theo dõi trạng thái thiết bị theo thời gian thực và hiểu cách các hệ thống thông minh vận hành.</p></div>
+                  </li>
+                  <li class="reveal">
+                    <span class="outcome-ico">📱</span>
+                    <div><h3>Điều khiển thiết bị bằng điện thoại</h3><p>Học sinh có thể tự thiết kế các ứng dụng đơn giản để điều khiển đèn, quạt, cửa và nhiều thiết bị khác từ điện thoại hoặc máy tính, giống như những hệ thống Smart Home hiện đại.</p></div>
+                  </li>
+                  <li class="reveal">
+                    <span class="outcome-ico">🏠</span>
+                    <div><h3>Tự xây dựng hệ thống IoT hoàn chỉnh</h3><p>Cuối khóa, học viên có thể kết hợp nhiều cảm biến và thiết bị để tạo nên một hệ thống Smart Home với khả năng tự động hóa, giám sát và điều khiển từ xa, đồng thời có nền tảng để tiếp tục học Robotics, IoT nâng cao và tham gia các cuộc thi công nghệ.</p></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="course-section reveal">
+              <div class="course-section-title">🤖 Dự án thực hành</div>
+              <h2 class="course-block-heading">Học qua những dự án IoT thực tế</h2>
+              <p class="course-block-tagline">20 dự án IoT xuyên suốt khóa học — mỗi dự án có video ngắn ghi lại thiết bị vận hành thực tế.</p>
+              <div class="project-grid project-grid-video">
+                <div class="project-card video-card reveal">
+                  <div class="project-video-wrap">
+                    <video class="project-video" preload="metadata" playsinline poster="assets/video_Iot_15_in1/posters/gesture-fan-robot.jpg"><source src="assets/video_Iot_15_in1/clips/gesture-fan-robot.mp4" type="video/mp4" /></video>
+                    <button class="project-play" type="button" aria-label="Xem video Quạt điều khiển bằng cử chỉ">▶</button>
+                    <span class="project-duration">5s</span>
+                  </div>
+                  <span class="project-name">Quạt Điều Khiển Bằng Cử Chỉ</span>
+                </div>
+                <div class="project-card video-card reveal">
+                  <div class="project-video-wrap">
+                    <video class="project-video" preload="metadata" playsinline poster="assets/video_Iot_15_in1/posters/smart-coded-lock.jpg"><source src="assets/video_Iot_15_in1/clips/smart-coded-lock.mp4" type="video/mp4" /></video>
+                    <button class="project-play" type="button" aria-label="Xem video Khóa cửa mật mã thông minh">▶</button>
+                    <span class="project-duration">6s</span>
+                  </div>
+                  <span class="project-name">Khóa Cửa Mật Mã Thông Minh</span>
+                </div>
+                <div class="project-card video-card reveal">
+                  <div class="project-video-wrap">
+                    <video class="project-video" preload="metadata" playsinline poster="assets/video_Iot_15_in1/posters/smart-hanger.jpg"><source src="assets/video_Iot_15_in1/clips/smart-hanger.mp4" type="video/mp4" /></video>
+                    <button class="project-play" type="button" aria-label="Xem video Giá phơi đồ thông minh">▶</button>
+                    <span class="project-duration">7s</span>
+                  </div>
+                  <span class="project-name">Giá Phơi Đồ Thông Minh</span>
+                </div>
+                <div class="project-card video-card reveal">
+                  <div class="project-video-wrap">
+                    <video class="project-video" preload="metadata" playsinline poster="assets/video_Iot_15_in1/posters/fire-fighter.jpg"><source src="assets/video_Iot_15_in1/clips/fire-fighter.mp4" type="video/mp4" /></video>
+                    <button class="project-play" type="button" aria-label="Xem video Robot chữa cháy mini">▶</button>
+                    <span class="project-duration">4s</span>
+                  </div>
+                  <span class="project-name">Robot Chữa Cháy Mini</span>
+                </div>
+                <div class="project-card video-card reveal">
+                  <div class="project-video-wrap">
+                    <video class="project-video" preload="metadata" playsinline poster="assets/video_Iot_15_in1/posters/air-conditioner.jpg"><source src="assets/video_Iot_15_in1/clips/air-conditioner.mp4" type="video/mp4" /></video>
+                    <button class="project-play" type="button" aria-label="Xem video Máy lạnh mini tự động">▶</button>
+                    <span class="project-duration">4s</span>
+                  </div>
+                  <span class="project-name">Máy Lạnh Mini Tự Động</span>
+                </div>
+                <div class="project-card video-card reveal">
+                  <div class="project-video-wrap">
+                    <video class="project-video" preload="metadata" playsinline poster="assets/video_Iot_15_in1/posters/moving-robot-car.jpg"><source src="assets/video_Iot_15_in1/clips/moving-robot-car.mp4" type="video/mp4" /></video>
+                    <button class="project-play" type="button" aria-label="Xem video Xe robot tự hành">▶</button>
+                    <span class="project-duration">5s</span>
+                  </div>
+                  <span class="project-name">Xe Robot Tự Hành</span>
+                </div>
+                <div class="project-card video-card reveal">
+                  <div class="project-video-wrap">
+                    <video class="project-video" preload="metadata" playsinline poster="assets/video_Iot_15_in1/posters/smart-curtain.jpg"><source src="assets/video_Iot_15_in1/clips/smart-curtain.mp4" type="video/mp4" /></video>
+                    <button class="project-play" type="button" aria-label="Xem video Rèm cửa tự động">▶</button>
+                    <span class="project-duration">9s</span>
+                  </div>
+                  <span class="project-name">Rèm Cửa Tự Động</span>
+                </div>
+                <div class="project-card video-card reveal">
+                  <div class="project-video-wrap">
+                    <video class="project-video" preload="metadata" playsinline poster="assets/video_Iot_15_in1/posters/smart-fan.jpg"><source src="assets/video_Iot_15_in1/clips/smart-fan.mp4" type="video/mp4" /></video>
+                    <button class="project-play" type="button" aria-label="Xem video Quạt thông minh">▶</button>
+                    <span class="project-duration">3s</span>
+                  </div>
+                  <span class="project-name">Quạt Thông Minh</span>
+                </div>
+                <div class="project-card video-card reveal">
+                  <div class="project-video-wrap">
+                    <video class="project-video" preload="metadata" playsinline poster="assets/video_Iot_15_in1/posters/corridor-lamp.jpg"><source src="assets/video_Iot_15_in1/clips/corridor-lamp.mp4" type="video/mp4" /></video>
+                    <button class="project-play" type="button" aria-label="Xem video Đèn hành lang tự động">▶</button>
+                    <span class="project-duration">3s</span>
+                  </div>
+                  <span class="project-name">Đèn Hành Lang Tự Động</span>
+                </div>
+                <div class="project-card video-card reveal">
+                  <div class="project-video-wrap">
+                    <video class="project-video" preload="metadata" playsinline poster="assets/video_Iot_15_in1/posters/weather-station.jpg"><source src="assets/video_Iot_15_in1/clips/weather-station.mp4" type="video/mp4" /></video>
+                    <button class="project-play" type="button" aria-label="Xem video Trạm đo thời tiết mini">▶</button>
+                    <span class="project-duration">3s</span>
+                  </div>
+                  <span class="project-name">Trạm Đo Thời Tiết Mini</span>
+                </div>
+                <div class="project-card video-card reveal">
+                  <div class="project-video-wrap">
+                    <video class="project-video" preload="metadata" playsinline poster="assets/video_Iot_15_in1/posters/obedient-gate.jpg"><source src="assets/video_Iot_15_in1/clips/obedient-gate.mp4" type="video/mp4" /></video>
+                    <button class="project-play" type="button" aria-label="Xem video Cổng tự động nghe lời">▶</button>
+                    <span class="project-duration">2s</span>
+                  </div>
+                  <span class="project-name">Cổng Tự Động Nghe Lời</span>
+                </div>
+                <div class="project-card video-card reveal">
+                  <div class="project-video-wrap">
+                    <video class="project-video" preload="metadata" playsinline poster="assets/video_Iot_15_in1/posters/rainbow-color-lamp.jpg"><source src="assets/video_Iot_15_in1/clips/rainbow-color-lamp.mp4" type="video/mp4" /></video>
+                    <button class="project-play" type="button" aria-label="Xem video Đèn cầu vồng đổi màu">▶</button>
+                    <span class="project-duration">4s</span>
+                  </div>
+                  <span class="project-name">Đèn Cầu Vồng Đổi Màu</span>
+                </div>
+                <div class="project-card video-card reveal">
+                  <div class="project-video-wrap">
+                    <video class="project-video" preload="metadata" playsinline poster="assets/video_Iot_15_in1/posters/parking-lot-system.jpg"><source src="assets/video_Iot_15_in1/clips/parking-lot-system.mp4" type="video/mp4" /></video>
+                    <button class="project-play" type="button" aria-label="Xem video Hệ thống bãi đỗ xe tự động">▶</button>
+                    <span class="project-duration">9s</span>
+                  </div>
+                  <span class="project-name">Hệ Thống Bãi Đỗ Xe Tự Động</span>
+                </div>
+                <div class="project-card video-card reveal">
+                  <div class="project-video-wrap">
+                    <video class="project-video" preload="metadata" playsinline poster="assets/video_Iot_15_in1/posters/magical-musician.jpg"><source src="assets/video_Iot_15_in1/clips/magical-musician.mp4" type="video/mp4" /></video>
+                    <button class="project-play" type="button" aria-label="Xem video Nhạc công robot kỳ diệu">▶</button>
+                    <span class="project-duration">8s</span>
+                  </div>
+                  <span class="project-name">Nhạc Công Robot Kỳ Diệu</span>
+                </div>
+                <div class="project-card video-card reveal">
+                  <div class="project-video-wrap">
+                    <video class="project-video" preload="metadata" playsinline poster="assets/video_smarthome/posters/voice-lighting-control.jpg"><source src="assets/video_smarthome/clips/voice-lighting-control.mp4" type="video/mp4" /></video>
+                    <button class="project-play" type="button" aria-label="Xem video Điều khiển đèn bằng giọng nói">▶</button>
+                    <span class="project-duration">25s</span>
+                  </div>
+                  <span class="project-name">Điều khiển đèn bằng giọng nói</span>
+                </div>
+                <div class="project-card video-card reveal">
+                  <div class="project-video-wrap">
+                    <video class="project-video" preload="metadata" playsinline poster="assets/video_smarthome/posters/smart-devices-control.jpg"><source src="assets/video_smarthome/clips/smart-devices-control.mp4" type="video/mp4" /></video>
+                    <button class="project-play" type="button" aria-label="Xem video Điều khiển cửa, cửa sổ và giải trí">▶</button>
+                    <span class="project-duration">29s</span>
+                  </div>
+                  <span class="project-name">Điều khiển cửa &amp; giải trí bằng giọng nói</span>
+                </div>
+                <div class="project-card video-card reveal">
+                  <div class="project-video-wrap">
+                    <video class="project-video" preload="metadata" playsinline poster="assets/video_smarthome/posters/smart-climate-control.jpg"><source src="assets/video_smarthome/clips/smart-climate-control.mp4" type="video/mp4" /></video>
+                    <button class="project-play" type="button" aria-label="Xem video Điều hòa và máy tạo độ ẩm thông minh">▶</button>
+                    <span class="project-duration">17s</span>
+                  </div>
+                  <span class="project-name">Điều hòa &amp; Máy Tạo Độ Ẩm Thông Minh</span>
+                </div>
+                <div class="project-card video-card reveal">
+                  <div class="project-video-wrap">
+                    <video class="project-video" preload="metadata" playsinline poster="assets/video_smarthome/posters/safety-alert-system.jpg"><source src="assets/video_smarthome/clips/safety-alert-system.mp4" type="video/mp4" /></video>
+                    <button class="project-play" type="button" aria-label="Xem video Cảnh báo an toàn thông minh">▶</button>
+                    <span class="project-duration">14s</span>
+                  </div>
+                  <span class="project-name">Cảnh Báo An Toàn Thông Minh</span>
+                </div>
+                <div class="project-card video-card reveal">
+                  <div class="project-video-wrap">
+                    <video class="project-video" preload="metadata" playsinline poster="assets/video_smarthome/posters/vehicle-plate-recognition.jpg"><source src="assets/video_smarthome/clips/vehicle-plate-recognition.mp4" type="video/mp4" /></video>
+                    <button class="project-play" type="button" aria-label="Xem video Nhận diện biển số xe tự động">▶</button>
+                    <span class="project-duration">20s</span>
+                  </div>
+                  <span class="project-name">Nhận Diện Biển Số Xe Tự Động</span>
+                </div>
+                <div class="project-card video-card reveal">
+                  <div class="project-video-wrap">
+                    <video class="project-video" preload="metadata" playsinline poster="assets/video_smarthome/posters/smart-weather-station.jpg"><source src="assets/video_smarthome/clips/smart-weather-station.mp4" type="video/mp4" /></video>
+                    <button class="project-play" type="button" aria-label="Xem video Trạm thời tiết thông minh">▶</button>
+                    <span class="project-duration">28s</span>
+                  </div>
+                  <span class="project-name">Trạm Thời Tiết Thông Minh</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="programs-cta reveal center" style="margin-top:48px;">
+            <a href="programs.html">← Xem tất cả chương trình</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad bg-paper">
+        <div class="container">
+          <div class="section-head reveal center">
+            <h2>Lộ trình phát triển</h2>
+          </div>
+          <div class="career-path reveal">
+            <a class="career-step" href="steam-explorer.html">
+              <span class="career-step-name">STEAM Explorer</span>
+              <span class="career-step-age">4–8 tuổi</span>
+            </a>
+            <span class="career-arrow">→</span>
+            <a class="career-step" href="young-maker.html">
+              <span class="career-step-name">Young Maker</span>
+              <span class="career-step-age">8–10 tuổi</span>
+            </a>
+            <span class="career-arrow">→</span>
+            <a class="career-step" href="robotics-builder.html">
+              <span class="career-step-name">Robotics Builder</span>
+              <span class="career-step-age">9–15 tuổi</span>
+            </a>
+            <span class="career-arrow">→</span>
+            <div class="career-step current">
+              <span class="career-step-name">IoT &amp; Smart Systems</span>
+              <span class="career-step-age">9–16 tuổi</span>
+            </div>
+            <span class="career-arrow">→</span>
+            <a class="career-step" href="ai-explorer.html">
+              <span class="career-step-name">AI Explorer</span>
+              <span class="career-step-age">12–18 tuổi</span>
+            </a>
+            <span class="career-arrow">→</span>
+            <a class="career-step" href="programs.html#track-competition">
+              <span class="career-step-name">Competition Academy</span>
+              <span class="career-step-age">10–18 tuổi</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="reveal">
+      <div class="container">
+        <div class="foot-top">
+          <div class="foot-brand">
+            <a href="index.html" class="logo foot-logo">
+              <img class="mark" src="assets/mechabot-logo.svg" alt="MechaBot logo" />
+              <span class="logo-text">Mecha<span class="bot-accent">Bot</span><span class="tagline">STEAM ACADEMY</span></span>
+            </a>
+            <p class="foot-brand-desc">MechaBot STEAM Academy là trung tâm đào tạo STEM thực hành cho trẻ 4–18 tuổi. <a href="index.html#booking">Đăng ký học thử</a> hoặc <a href="contact.html">liên hệ tư vấn</a> ngay hôm nay!</p>
+          </div>
+          <div class="foot-cols">
+            <div class="foot-col-links">
+              <span class="foot-col-title">Khám phá</span>
+              <a href="about.html">Giới thiệu</a>
+              <a href="programs.html">Chương trình</a>
+              <a href="projects.html">Dự án</a>
+              <a href="library.html">Thư viện</a>
+            </div>
+            <div class="foot-col-links">
+              <span class="foot-col-title">Hỗ trợ</span>
+              <a href="maker-space.html">Maker Space</a>
+              <a href="faq.html">Hỏi đáp</a>
+              <a href="contact.html">Liên hệ</a>
+              <a href="index.html#booking">Đăng ký học thử</a>
+            </div>
+            <div class="foot-col-social">
+              <span class="foot-col-title">Kết nối cùng MechaBot</span>
+              <div class="foot-social">
+                <a class="social-ico social-fb" href="#" aria-label="Facebook" target="_blank" rel="noopener"><span>f</span></a>
+                <a class="social-ico social-yt" href="#" aria-label="YouTube" target="_blank" rel="noopener"><span>▶</span></a>
+                <a class="social-ico social-tiktok" href="#" aria-label="TikTok" target="_blank" rel="noopener"><span>TT</span></a>
+                <a class="social-ico social-zalo" href="#" aria-label="Zalo OA" target="_blank" rel="noopener"><span>Z</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="foot-contact-row">
+          <div><b>Địa chỉ</b>Cơ sở 1: Chúc Sơn, Chương Mỹ, Hà Nội<br />Cơ sở 2: Biển Xanh 49, Vinhomes Ocean Park 2, Văn Giang, Hưng Yên</div>
+          <div><b>Điện thoại liên hệ</b><span class="foot-copy" data-copy="0362 750 092"><a href="tel:0362750092">0362 750 092</a><span class="foot-copy-tooltip">Đã sao chép!</span></span></div>
+          <div><b>Email</b><span class="foot-copy" data-copy="mechabot4702@gmail.com"><a href="mailto:mechabot4702@gmail.com">mechabot4702@gmail.com</a><span class="foot-copy-tooltip">Đã sao chép!</span></span></div>
+        </div>
+
+        <div class="foot-bottom">
+          <span>© 2026 MechaBot STEAM Academy. All rights reserved.</span>
+          <div class="foot-legal">
+            <a href="terms.html">Điều khoản sử dụng</a><span class="foot-legal-sep">|</span>
+            <a href="privacy.html">Quyền riêng tư</a><span class="foot-legal-sep">|</span>
+            <a href="refund.html">Chính sách hoàn phí</a>
+          </div>
+        </div>
+      </div>
+      <button class="scroll-top" id="scrollTopBtn" type="button" aria-label="Lên đầu trang">↑</button>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chương trình đào tạo | MechaBot STEAM Academy</title>
+    <meta
+      name="description"
+      content="Hai lộ trình đào tạo của MechaBot STEAM Academy: Lộ trình Kiến tạo (sáng tạo & ứng dụng công nghệ) và Lộ trình Chinh phục (luyện thi đấu Robotics VEX), thiết kế theo từng giai đoạn phát triển từ 4–18 tuổi."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/mechabot-logo.svg" />
+  </head>
+  <body>
+    <header id="siteHeader">
+      <div class="nav-wrap">
+        <a href="index.html" class="logo">
+          <img class="mark" src="assets/mechabot-logo.svg" alt="MechaBot logo" />
+          <span class="logo-text">Mecha<span class="bot-accent">Bot</span><span class="tagline">STEAM ACADEMY</span></span>
+        </a>
+        <button class="burger" id="burger" aria-label="Mở menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav-links" id="navLinks">
+          <a href="index.html">Trang chủ</a>
+          <a href="about.html">Giới thiệu</a>
+          <div class="nav-item-dropdown">
+            <a href="programs.html" class="active">Chương trình</a>
+            <div class="nav-dropdown nav-dropdown-mega">
+              <div class="mega-col">
+                <span class="mega-col-title">🌱 Nền tảng</span>
+                <a href="steam-explorer.html">STEAM Explorer</a>
+                <a href="young-maker.html">Young Maker</a>
+                <a href="robotics-builder.html">Robotics Builder</a>
+              </div>
+              <div class="mega-col">
+                <span class="mega-col-title mega-col-title-blue">💡 Phát triển</span>
+                <a href="aiot-smart-systems.html">IoT &amp; Smart Systems</a>
+                <a href="ai-explorer.html">AI Explorer</a>
+              </div>
+              <div class="mega-col">
+                <span class="mega-col-title mega-col-title-orange">🏆 Thi đấu</span>
+                <a href="programs.html#track-competition">VEX IQ</a>
+                <a href="programs.html#track-competition">VEX V5</a>
+                <a href="programs.html#track-competition">WhalesBot</a>
+                <a href="programs.html#track-competition">Weeemake</a>
+              </div>
+            </div>
+          </div>
+          <a href="maker-space.html">Maker Space</a>
+          <a href="projects.html">Dự án</a>
+          <a href="library.html">Thư viện</a>
+          <a href="faq.html">Hỏi đáp</a>
+          <a href="contact.html">Liên hệ</a>
+        </nav>
+        <div class="nav-cta">
+          <a href="index.html#booking" class="btn btn-primary">Đăng ký học thử</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section-pad page-top">
+        <div class="container">
+          <div class="section-head reveal center">
+            <div class="eyebrow eyebrow-badge eyebrow-badge-lg">
+              <span class="badge-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="5" y="9" width="14" height="11" rx="3" />
+                  <circle cx="9.5" cy="14.5" r="1" fill="#fff" stroke="none" />
+                  <circle cx="14.5" cy="14.5" r="1" fill="#fff" stroke="none" />
+                  <line x1="12" y1="9" x2="12" y2="6" />
+                  <circle cx="12" cy="5" r="1.2" fill="#fff" stroke="none" />
+                  <line x1="5" y1="13" x2="3" y2="13" />
+                  <line x1="19" y1="13" x2="21" y2="13" />
+                </svg>
+              </span>
+              <span class="badge-divider"></span>
+              <span class="badge-text"><b class="badge-dark">Lộ trình</b> <b class="badge-blue">đào tạo</b></span>
+            </div>
+            <h2>Hai lộ trình học tập dành cho thế hệ sáng tạo công nghệ</h2>
+            <p>Tại MechaBot STEAM Academy, chúng tôi xây dựng chương trình theo mô hình giáo dục STEAM hiện đại, giúp học sinh phát triển từ tư duy nền tảng đến năng lực sáng tạo và kỹ thuật chuyên sâu. Học sinh có thể lựa chọn một trong hai định hướng:</p>
+          </div>
+          <div class="track-pills reveal">
+            <div class="track-pill track-pill-innovation">
+              <span class="track-pill-ico">💡</span>
+              <b>Lộ trình Kiến tạo</b>
+              <span>Sáng tạo công nghệ – Xây dựng giải pháp – Phát triển tư duy kỹ thuật</span>
+            </div>
+            <div class="track-pill track-pill-competition">
+              <span class="track-pill-ico">🏆</span>
+              <b>Lộ trình Chinh phục</b>
+              <span>Rèn luyện kỹ năng – Thi đấu Robotics – Vươn tới đấu trường quốc tế</span>
+            </div>
+          </div>
+
+          <div class="route-map reveal">
+            <div class="route-col-steps route-col-steps-shared">
+              <div class="route-node"><span class="num">4–6 tuổi</span><b>STEAM Explorer</b></div>
+              <span class="route-col-arrow">↓</span>
+              <div class="route-node"><span class="num">7–9 tuổi</span><b>Young Maker</b></div>
+              <span class="route-col-arrow">↓</span>
+              <div class="route-node"><span class="num">10–12 tuổi</span><b>Robotics Builder</b></div>
+            </div>
+            <div class="route-fork-connector" aria-hidden="true"></div>
+            <div class="route-split">
+              <div class="route-split-col route-split-innovation">
+                <span class="route-track-label route-track-label-innovation">💡 Lộ trình Kiến tạo</span>
+                <div class="route-col-steps">
+                  <div class="route-node"><span class="num">📡 13–15 tuổi</span><b>IoT &amp; Smart Systems</b></div>
+                  <span class="route-col-arrow">↓</span>
+                  <div class="route-node"><span class="num">🧠 16–18 tuổi</span><b>AI Explorer</b></div>
+                </div>
+              </div>
+              <div class="route-split-col route-split-competition">
+                <span class="route-track-label route-track-label-competition">🏆 Lộ trình Chinh phục</span>
+                <div class="route-col-steps">
+                  <div class="route-node"><span class="num">Level 1–2</span><b>School &amp; National Robotics</b></div>
+                  <span class="route-col-arrow">↓</span>
+                  <div class="route-node route-node-branch">
+                    <span class="num">Level 3</span><b>International Competitions</b>
+                    <div class="branch-tags">
+                      <span>VEX IQ</span><span>Weeemake Challenge</span><span>WhalesBot Challenge</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="trust-row reveal">
+            <span class="trust-item">🎓 50+ Projects</span>
+            <span class="trust-item">🤖 100% PBL</span>
+            <span class="trust-item">🏆 Competition Pathway</span>
+            <span class="trust-item">📁 Portfolio</span>
+          </div>
+
+          <div class="programs-cta reveal">
+            <a href="#track-innovation">Khám phá từng khóa học →</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad track-banner track-banner-innovation" id="track-innovation">
+        <div class="container">
+          <div class="section-head reveal center">
+            <div class="eyebrow eyebrow-badge">
+              <span class="badge-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9 18h6M10 21h4" />
+                  <path d="M12 3a6 6 0 0 0-3.4 10.9c.6.4.9 1 .9 1.7V16h5v-.4c0-.7.3-1.3.9-1.7A6 6 0 0 0 12 3Z" />
+                </svg>
+              </span>
+              <span class="badge-divider"></span>
+              <span class="badge-text"><b class="badge-dark">Lộ trình</b> <b class="badge-blue">Kiến tạo</b></span>
+            </div>
+            <h2>Học để sáng tạo và ứng dụng công nghệ</h2>
+            <p>Lộ trình dành cho học sinh muốn phát triển tư duy công nghệ, kỹ năng thực hành và xây dựng các dự án STEAM, Robotics, AI và IoT thực tế.</p>
+          </div>
+          <div class="track-grid">
+            <article class="track-card">
+              <div class="track-card-top">
+                <span class="level-ico">🌱</span>
+                <span class="age">4–6 tuổi</span>
+                <h3>STEAM Explorer</h3>
+                <span class="kit-tag">Bộ kit: WhalesBot C3 Pro</span>
+              </div>
+              <div class="track-card-body">
+                <div class="track-block">
+                  <h4>Mục tiêu</h4>
+                  <ul class="prog-checklist">
+                    <li><span class="check">✓</span>Phát triển tư duy logic và sáng tạo</li>
+                    <li><span class="check">✓</span>Rèn luyện vận động tinh và phối hợp tay–mắt</li>
+                    <li><span class="check">✓</span>Làm quen với robot và lập trình kéo thả</li>
+                  </ul>
+                </div>
+                <div class="track-block">
+                  <h4>Nội dung nổi bật</h4>
+                  <div class="mini-tags">
+                    <span>LEGO &amp; cơ cấu cơ khí</span><span>Blockly kéo thả</span><span>Robot chuyển động</span><span>Kể chuyện với robot</span><span>STEAM qua trò chơi</span>
+                  </div>
+                </div>
+                <div class="track-block">
+                  <h4>Dự án tiêu biểu</h4>
+                  <div class="mini-tags">
+                    <span>Robot động vật</span><span>Xe đua mini</span><span>Cối xay gió</span><span>Công viên thông minh</span>
+                  </div>
+                </div>
+                <div class="track-result"><b>Kết quả:</b> 20+ mô hình STEAM đầu tiên.</div>
+                <a href="steam-explorer.html" class="prog-link prog-link-detail">Xem chi tiết →</a>
+                <a href="index.html#booking" class="prog-link">Đăng ký ngay →</a>
+              </div>
+            </article>
+            <article class="track-card">
+              <div class="track-card-top">
+                <span class="level-ico">⚙️</span>
+                <span class="age">8–10 tuổi</span>
+                <h3>Young Maker</h3>
+                <span class="kit-tag">Bộ kit: WhalesBot AI Module 1S</span>
+              </div>
+              <div class="track-card-body">
+                <div class="track-block">
+                  <h4>Mục tiêu</h4>
+                  <p>Bắt đầu hành trình trở thành kỹ sư nhí thông qua lắp ráp cơ khí, cảm biến và lập trình kéo-thả.</p>
+                </div>
+                <div class="track-block">
+                  <h4>Nội dung nổi bật</h4>
+                  <div class="mini-tags">
+                    <span>Robot Assembly</span><span>Motor &amp; Gear Mechanism</span><span>Infrared &amp; Touch Sensor</span><span>Branch Logic &amp; Comparison</span><span>Sensor-based Automation</span>
+                  </div>
+                </div>
+                <div class="track-block">
+                  <h4>Dự án tiêu biểu</h4>
+                  <div class="mini-tags">
+                    <span>Windmill Kingdom</span><span>Bee Robot</span><span>Shy Penguin</span><span>Smart Gate</span><span>Line Patrol Car</span>
+                  </div>
+                </div>
+                <div class="track-result"><b>Kết quả:</b> Hoàn thành 13+ dự án Robotics từ cơ khí đến tự động hóa.</div>
+                <a href="young-maker.html" class="prog-link prog-link-detail">Xem chi tiết →</a>
+                <a href="index.html#booking" class="prog-link">Đăng ký ngay →</a>
+              </div>
+            </article>
+            <article class="track-card">
+              <div class="track-card-top">
+                <span class="level-ico">🤖</span>
+                <span class="age">10–12 tuổi</span>
+                <h3>Robotics Builder</h3>
+                <span class="kit-tag">Bộ kit: Weeemake 15 in 1 IoT</span>
+              </div>
+              <div class="track-card-body">
+                <div class="track-block">
+                  <h4>Mục tiêu</h4>
+                  <p>Tự thiết kế, lắp ráp và lập trình robot hoàn chỉnh.</p>
+                </div>
+                <div class="track-block">
+                  <h4>Nội dung nổi bật</h4>
+                  <div class="mini-tags">
+                    <span>Arduino nâng cao</span><span>ESP32 &amp; WiFi</span><span>IoT &amp; MQTT</span><span>Điều khiển bằng điện thoại</span><span>Smart Home &amp; Smart City</span>
+                  </div>
+                </div>
+                <div class="track-block">
+                  <h4>Dự án tiêu biểu</h4>
+                  <div class="mini-tags">
+                    <span>Smart Home</span><span>Smart Parking</span><span>Weather Station</span><span>Robot điều khiển App</span>
+                  </div>
+                </div>
+                <div class="track-result"><b>Kết quả:</b> Xây dựng hệ thống IoT hoàn chỉnh đầu tiên.</div>
+                <a href="robotics-builder.html" class="prog-link prog-link-detail">Xem chi tiết →</a>
+                <a href="index.html#booking" class="prog-link">Đăng ký ngay →</a>
+              </div>
+            </article>
+            <article class="track-card">
+              <div class="track-card-top">
+                <span class="level-ico">📡</span>
+                <span class="age">13–15 tuổi</span>
+                <h3>IoT &amp; Smart Systems</h3>
+              </div>
+              <div class="track-card-body">
+                <div class="track-block">
+                  <h4>Mục tiêu</h4>
+                  <p>Nâng cao năng lực IoT, kết nối và điều khiển các hệ thống thông minh quy mô lớn hơn.</p>
+                </div>
+                <div class="track-block">
+                  <h4>Nội dung nổi bật</h4>
+                  <div class="mini-tags">
+                    <span>ESP32 nâng cao</span><span>Cloud IoT</span><span>Mobile App Control</span><span>Sensor Fusion</span><span>Data Logging</span>
+                  </div>
+                </div>
+                <div class="track-block">
+                  <h4>Dự án tiêu biểu</h4>
+                  <div class="mini-tags">
+                    <span>Smart Building</span><span>Hệ thống giám sát môi trường</span><span>IoT Dashboard</span><span>Điều khiển robot từ xa</span>
+                  </div>
+                </div>
+                <div class="track-result"><b>Kết quả:</b> Hệ thống IoT nâng cao hoàn chỉnh.</div>
+                <a href="aiot-smart-systems.html" class="prog-link prog-link-detail">Xem chi tiết →</a>
+                <a href="index.html#booking" class="prog-link">Đăng ký ngay →</a>
+              </div>
+            </article>
+            <article class="track-card">
+              <div class="track-card-top">
+                <span class="level-ico">🚀</span>
+                <span class="age">12–18 tuổi</span>
+                <h3>AI Explorer</h3>
+              </div>
+              <div class="track-card-body">
+                <div class="track-block">
+                  <h4>Mục tiêu</h4>
+                  <p>Khám phá trí tuệ nhân tạo qua thị giác máy tính, robot tự hành và tự huấn luyện mô hình AI của riêng mình.</p>
+                </div>
+                <div class="track-block">
+                  <h4>Nội dung nổi bật</h4>
+                  <div class="mini-tags">
+                    <span>Computer Vision</span><span>Object &amp; Voice Recognition</span><span>Mecanum Wheel Robotics</span><span>Model Training &amp; Deployment</span><span>Nguyên lý Machine Learning</span>
+                  </div>
+                </div>
+                <div class="track-block">
+                  <h4>Capstone Project</h4>
+                  <div class="mini-tags">
+                    <span>Trợ lý AI mini</span><span>Robot giao hàng tự hành</span><span>AI nhận diện của riêng tôi</span><span>Bộ não AI tự học</span>
+                  </div>
+                </div>
+                <div class="track-result"><b>Kết quả:</b> Portfolio công nghệ cá nhân và dự án tốt nghiệp.</div>
+                <a href="ai-explorer.html" class="prog-link prog-link-detail">Xem chi tiết →</a>
+                <a href="index.html#booking" class="prog-link">Đăng ký ngay →</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad track-banner track-banner-competition" id="track-competition">
+        <div class="container">
+          <div class="section-head reveal center">
+            <div class="eyebrow eyebrow-badge">
+              <span class="badge-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 2l2.9 6.3 6.9.7-5.2 4.7 1.5 6.8L12 17l-6.1 3.5 1.5-6.8L2.2 9l6.9-.7Z" />
+                </svg>
+              </span>
+              <span class="badge-divider"></span>
+              <span class="badge-text"><b class="badge-dark">Lộ trình</b> <b class="badge-blue">Chinh phục</b></span>
+            </div>
+            <h2>Đội tuyển Robotics thi đấu chuyên nghiệp</h2>
+            <p>Lộ trình dành cho học sinh có năng lực nổi bật và mong muốn tham gia các giải Robotics cấp trường, cấp quốc gia và quốc tế.</p>
+          </div>
+          <div class="track-grid">
+            <article class="track-card">
+              <div class="track-card-top track-card-top-orange">
+                <span class="level-ico">🏆</span>
+                <span class="age">Level 1 · 10–12 tuổi</span>
+                <h3>School Challenge</h3>
+              </div>
+              <div class="track-card-body">
+                <div class="track-block">
+                  <h4>Điều kiện tham gia</h4>
+                  <p>Hoàn thành Robotics Builder hoặc vượt qua bài kiểm tra đầu vào.</p>
+                </div>
+                <div class="track-block">
+                  <h4>Nội dung</h4>
+                  <div class="mini-tags">
+                    <span>Engineering Design Process</span><span>Cơ khí nâng cao</span><span>Gear Ratio &amp; Torque</span><span>CAD cơ bản</span><span>C++ cho Robotics</span>
+                  </div>
+                </div>
+                <div class="track-result"><b>Mục tiêu:</b> Xây dựng nền tảng kỹ thuật và tham gia giải Robotics cấp trường.</div>
+                <a href="school-challenge.html" class="prog-link prog-link-detail">Xem chi tiết →</a>
+                <a href="index.html#booking" class="prog-link">Đăng ký ngay →</a>
+              </div>
+            </article>
+            <article class="track-card">
+              <div class="track-card-top track-card-top-orange">
+                <span class="level-ico">🤖</span>
+                <span class="age">Level 2 · 11–14 tuổi</span>
+                <h3>National Robotics</h3>
+              </div>
+              <div class="track-card-body">
+                <div class="track-block">
+                  <h4>Nội dung huấn luyện</h4>
+                  <div class="mini-tags">
+                    <span>Thiết kế robot thi đấu</span><span>Autonomous Programming</span><span>Driver Control</span><span>Chiến thuật thi đấu</span><span>Engineering Notebook</span><span>Teamwork &amp; Presentation</span>
+                  </div>
+                </div>
+                <div class="track-block">
+                  <h4>Giải đấu hướng tới</h4>
+                  <div class="mini-tags">
+                    <span>Giải Robotics cấp tỉnh</span><span>Giải Robotics cấp quốc gia</span><span>VEX IQ Robotics Competition</span>
+                  </div>
+                </div>
+                <div class="track-result"><b>Kết quả:</b> Hình thành đội tuyển Robotics chính thức của MechaBot.</div>
+                <a href="national-robotics.html" class="prog-link prog-link-detail">Xem chi tiết →</a>
+                <a href="index.html#booking" class="prog-link">Đăng ký ngay →</a>
+              </div>
+            </article>
+            <article class="track-card">
+              <div class="track-card-top track-card-top-orange">
+                <span class="level-ico">🚀</span>
+                <span class="age">Level 3 · 14–18 tuổi</span>
+                <h3>International Robotics</h3>
+              </div>
+              <div class="track-card-body">
+                <div class="track-block">
+                  <h4>Định dạng thi đấu</h4>
+                  <div class="mini-tags">
+                    <span>VEX IQ</span><span>Weeemake Challenge</span><span>WhalesBot Challenge</span>
+                  </div>
+                </div>
+                <div class="track-block">
+                  <h4>Nội dung huấn luyện</h4>
+                  <div class="mini-tags">
+                    <span>Advanced C++</span><span>PID Control</span><span>Motion Planning</span><span>Vision Sensor</span><span>GPS Sensor</span><span>Autonomous nâng cao</span>
+                  </div>
+                </div>
+                <div class="track-block">
+                  <h4>Giải đấu hướng tới</h4>
+                  <div class="mini-tags">
+                    <span>VEX V5 Robotics Competition</span><span>Giải Robotics quốc tế</span>
+                  </div>
+                </div>
+                <div class="track-result"><b>Kết quả:</b> Năng lực Robotics Engineering ở cấp THPT, sẵn sàng thi đấu quốc tế.</div>
+                <a href="international-robotics.html" class="prog-link prog-link-detail">Xem chi tiết →</a>
+                <a href="index.html#booking" class="prog-link">Đăng ký ngay →</a>
+              </div>
+            </article>
+            <article class="track-card">
+              <div class="track-card-top track-card-top-orange">
+                <span class="level-ico">🥇</span>
+                <span class="age">15–18+ tuổi</span>
+                <h3>Elite Robotics Lab</h3>
+              </div>
+              <div class="track-card-body">
+                <div class="track-block">
+                  <h4>Nội dung chuyên sâu</h4>
+                  <div class="mini-tags">
+                    <span>ROS2</span><span>Jetson AI</span><span>SLAM</span><span>Machine Learning</span><span>Computer Vision</span><span>Autonomous Navigation</span>
+                  </div>
+                </div>
+                <div class="track-block">
+                  <h4>Dự án nghiên cứu</h4>
+                  <div class="mini-tags">
+                    <span>Warehouse Robot</span><span>AI Mobile Robot</span><span>Smart Factory Robot</span><span>Drone AI</span>
+                  </div>
+                </div>
+                <div class="track-result"><b>Kết quả:</b> Chuẩn bị cho đại học kỹ thuật và nghiên cứu Robotics chuyên sâu.</div>
+                <a href="elite-robotics-lab.html" class="prog-link prog-link-detail">Xem chi tiết →</a>
+                <a href="index.html#booking" class="prog-link">Đăng ký ngay →</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad">
+        <div class="container">
+          <div class="section-head reveal center">
+            <div class="eyebrow eyebrow-badge">
+              <span class="badge-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="5" y="9" width="14" height="11" rx="3" />
+                  <circle cx="9.5" cy="14.5" r="1" fill="#fff" stroke="none" />
+                  <circle cx="14.5" cy="14.5" r="1" fill="#fff" stroke="none" />
+                  <line x1="12" y1="9" x2="12" y2="6" />
+                  <circle cx="12" cy="5" r="1.2" fill="#fff" stroke="none" />
+                  <line x1="5" y1="13" x2="3" y2="13" />
+                  <line x1="19" y1="13" x2="21" y2="13" />
+                </svg>
+              </span>
+              <span class="badge-divider"></span>
+              <span class="badge-text"><b class="badge-dark">Phương pháp</b> <b class="badge-blue">giảng dạy</b></span>
+            </div>
+            <h2>Project-Based Learning trong mọi chương trình</h2>
+            <p>Học sinh học thông qua trải nghiệm thực tế và hoàn thành sản phẩm ở mỗi giai đoạn.</p>
+          </div>
+          <div class="timeline timeline-7 reveal">
+            <div class="timeline-track" aria-hidden="true"></div>
+            <div class="timeline-step"><div class="timeline-circle"><span class="timeline-emoji">🔍</span></div><div class="timeline-label">Khám phá vấn đề</div></div>
+            <div class="timeline-step"><div class="timeline-circle"><span class="timeline-emoji">📐</span></div><div class="timeline-label">Thiết kế giải pháp</div></div>
+            <div class="timeline-step"><div class="timeline-circle"><span class="timeline-emoji">🔧</span></div><div class="timeline-label">Lắp ráp</div></div>
+            <div class="timeline-step"><div class="timeline-circle"><span class="timeline-emoji">💻</span></div><div class="timeline-label">Lập trình</div></div>
+            <div class="timeline-step"><div class="timeline-circle"><span class="timeline-emoji">🧪</span></div><div class="timeline-label">Kiểm thử</div></div>
+            <div class="timeline-step"><div class="timeline-circle"><span class="timeline-emoji">📈</span></div><div class="timeline-label">Cải tiến</div></div>
+            <div class="timeline-step"><div class="timeline-circle"><span class="timeline-emoji">🏆</span></div><div class="timeline-label">Trình bày sản phẩm</div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad bg-paper">
+        <div class="container">
+          <div class="commit-grid reveal">
+            <div class="commit-card">
+              <h3>Cam kết từ MechaBot</h3>
+              <ul class="prog-checklist">
+                <li><span class="check">✓</span>Lớp học sĩ số nhỏ 8–10 học viên</li>
+                <li><span class="check">✓</span>100% thời lượng thực hành</li>
+                <li><span class="check">✓</span>Mỗi học viên có bộ kit riêng trong giờ học</li>
+                <li><span class="check">✓</span>Portfolio sau mỗi khóa học</li>
+                <li><span class="check">✓</span>Định hướng tham gia các cuộc thi STEM &amp; Robotics</li>
+                <li><span class="check">✓</span>Đồng hành cùng phụ huynh trong suốt quá trình học tập</li>
+              </ul>
+            </div>
+            <div class="commit-card">
+              <h3>Học sinh sẽ nhận được gì?</h3>
+              <ul class="prog-checklist">
+                <li><span class="check">✓</span>Tư duy logic và sáng tạo</li>
+                <li><span class="check">✓</span>Kỹ năng lập trình và công nghệ</li>
+                <li><span class="check">✓</span>Khả năng thiết kế và chế tạo robot</li>
+                <li><span class="check">✓</span>Kỹ năng làm việc nhóm và thuyết trình</li>
+                <li><span class="check">✓</span>Portfolio cá nhân và dự án thực tế</li>
+                <li><span class="check">✓</span>Nền tảng vững chắc cho tương lai công nghệ</li>
+              </ul>
+            </div>
+          </div>
+          <div class="section-head reveal center" style="margin-top:56px;">
+            <h2>Sẵn sàng bắt đầu hành trình sáng tạo?</h2>
+            <p>Hãy để MechaBot STEAM Academy đồng hành cùng con trên con đường khám phá Robotics, AI và công nghệ của tương lai.</p>
+          </div>
+          <div class="programs-cta reveal">
+            <a href="index.html#booking">Đăng ký tư vấn ngay →</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="reveal">
+      <div class="container">
+        <div class="foot-top">
+          <div class="foot-brand">
+            <a href="index.html" class="logo foot-logo">
+              <img class="mark" src="assets/mechabot-logo.svg" alt="MechaBot logo" />
+              <span class="logo-text">Mecha<span class="bot-accent">Bot</span><span class="tagline">STEAM ACADEMY</span></span>
+            </a>
+            <p class="foot-brand-desc">MechaBot STEAM Academy là trung tâm đào tạo STEM thực hành cho trẻ 4–18 tuổi. <a href="index.html#booking">Đăng ký học thử</a> hoặc <a href="contact.html">liên hệ tư vấn</a> ngay hôm nay!</p>
+          </div>
+          <div class="foot-cols">
+            <div class="foot-col-links">
+              <span class="foot-col-title">Khám phá</span>
+              <a href="about.html">Giới thiệu</a>
+              <a href="programs.html">Chương trình</a>
+              <a href="projects.html">Dự án</a>
+              <a href="library.html">Thư viện</a>
+            </div>
+            <div class="foot-col-links">
+              <span class="foot-col-title">Hỗ trợ</span>
+              <a href="maker-space.html">Maker Space</a>
+              <a href="faq.html">Hỏi đáp</a>
+              <a href="contact.html">Liên hệ</a>
+              <a href="index.html#booking">Đăng ký học thử</a>
+            </div>
+            <div class="foot-col-social">
+              <span class="foot-col-title">Kết nối cùng MechaBot</span>
+              <div class="foot-social">
+                <a class="social-ico social-fb" href="#" aria-label="Facebook" target="_blank" rel="noopener"><span>f</span></a>
+                <a class="social-ico social-yt" href="#" aria-label="YouTube" target="_blank" rel="noopener"><span>▶</span></a>
+                <a class="social-ico social-tiktok" href="#" aria-label="TikTok" target="_blank" rel="noopener"><span>TT</span></a>
+                <a class="social-ico social-zalo" href="#" aria-label="Zalo OA" target="_blank" rel="noopener"><span>Z</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="foot-contact-row">
+          <div><b>Địa chỉ</b>Cơ sở 1: Chúc Sơn, Chương Mỹ, Hà Nội<br />Cơ sở 2: Biển Xanh 49, Vinhomes Ocean Park 2, Văn Giang, Hưng Yên</div>
+          <div><b>Điện thoại liên hệ</b><span class="foot-copy" data-copy="0362 750 092"><a href="tel:0362750092">0362 750 092</a><span class="foot-copy-tooltip">Đã sao chép!</span></span></div>
+          <div><b>Email</b><span class="foot-copy" data-copy="mechabot4702@gmail.com"><a href="mailto:mechabot4702@gmail.com">mechabot4702@gmail.com</a><span class="foot-copy-tooltip">Đã sao chép!</span></span></div>
+        </div>
+
+        <div class="foot-bottom">
+          <span>© 2026 MechaBot STEAM Academy. All rights reserved.</span>
+          <div class="foot-legal">
+            <a href="terms.html">Điều khoản sử dụng</a><span class="foot-legal-sep">|</span>
+            <a href="privacy.html">Quyền riêng tư</a><span class="foot-legal-sep">|</span>
+            <a href="refund.html">Chính sách hoàn phí</a>
+          </div>
+        </div>
+      </div>
+      <button class="scroll-top" id="scrollTopBtn" type="button" aria-label="Lên đầu trang">↑</button>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
