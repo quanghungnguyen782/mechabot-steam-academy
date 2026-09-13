@@ -153,6 +153,17 @@ document.querySelectorAll('.hl-num').forEach(el => {
   io.observe(el);
 });
 
+// module card "xem thêm" toggle
+document.querySelectorAll('.module-toggle').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    const card = btn.closest('.module-card');
+    if(!card) return;
+    card.classList.toggle('expanded');
+    const expanded = card.classList.contains('expanded');
+    btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+  });
+});
+
 // timeline progress fill (module list vertical line)
 (() => {
   const lists = document.querySelectorAll('.module-list');
