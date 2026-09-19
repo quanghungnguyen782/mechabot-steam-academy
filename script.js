@@ -153,6 +153,21 @@ document.querySelectorAll('.hl-num').forEach(el => {
   io.observe(el);
 });
 
+// hero slideshow auto-rotate
+const heroSlideshow = document.querySelector('.hero-slideshow');
+if(heroSlideshow){
+  const slides = [...heroSlideshow.querySelectorAll('.hero-photo')];
+  let slideIndex = slides.findIndex(s=>s.classList.contains('active'));
+  if(slideIndex < 0) slideIndex = 0;
+  if(slides.length > 1){
+    setInterval(()=>{
+      slides[slideIndex].classList.remove('active');
+      slideIndex = (slideIndex + 1) % slides.length;
+      slides[slideIndex].classList.add('active');
+    }, 3500);
+  }
+}
+
 // module card "xem thêm" toggle
 document.querySelectorAll('.module-toggle').forEach(btn=>{
   btn.addEventListener('click', ()=>{
