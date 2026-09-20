@@ -659,6 +659,9 @@ header.scrolled .nav-wrap{padding-top:11px; padding-bottom:11px;}
   border-radius:24px; box-shadow:0 24px 55px rgba(0,0,0,.2);
 }
 .course-hero-media img.pos-low{object-position:center 75%;}
+.course-hero-media img.no-crop{
+  object-fit:contain; max-height:520px; background:rgba(255,255,255,.06);
+}
 .course-hero-credit{position:relative; z-index:1; margin-top:10px; text-align:center; font-size:11.5px; color:rgba(255,255,255,.7); font-style:italic;}
 .course-detail{max-width:760px; margin:0 auto; display:flex; flex-direction:column; gap:72px;}
 @media(max-width:640px){.course-detail{gap:56px;}}
