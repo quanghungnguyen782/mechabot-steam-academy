@@ -1329,3 +1329,42 @@ footer{
   .reveal, .hero-stagger > *{opacity:1; transform:none; transition:none;}
   .scroll-cue .line, .play-badge::after, .hero-badge{animation:none;}
 }
+
+/* ===== Young Maker: lộ trình 96 buổi (học phần → tháng → buổi) ===== */
+.ym-module-facts{display:flex; flex-wrap:wrap; gap:8px; margin:-6px 0 20px;}
+.ym-module-facts span{font-size:12.5px; font-weight:700; color:var(--ink); background:var(--paper); border:1px solid var(--line); border-radius:999px; padding:5px 12px;}
+.module-card.expanded .module-meta.module-more.ym-meta{max-height:12000px;}
+.ym-months-wrap{grid-column:1 / -1;}
+.ym-months{display:grid; grid-template-columns:repeat(auto-fill, minmax(280px,1fr)); gap:14px;}
+.ym-month{background:#fff; border:1px solid var(--line); border-radius:16px; padding:16px 16px 10px; box-shadow:0 2px 6px rgba(15,23,42,.04);}
+.ym-month-head{display:flex; justify-content:space-between; align-items:baseline; gap:8px;}
+.ym-month-label{font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:.05em; color:var(--blue);}
+.ym-month-weeks{font-size:11.5px; color:var(--text-soft); white-space:nowrap;}
+.ym-month-topic{font-size:15px; font-weight:800; color:var(--ink); margin:2px 0 10px; line-height:1.35;}
+.ym-sessions{list-style:none; display:flex; flex-direction:column;}
+.ym-sessions li{display:flex; gap:10px; padding:9px 0; border-top:1px dashed var(--line);}
+.ym-session-num{flex-shrink:0; min-width:34px; height:24px; border-radius:8px; background:rgba(37,99,235,.08); color:var(--blue); font-size:12px; font-weight:800; display:flex; align-items:center; justify-content:center;}
+.ym-sessions b{display:block; font-size:13.5px; color:var(--ink); line-height:1.4;}
+.ym-sessions small{display:block; font-size:12.5px; color:var(--text-soft); line-height:1.5; margin-top:2px;}
+.ym-tag{font-style:normal; font-size:10.5px; font-weight:800; text-transform:uppercase; letter-spacing:.03em; border-radius:6px; padding:2px 6px; margin-left:6px; vertical-align:1px;}
+.ym-tag-challenge{background:rgba(249,115,22,.12); color:#C2410C;}
+.ym-tag-project{background:rgba(34,197,94,.14); color:#15803D;}
+
+.ym-flow{list-style:none; display:grid; grid-template-columns:repeat(6,1fr); gap:14px; counter-reset:none;}
+@media(max-width:980px){.ym-flow{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:560px){.ym-flow{grid-template-columns:repeat(2,1fr);}}
+.ym-flow li{position:relative; display:flex; flex-direction:column; align-items:center; text-align:center; gap:6px; background:#fff; border:1px solid var(--line); border-radius:16px; padding:22px 12px 18px;}
+.ym-flow-num{position:absolute; top:10px; left:12px; font-size:12px; font-weight:800; color:var(--blue);}
+.ym-flow-ico{width:48px; height:48px; border-radius:14px; background:rgba(37,99,235,.08); display:flex; align-items:center; justify-content:center; font-size:24px;}
+.ym-flow b{font-size:15px; color:var(--ink);}
+.ym-flow li > span:last-child{font-size:13px; color:var(--text-soft); line-height:1.5;}
+
+.ym-progress-wrap{overflow-x:auto; -webkit-overflow-scrolling:touch; border:1px solid var(--line); border-radius:16px; background:#fff;}
+.ym-progress{width:100%; min-width:760px; border-collapse:collapse; font-size:13.5px;}
+.ym-progress th, .ym-progress td{padding:12px 14px; text-align:left; vertical-align:top; border-bottom:1px solid var(--line); line-height:1.5;}
+.ym-progress thead th{background:rgba(37,99,235,.06); color:var(--blue); font-size:12.5px; font-weight:800; text-transform:uppercase; letter-spacing:.03em;}
+.ym-progress tbody th{font-weight:800; color:var(--ink); white-space:nowrap; background:var(--paper);}
+.ym-progress td{color:var(--text);}
+.ym-progress tbody tr:last-child th, .ym-progress tbody tr:last-child td{border-bottom:none;}
+.ym-chip-text{font-style:normal;}
+
