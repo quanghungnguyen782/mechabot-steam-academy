@@ -46,12 +46,11 @@
               </div>
               <div class="mega-col">
                 <span class="mega-col-title mega-col-title-orange">🏆 Thi đấu</span>
-                <a href="programs.html#track-competition">VEX IQ</a>
-                <a href="programs.html#track-competition">VEX V5</a>
-                <a href="programs.html#track-competition">WhalesBot</a>
-                <a href="programs.html#track-competition">Weeemake</a>
+                <a href="programs.html#track-competition">VEX Robotics</a>
+                <a href="programs.html#track-competition">Weeemake Competition</a>
                 <a href="programs.html#track-competition">EnjoyAI</a>
                 <a href="programs.html#track-competition">WRO</a>
+                <a href="programs.html#track-competition">Luyện thi khoa học kỹ thuật các cấp</a>
               </div>
             </div>
           </div>
@@ -505,13 +504,60 @@
 
       <section class="final-cta" id="booking">
         <div class="container">
-          <div class="final-cta-inner reveal">
-            <h2>Sẵn sàng cho hành trình khám phá của con?</h2>
-            <p>Cùng MechaBot tìm lộ trình STEAM &amp; Robotics phù hợp với độ tuổi và sở thích của con.</p>
-            <div class="final-cta-actions">
-              <a href="mailto:mechabot4702@gmail.com?subject=Đăng ký tư vấn" class="btn btn-primary">Đăng ký tư vấn</a>
-              <a href="programs.html" class="btn btn-ghost">Khám phá chương trình</a>
+          <div class="register-grid">
+            <div class="register-info reveal">
+              <span class="eyebrow">Đăng ký học thử</span>
+              <h2>Đăng ký học thử miễn phí</h2>
+              <p>Đừng để con bỏ lỡ cơ hội khám phá STEAM &amp; Robotics. Đăng ký ngay để con được trải nghiệm 1 buổi học thử cùng đội ngũ giảng viên cựu Robocon, Astec Robotics.</p>
+              <ul class="prog-checklist register-benefits">
+                <li><span class="check">✓</span>Buổi học thử hoàn toàn miễn phí</li>
+                <li><span class="check">✓</span>Tư vấn 1-1 cùng giảng viên chuyên môn (cựu Robocon, Astec Robotics)</li>
+                <li><span class="check">✓</span>Lộ trình học phù hợp theo từng độ tuổi, từ 4–18 tuổi</li>
+                <li><span class="check">✓</span>Trải nghiệm trực tiếp robot &amp; phòng Lab tại trung tâm</li>
+              </ul>
+              <div class="register-contact-row">
+                <a href="tel:0362750092">📞 0362 750 092</a>
+                <a href="mailto:mechabot4702@gmail.com">✉️ mechabot4702@gmail.com</a>
+              </div>
             </div>
+            <form class="register-form reveal" id="registerForm">
+              <h3>Đăng ký tư vấn miễn phí</h3>
+              <div class="form-field">
+                <label for="regName">Họ và tên</label>
+                <input type="text" id="regName" name="name" placeholder="Họ và tên phụ huynh/học sinh" required />
+              </div>
+              <div class="form-field">
+                <label for="regPhone">Số điện thoại</label>
+                <input type="tel" id="regPhone" name="phone" placeholder="VD: 0912 345 678" required />
+              </div>
+              <div class="form-field">
+                <label for="regAge">Độ tuổi của học sinh</label>
+                <select id="regAge" name="age" required>
+                  <option value="" disabled selected>Chọn độ tuổi</option>
+                  <option>4–6 tuổi</option>
+                  <option>7–9 tuổi</option>
+                  <option>10–12 tuổi</option>
+                  <option>13–14 tuổi</option>
+                  <option>15–18 tuổi</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="regCourse">Chương trình quan tâm</label>
+                <select id="regCourse" name="course">
+                  <option value="" disabled selected>Chọn chương trình</option>
+                  <option>STEAM Explorer</option>
+                  <option>Young Maker</option>
+                  <option>Robotics Builder</option>
+                  <option>IoT &amp; Smart Systems</option>
+                  <option>AI Explorer</option>
+                  <option>School / National / International Robotics (Thi đấu)</option>
+                  <option>Elite Robotics Lab</option>
+                  <option>Chưa biết — Cần tư vấn</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary register-submit">Đăng ký học thử miễn phí →</button>
+              <p class="register-privacy">Thông tin được bảo mật · Không spam</p>
+            </form>
           </div>
         </div>
       </section>

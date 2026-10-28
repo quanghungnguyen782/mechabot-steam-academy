@@ -464,7 +464,7 @@ header.scrolled .nav-wrap{padding-top:11px; padding-bottom:11px;}
 .branch-tags{display:flex; flex-direction:column; gap:4px; margin-top:6px;}
 .branch-tags span{
   font-size:12px; font-weight:600; color:var(--orange); background:rgba(249,115,22,.08);
-  padding:3px 8px; border-radius:6px; white-space:nowrap;
+  padding:3px 8px; border-radius:6px;
 }
 
 .trust-row{display:flex; flex-wrap:wrap; justify-content:center; gap:14px; margin-top:36px;}
@@ -1192,6 +1192,29 @@ a.career-step:hover .career-step-name{color:var(--blue);}
 .final-cta-inner h2{color:var(--ink); font-size:clamp(26px,3.4vw,38px); font-weight:800; margin-bottom:18px; text-wrap:balance;}
 .final-cta-inner p{color:var(--text-soft); font-size:16px; margin-bottom:34px;}
 .final-cta-actions{display:flex; gap:16px; flex-wrap:wrap; justify-content:center;}
+
+.register-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start; position:relative; z-index:2; max-width:1040px; margin:0 auto;}
+.register-info h2{color:var(--ink); font-size:clamp(26px,3.2vw,36px); font-weight:800; margin-bottom:14px; text-wrap:balance;}
+.register-info > p{color:var(--text-soft); font-size:15.5px; line-height:1.65; margin-bottom:24px;}
+.register-benefits{margin-bottom:26px;}
+.register-contact-row{display:flex; flex-direction:column; gap:8px; font-weight:700; font-size:14.5px; color:var(--ink);}
+.register-contact-row a:hover{color:var(--blue);}
+.register-form{
+  background:#fff; border:1px solid var(--line); border-radius:22px; padding:32px;
+  box-shadow:0 24px 60px rgba(15,23,42,.1);
+  display:flex; flex-direction:column; gap:16px;
+}
+.register-form h3{font-size:19px; font-weight:800; color:var(--ink); margin-bottom:4px;}
+.form-field{display:flex; flex-direction:column; gap:6px;}
+.form-field label{font-size:13px; font-weight:700; color:var(--text-soft);}
+.form-field input, .form-field select{
+  font-family:var(--font-body); font-size:14.5px; padding:12px 14px; border-radius:10px;
+  border:1.5px solid var(--line); background:var(--paper); color:var(--ink); transition:.2s ease; width:100%;
+}
+.form-field input:focus, .form-field select:focus{outline:none; border-color:var(--blue); background:#fff; box-shadow:0 0 0 3px rgba(37,99,235,.12);}
+.register-submit{justify-content:center; width:100%; margin-top:4px;}
+.register-privacy{text-align:center; font-size:12.5px; color:var(--text-soft); margin-top:2px;}
+@media(max-width:900px){.register-grid{grid-template-columns:1fr; gap:36px;}}
 
 /* ---------- FOOTER ---------- */
 footer{

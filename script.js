@@ -204,3 +204,19 @@ document.querySelectorAll('.module-toggle').forEach(btn=>{
   window.addEventListener('resize', onScroll);
   update();
 })();
+
+const registerForm = document.getElementById('registerForm');
+if (registerForm) {
+  registerForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = registerForm.name.value.trim();
+    const phone = registerForm.phone.value.trim();
+    const age = registerForm.age.value || 'Chưa chọn';
+    const course = registerForm.course.value || 'Chưa chọn';
+    const subject = encodeURIComponent('Đăng ký học thử - ' + name);
+    const body = encodeURIComponent(
+      `Họ và tên: ${name}\nSố điện thoại: ${phone}\nĐộ tuổi của học sinh: ${age}\nChương trình quan tâm: ${course}`
+    );
+    window.location.href = `mailto:mechabot4702@gmail.com?subject=${subject}&body=${body}`;
+  });
+}
