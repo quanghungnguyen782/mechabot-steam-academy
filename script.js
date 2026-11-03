@@ -207,16 +207,53 @@ document.querySelectorAll('.module-toggle').forEach(btn=>{
 
 const registerForm = document.getElementById('registerForm');
 if (registerForm) {
+  const registerSubmit = registerForm.querySelector('.register-submit');
+  const registerStatus = document.getElementById('registerStatus');
+
   registerForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    if (registerForm.botcheck.checked) return; // honeypot: silently drop bot submissions
+
     const name = registerForm.name.value.trim();
     const phone = registerForm.phone.value.trim();
     const age = registerForm.age.value || 'Chưa chọn';
     const course = registerForm.course.value || 'Chưa chọn';
-    const subject = encodeURIComponent('Đăng ký học thử - ' + name);
-    const body = encodeURIComponent(
-      `Họ và tên: ${name}\nSố điện thoại: ${phone}\nĐộ tuổi của học sinh: ${age}\nChương trình quan tâm: ${course}`
-    );
-    window.location.href = `mailto:mechabot4702@gmail.com?subject=${subject}&body=${body}`;
+
+    const submitLabel = registerSubmit.textContent;
+    registerSubmit.disabled = true;
+    registerSubmit.textContent = 'Đang gửi...';
+    registerStatus.textContent = '';
+    registerStatus.className = 'register-status';
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({
+        access_key: 'd568f2ef-c1f1-49e8-a6bc-05e452aabf1d',
+        subject: `Đăng ký học thử - ${name}`,
+        'Họ và tên': name,
+        'Số điện thoại': phone,
+        'Độ tuổi của học sinh': age,
+        'Chương trình quan tâm': course,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          registerForm.reset();
+          registerStatus.textContent = 'Đăng ký thành công! MechaBot sẽ liên hệ lại với bạn sớm nhất.';
+          registerStatus.className = 'register-status register-status-success';
+        } else {
+          throw new Error(data.message || 'Gửi thất bại');
+        }
+      })
+      .catch(() => {
+        registerStatus.textContent = 'Gửi không thành công. Vui lòng gọi 0362 750 092 hoặc thử lại.';
+        registerStatus.className = 'register-status register-status-error';
+      })
+      .finally(() => {
+        registerSubmit.disabled = false;
+        registerSubmit.textContent = submitLabel;
+      });
   });
 }

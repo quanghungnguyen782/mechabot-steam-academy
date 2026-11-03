@@ -522,6 +522,7 @@
             </div>
             <form class="register-form reveal" id="registerForm">
               <h3>Đăng ký tư vấn miễn phí</h3>
+              <input type="checkbox" name="botcheck" class="register-botcheck" style="display:none" tabindex="-1" autocomplete="off" />
               <div class="form-field">
                 <label for="regName">Họ và tên</label>
                 <input type="text" id="regName" name="name" placeholder="Họ và tên phụ huynh/học sinh" required />
@@ -556,6 +557,7 @@
                 </select>
               </div>
               <button type="submit" class="btn btn-primary register-submit">Đăng ký học thử miễn phí →</button>
+              <p class="register-status" id="registerStatus" role="status" aria-live="polite"></p>
               <p class="register-privacy">Thông tin được bảo mật · Không spam</p>
             </form>
           </div>
