@@ -244,14 +244,14 @@ if (registerForm) {
       .then((data) => {
         if (data.success) {
           registerForm.reset();
-          registerStatus.textContent = 'Đăng ký thành công! MechaBot sẽ liên hệ lại với bạn sớm nhất.';
+          registerStatus.textContent = '✓ Đăng ký thành công!';
           registerStatus.className = 'register-status register-status-success';
         } else {
           throw new Error(data.message || 'Gửi thất bại');
         }
       })
       .catch(() => {
-        registerStatus.textContent = 'Gửi không thành công. Vui lòng gọi 0362 750 092 hoặc thử lại.';
+        registerStatus.textContent = '✕ Gửi thất bại — gọi 0362 750 092 giúp mình nhé.';
         registerStatus.className = 'register-status register-status-error';
       })
       .finally(() => {

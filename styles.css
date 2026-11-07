@@ -1216,11 +1216,10 @@ a.career-step:hover .career-step-name{color:var(--blue);}
 .form-field input:focus, .form-field select:focus{outline:none; border-color:var(--blue); background:#fff; box-shadow:0 0 0 3px rgba(37,99,235,.12);}
 .register-submit{justify-content:center; width:100%; margin-top:4px;}
 .register-submit:disabled{opacity:.7; cursor:not-allowed;}
-.register-status{text-align:center; font-size:14px; font-weight:600; margin:0; min-height:0;}
-.register-status:empty{display:none;}
-.register-status-success{color:#15803D;}
-.register-status-error{color:#DC2626;}
-.register-privacy{text-align:center; font-size:12.5px; color:var(--text-soft); margin-top:2px;}
+.register-status{text-align:center; font-size:14.5px; font-weight:700; margin:0; padding:10px 14px; border-radius:10px;}
+.register-status:empty{display:none; padding:0;}
+.register-status-success{color:#15803D; background:rgba(21,128,61,.1);}
+.register-status-error{color:#DC2626; background:rgba(220,38,38,.1);}
 @media(max-width:900px){.register-grid{grid-template-columns:1fr; gap:36px;}}
 
 /* ---------- FOOTER ---------- */
@@ -1397,6 +1396,7 @@ footer{
 .ym-progress td{color:var(--text);}
 .ym-progress tbody tr:last-child th, .ym-progress tbody tr:last-child td{border-bottom:none;}
 .ym-chip-text{font-style:normal;}
+
 
 /* ---------- CLASS GALLERY (ảnh lớp học thực tế, dạng mosaic) ---------- */
 .class-gallery{
