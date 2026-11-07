@@ -1398,3 +1398,16 @@ footer{
 .ym-progress tbody tr:last-child th, .ym-progress tbody tr:last-child td{border-bottom:none;}
 .ym-chip-text{font-style:normal;}
 
+/* ---------- CLASS GALLERY (ảnh lớp học thực tế, dạng mosaic) ---------- */
+.class-gallery{
+  display:grid; grid-template-columns:repeat(3,1fr); grid-auto-rows:190px; gap:12px;
+  grid-template-areas:"a a b" "c d b" "c d f" "e e f";
+}
+.class-gallery figure{margin:0; position:relative; overflow:hidden; border-radius:16px; background:var(--paper); box-shadow:0 8px 22px rgba(15,23,42,.08);}
+.class-gallery img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .5s ease;}
+.class-gallery figure:hover img{transform:scale(1.04);}
+.cg-a{grid-area:a;} .cg-b{grid-area:b;} .cg-c{grid-area:c;} .cg-d{grid-area:d;} .cg-e{grid-area:e;} .cg-f{grid-area:f;}
+@media(max-width:600px){
+  .class-gallery{grid-template-columns:1fr 1fr; grid-auto-rows:140px; gap:10px; grid-template-areas:"a a" "b c" "b c" "e e" "d f" "d f";}
+}
+@media (prefers-reduced-motion: reduce){.class-gallery img{transition:none;}}
