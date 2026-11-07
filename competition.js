@@ -123,6 +123,7 @@
           <span class="comp-challenge-code">CHALLENGE ${esc(c.code)}</span>
         </div>
         <div class="comp-challenge-body">
+          <span class="comp-challenge-num" aria-hidden="true">${esc(c.code)}</span>
           ${difficultyMeter(c.difficulty)}
           <h3>${esc(c.name)}</h3>
           <p>${esc(c.objective)}</p>
@@ -137,9 +138,34 @@
     const el = $('#challengeGrid');
     if (!el) return;
     el.innerHTML = DATA.challenges.map(challengeCard).join('');
+    idleArenas(el);
+  }
+
+  // Robot trên sa bàn chỉ chạy khi rê chuột / focus vào thẻ — tránh chuyển động liên tục gây rối mắt
+  function idleArenas(root) {
+    root.querySelectorAll('.comp-challenge-link').forEach((card) => {
+      const svg = card.querySelector('svg');
+      if (!svg || !svg.pauseAnimations) return;
+      svg.pauseAnimations();
+      const play = () => svg.unpauseAnimations();
+      const stop = () => svg.pauseAnimations();
+      card.addEventListener('mouseenter', play);
+      card.addEventListener('mouseleave', stop);
+      card.addEventListener('focus', play);
+      card.addEventListener('blur', stop);
+    });
   }
 
   /* ---------- 4. Roadmap ---------- */
+  // Bộ icon nét đồng nhất cho 4 giai đoạn (thay emoji trong dữ liệu)
+  const svgIcon = (d) =>
+    `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+  const STAGE_ICONS = [
+    svgIcon('<path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/>'),
+    svgIcon('<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor"/>'),
+    svgIcon('<circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><circle cx="17" cy="9" r="2.4"/><path d="M15.5 14.2A5 5 0 0 1 21 19"/>'),
+    svgIcon('<path d="M8 4h8v5a4 4 0 0 1-8 0z"/><path d="M16 5h3a3 3 0 0 1-3 4M8 5H5a3 3 0 0 0 3 4"/><path d="M12 13v4M8 20h8M10 17h4"/>'),
+  ];
   function renderRoadmap() {
     const wrap = $('#roadStages');
     const road = $('#compRoadmap');
@@ -151,7 +177,7 @@
       <div class="comp-stage" data-index="${i}">
         <button type="button" class="comp-stage-node" aria-pressed="${i === 0}" aria-label="Giai đoạn ${i + 1}: ${esc(s.title)}">
           <span class="comp-stage-num">${String(i + 1).padStart(2, '0')}</span>
-          <span class="comp-stage-ico" aria-hidden="true">${s.icon}</span>
+          <span class="comp-stage-ico" aria-hidden="true">${STAGE_ICONS[i] || s.icon}</span>
         </button>
         <div class="comp-stage-card">
           <span class="comp-stage-key" lang="en">Stage ${i + 1} · ${esc(s.key)}</span>
@@ -208,7 +234,7 @@
     if (!events.length) {
       el.innerHTML = `
         <div class="comp-empty">
-          <div class="comp-empty-ico" aria-hidden="true">📅</div>
+          <div class="comp-empty-ico" aria-hidden="true">${svgIcon('<rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/><path d="M8.5 14h2M13.5 14h2M8.5 17h2"/>')}</div>
           <p>Các sự kiện và thử thách mới đang được MechaBot chuẩn bị. Hãy theo dõi để không bỏ lỡ!</p>
           <a href="#dang-ky" class="btn btn-ghost" data-goal="Tư vấn lộ trình luyện thi">Để lại thông tin để nhận lịch sớm nhất</a>
         </div>`;
@@ -390,14 +416,16 @@
         </div>
       </section>
 
-      <section class="section-pad bg-paper">
+      <section class="section-pad comp-arena comp-related">
         <div class="container">
-          <div class="section-head center reveal comp-section-head">
-            <span class="eyebrow">Tiếp tục thử thách</span>
-            <h2>Thử thách liên quan</h2>
+          <div class="comp-arena-head reveal" style="margin-bottom:36px">
+            <div>
+              <span class="comp-eyebrow">Tiếp tục thử thách</span>
+              <h2>Thử thách liên quan</h2>
+            </div>
           </div>
-          <div class="comp-challenge-grid comp-challenge-grid-3">${related.map(challengeCard).join('')}</div>
-          ${idx < DATA.challenges.length - 1 ? `<p class="comp-next"><a href="${challengeUrl(DATA.challenges[idx + 1])}">Thử thách tiếp theo: ${esc(DATA.challenges[idx + 1].name)} →</a></p>` : ''}
+          <div class="comp-challenge-grid comp-challenge-grid-3" id="relatedGrid">${related.map(challengeCard).join('')}</div>
+          ${idx < DATA.challenges.length - 1 ? `<p class="comp-next comp-next-dark"><a href="${challengeUrl(DATA.challenges[idx + 1])}">Thử thách tiếp theo: ${esc(DATA.challenges[idx + 1].name)} →</a></p>` : ''}
         </div>
       </section>`;
   }
@@ -408,5 +436,6 @@
   renderEvents();
   renderGallery();
   renderChallengeDetail();
+  if ($('#relatedGrid')) idleArenas($('#relatedGrid'));
   wireGoalCtas();
 })();
