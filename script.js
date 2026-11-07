@@ -218,6 +218,8 @@ if (registerForm) {
     const phone = registerForm.phone.value.trim();
     const age = registerForm.age.value || 'Chưa chọn';
     const course = registerForm.course.value || 'Chưa chọn';
+    const goal = registerForm.goal ? registerForm.goal.value : '';
+    const subjectPrefix = registerForm.dataset.subject ? `${registerForm.dataset.subject} - ${goal || 'Đăng ký'}` : 'Đăng ký học thử';
 
     const submitLabel = registerSubmit.textContent;
     registerSubmit.disabled = true;
@@ -230,7 +232,8 @@ if (registerForm) {
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify({
         access_key: 'd568f2ef-c1f1-49e8-a6bc-05e452aabf1d',
-        subject: `Đăng ký học thử - ${name}`,
+        subject: `${subjectPrefix} - ${name}`,
+        ...(goal && { 'Nhu cầu': goal }),
         'Họ và tên': name,
         'Số điện thoại': phone,
         'Độ tuổi của học sinh': age,

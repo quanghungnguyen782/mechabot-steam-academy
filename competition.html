@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Competition Academy – Luyện thi Robotics | MechaBot STEAM Academy</title>
+    <meta
+      name="description"
+      content="MechaBot Competition Academy: luyện thi Robotics & STEM cho học sinh 10–18 tuổi — VEX Robotics, WRO, Weeemake, EnjoyAI, Khoa học Kỹ thuật. Thực hành trên sa bàn Smart City, thử thách nội bộ và lộ trình tuyển chọn đội tuyển."
+    />
+    <meta property="og:title" content="MechaBot Competition Academy – Lập trình bản lĩnh, chinh phục đấu trường Robotics" />
+    <meta property="og:description" content="Lộ trình Learn → Practice → Challenge → Compete → Achieve cho học sinh yêu Robotics." />
+    <meta property="og:image" content="assets/competition/arena-smart-city.webp" />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="competition.css" />
+    <link rel="icon" type="image/png" href="assets/mechabot-mascot.png" />
+  </head>
+  <body class="comp-page">
+    <header id="siteHeader">
+      <div class="nav-wrap">
+        <a href="index.html" class="logo">
+          <img class="mark" src="assets/mechabot-mascot.png" alt="MechaBot logo" />
+          <span class="logo-text">Mecha<span class="bot-accent">Bot</span><span class="tagline">STEAM ACADEMY</span></span>
+        </a>
+        <button class="burger" id="burger" aria-label="Mở menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav-links" id="navLinks">
+          <a href="index.html">Trang chủ</a>
+          <a href="about.html">Giới thiệu</a>
+          <div class="nav-item-dropdown">
+            <a href="programs.html" class="active">Chương trình</a>
+            <div class="nav-dropdown nav-dropdown-mega">
+              <div class="mega-col">
+                <span class="mega-col-title">🌱 Nền tảng</span>
+                <a href="steam-explorer.html">STEAM Explorer<small>🌱 Nhà Khám Phá STEAM</small></a>
+                <a href="young-maker.html">Young Maker<small>🔧 Nhà Sáng Chế Nhí</small></a>
+                <a href="robotics-builder.html">Robotics Builder<small>🤖 Kiến Tạo Robot</small></a>
+              </div>
+              <div class="mega-col">
+                <span class="mega-col-title mega-col-title-blue">💡 Phát triển</span>
+                <a href="aiot-smart-systems.html">IoT &amp; Smart Systems<small>📡 Hệ Thống IoT Thông Minh</small></a>
+                <a href="ai-explorer.html">AI Explorer<small>🚀 Khám Phá Trí Tuệ Nhân Tạo</small></a>
+              </div>
+              <div class="mega-col">
+                <span class="mega-col-title mega-col-title-orange">🏆 Thi đấu</span>
+                <a href="competition.html">Competition Academy</a>
+                <a href="enjoyai.html">EnjoyAI</a>
+                <a href="vex-robotics.html">VEX Robotics</a>
+                <a href="weeemake-competition.html">Weeemake Competition</a>
+                <a href="wro.html">WRO</a>
+                <a href="khoa-hoc-ky-thuat.html">Luyện thi khoa học kỹ thuật các cấp</a>
+              </div>
+            </div>
+          </div>
+          <a href="maker-space.html">Maker Space</a>
+          <a href="projects.html">Dự án</a>
+          <a href="library.html">Thư viện</a>
+          <a href="faq.html">Hỏi đáp</a>
+          <a href="contact.html">Liên hệ</a>
+        </nav>
+        <div class="nav-cta">
+          <a href="#dang-ky" class="btn btn-primary" data-goal="Đánh giá năng lực Robotics">Đăng ký đánh giá</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ============ 1. HERO ============ -->
+      <section class="comp-hero" aria-labelledby="compHeroTitle">
+        <div class="comp-hero-grid-bg" aria-hidden="true"></div>
+        <div class="comp-hero-glow" aria-hidden="true"></div>
+        <div class="container comp-hero-inner">
+          <div class="comp-hero-copy">
+            <span class="comp-eyebrow"><span class="comp-eyebrow-dot"></span>MECHABOT COMPETITION ACADEMY</span>
+            <h1 id="compHeroTitle">Lập trình bản lĩnh –<br /><span class="comp-grad-text">Chinh phục đấu trường Robotics</span></h1>
+            <p class="comp-hero-tagline" lang="en">Build. Code. Compete. Conquer.</p>
+            <p class="comp-hero-desc">
+              Từ những thử thách đầu tiên trên sa bàn đến các sân chơi Robotics trong nước và quốc tế, MechaBot đồng hành cùng học sinh trên hành trình rèn luyện tư duy kỹ thuật, chiến thuật thi đấu và tinh thần đồng đội.
+            </p>
+            <div class="comp-hero-ctas">
+              <a href="#chuong-trinh" class="btn btn-primary btn-lg">Khám phá chương trình luyện thi →</a>
+              <a href="#dang-ky" class="btn comp-btn-ghost" data-goal="Đánh giá năng lực Robotics">Đăng ký đánh giá năng lực</a>
+            </div>
+            <ul class="comp-hero-facts" aria-label="Tổng quan Competition Academy">
+              <li><b>5</b><span>sân chơi luyện thi</span></li>
+              <li><b>4</b><span>thử thách sa bàn</span></li>
+              <li><b>4</b><span>giai đoạn huấn luyện</span></li>
+            </ul>
+          </div>
+
+          <div class="comp-hero-visual">
+            <div class="comp-hero-frame">
+              <img
+                src="assets/competition/arena-smart-city.webp"
+                alt="Sa bàn Smart City với nhiều robot tự hành trên đường phố mô phỏng"
+                width="1400" height="933"
+                fetchpriority="high"
+              />
+              <span class="comp-hud comp-hud-tl" aria-hidden="true">ARENA · SMART CITY</span>
+              <span class="comp-hud comp-hud-br" aria-hidden="true"><span class="comp-live-dot"></span>MISSION READY</span>
+              <span class="comp-scanline" aria-hidden="true"></span>
+            </div>
+            <div class="comp-hero-chip comp-hero-chip-a" aria-hidden="true">🏁 Line Tracking</div>
+            <div class="comp-hero-chip comp-hero-chip-b" aria-hidden="true">📦 Smart Delivery</div>
+          </div>
+        </div>
+
+        <div class="container">
+          <ol class="comp-journey" aria-label="Hành trình Competition Academy">
+            <li><span class="comp-journey-ico">📘</span><b lang="en">Learn</b><span>Học nền tảng</span></li>
+            <li><span class="comp-journey-ico">🛠️</span><b lang="en">Practice</b><span>Luyện trên sa bàn</span></li>
+            <li><span class="comp-journey-ico">🎯</span><b lang="en">Challenge</b><span>Thử thách nội bộ</span></li>
+            <li><span class="comp-journey-ico">⚔️</span><b lang="en">Compete</b><span>Ra đấu trường</span></li>
+            <li><span class="comp-journey-ico">🏆</span><b lang="en">Achieve</b><span>Chinh phục mục tiêu</span></li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============ 2. PROGRAMS ============ -->
+      <section class="section-pad comp-programs" id="chuong-trinh" aria-labelledby="programsTitle">
+        <div class="container">
+          <div class="section-head center reveal comp-section-head">
+            <span class="eyebrow">Luyện thi Robotics</span>
+            <h2 id="programsTitle">Chương trình luyện thi Robotics &amp; STEM</h2>
+            <p>Lộ trình huấn luyện chuyên sâu, giúp học sinh phát triển kỹ năng và sẵn sàng cho những thử thách công nghệ.</p>
+          </div>
+          <div class="comp-program-grid" id="programGrid"></div>
+          <noscript>
+            <ul class="comp-noscript-list">
+              <li><a href="vex-robotics.html">VEX Robotics Competition</a></li>
+              <li><a href="weeemake-competition.html">Weeemake Robotics Challenge</a></li>
+              <li><a href="wro.html">World Robot Olympiad (WRO)</a></li>
+              <li><a href="enjoyai.html">EnjoyAI Robotics Challenge</a></li>
+              <li><a href="khoa-hoc-ky-thuat.html">Khoa học Kỹ thuật &amp; STEM</a></li>
+            </ul>
+          </noscript>
+          <p class="comp-disclaimer reveal">
+            MechaBot là đơn vị đào tạo, huấn luyện học sinh chuẩn bị cho các cuộc thi trên. Tên cuộc thi thuộc về ban tổ chức tương ứng.
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ 3. CHALLENGE ARENA ============ -->
+      <section class="section-pad comp-arena" id="arena" aria-labelledby="arenaTitle">
+        <div class="comp-arena-bg" aria-hidden="true"></div>
+        <div class="container">
+          <div class="comp-arena-head reveal">
+            <div>
+              <span class="comp-eyebrow comp-eyebrow-light"><span class="comp-eyebrow-dot"></span>Điểm khác biệt của MechaBot</span>
+              <h2 id="arenaTitle">MechaBot Challenge Arena</h2>
+              <p>Đấu trường thử thách – Nơi kiến thức biến thành kỹ năng thi đấu.</p>
+            </div>
+            <div class="comp-arena-note">
+              <span class="comp-badge-dev">Đang phát triển</span>
+              <p>MechaBot đang xây dựng sa bàn thi đấu <b>Smart City Robotics</b> riêng — nơi học sinh luyện tập theo nhiệm vụ, đo tiến bộ qua từng lượt chạy và chuẩn bị cho thi đấu thật.</p>
+            </div>
+          </div>
+          <div class="comp-challenge-grid" id="challengeGrid"></div>
+        </div>
+      </section>
+
+      <!-- ============ 4. ROADMAP ============ -->
+      <section class="section-pad comp-roadmap" id="lo-trinh" aria-labelledby="roadmapTitle">
+        <div class="container">
+          <div class="section-head center reveal comp-section-head">
+            <span class="eyebrow">4 giai đoạn</span>
+            <h2 id="roadmapTitle">Lộ trình chinh phục đấu trường Robotics</h2>
+            <p>Mỗi giai đoạn có mục tiêu và tiêu chí đánh giá rõ ràng — phụ huynh theo dõi được con đang ở đâu và cần gì để tiến lên.</p>
+          </div>
+          <div class="comp-road reveal" id="compRoadmap">
+            <div class="comp-road-track" aria-hidden="true"><span class="comp-road-fill" id="roadFill"></span></div>
+            <div class="comp-road-stages" id="roadStages" role="tablist" aria-label="Các giai đoạn huấn luyện"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 5. EVENTS ============ -->
+      <section class="section-pad bg-paper comp-events" id="su-kien" aria-labelledby="eventsTitle">
+        <div class="container">
+          <div class="section-head center reveal comp-section-head">
+            <span class="eyebrow">Lịch hoạt động</span>
+            <h2 id="eventsTitle">Sự kiện &amp; lịch thi đấu</h2>
+            <p>Workshop luyện tập, thử thách nội bộ, thi thử và các buổi tuyển chọn đội tuyển tại MechaBot.</p>
+          </div>
+          <div id="eventList" class="reveal"></div>
+        </div>
+      </section>
+
+      <!-- ============ 6. ACHIEVEMENTS ============ -->
+      <section class="section-pad comp-gallery-sec" id="dau-an" aria-labelledby="galleryTitle">
+        <div class="container">
+          <div class="section-head center reveal comp-section-head">
+            <span class="eyebrow">Hoạt động thực tế</span>
+            <h2 id="galleryTitle">Dấu ấn của những kỹ sư nhí</h2>
+            <p>Những khoảnh khắc lắp ráp, lập trình và thi đấu của học sinh MechaBot.</p>
+          </div>
+          <div class="comp-gallery reveal" id="gallery"></div>
+        </div>
+      </section>
+
+      <!-- ============ 7. FINAL CTA + FORM ============ -->
+      <section class="comp-final" id="dang-ky" aria-labelledby="finalTitle">
+        <div class="comp-hero-grid-bg" aria-hidden="true"></div>
+        <div class="container">
+          <div class="comp-final-grid">
+            <div class="comp-final-copy reveal">
+              <span class="comp-eyebrow comp-eyebrow-light"><span class="comp-eyebrow-dot"></span>Bắt đầu hành trình</span>
+              <h2 id="finalTitle">Sẵn sàng chinh phục thử thách đầu tiên?</h2>
+              <p>Khám phá năng lực Robotics của bạn và bắt đầu hành trình trở thành một kỹ sư công nghệ tương lai cùng MechaBot.</p>
+              <div class="comp-final-ctas">
+                <button type="button" class="btn btn-primary" data-goal="Đánh giá năng lực Robotics">Đăng ký đánh giá năng lực</button>
+                <button type="button" class="btn comp-btn-ghost" data-goal="Tư vấn lộ trình luyện thi">Tư vấn lộ trình luyện thi</button>
+              </div>
+              <ul class="comp-final-points">
+                <li>Giảng viên cựu Robocon, Astec Robotics trực tiếp đánh giá</li>
+                <li>Gợi ý chương trình luyện thi phù hợp với độ tuổi và năng lực</li>
+                <li>Hoặc gọi ngay: <a href="tel:0362750092">0362 750 092</a></li>
+              </ul>
+            </div>
+
+            <form class="register-form comp-form reveal" id="registerForm" data-subject="Competition Academy">
+              <h3>Đăng ký với MechaBot</h3>
+              <input type="checkbox" name="botcheck" class="register-botcheck" style="display:none" tabindex="-1" autocomplete="off" />
+              <div class="form-field">
+                <label for="regGoal">Bạn cần</label>
+                <select id="regGoal" name="goal" required>
+                  <option>Đánh giá năng lực Robotics</option>
+                  <option>Tư vấn lộ trình luyện thi</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="regName">Họ và tên</label>
+                <input type="text" id="regName" name="name" placeholder="Họ và tên phụ huynh/học sinh" autocomplete="name" required />
+              </div>
+              <div class="form-field">
+                <label for="regPhone">Số điện thoại</label>
+                <input type="tel" id="regPhone" name="phone" placeholder="VD: 0912 345 678" autocomplete="tel" required />
+              </div>
+              <div class="form-field">
+                <label for="regAge">Độ tuổi của học sinh</label>
+                <select id="regAge" name="age" required>
+                  <option value="" disabled selected>Chọn độ tuổi</option>
+                  <option>7–9 tuổi</option>
+                  <option>10–12 tuổi</option>
+                  <option>13–14 tuổi</option>
+                  <option>15–18 tuổi</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="regCourse">Sân chơi quan tâm</label>
+                <select id="regCourse" name="course">
+                  <option value="" disabled selected>Chọn chương trình</option>
+                  <option>VEX Robotics Competition</option>
+                  <option>Weeemake Robotics Challenge</option>
+                  <option>World Robot Olympiad (WRO)</option>
+                  <option>EnjoyAI Robotics Challenge</option>
+                  <option>Khoa học Kỹ thuật &amp; STEM</option>
+                  <option>MechaBot Challenge Arena</option>
+                  <option>Chưa biết — Cần tư vấn</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary register-submit">Gửi đăng ký →</button>
+              <p class="register-status" id="registerStatus" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="reveal">
+      <div class="container">
+        <div class="foot-top">
+          <div class="foot-brand">
+            <a href="index.html" class="logo foot-logo">
+              <img class="mark" src="assets/mechabot-mascot.png" alt="MechaBot logo" />
+              <span class="logo-text">Mecha<span class="bot-accent">Bot</span><span class="tagline">STEAM ACADEMY</span></span>
+            </a>
+            <p class="foot-brand-desc">MechaBot STEAM Academy là trung tâm đào tạo STEM thực hành cho trẻ 4–18 tuổi. <a href="index.html#booking">Đăng ký học thử</a> hoặc <a href="contact.html">liên hệ tư vấn</a> ngay hôm nay!</p>
+          </div>
+          <div class="foot-cols">
+            <div class="foot-col-links">
+              <span class="foot-col-title">Khám phá</span>
+              <a href="about.html">Giới thiệu</a>
+              <a href="programs.html">Chương trình</a>
+              <a href="projects.html">Dự án</a>
+              <a href="library.html">Thư viện</a>
+            </div>
+            <div class="foot-col-links">
+              <span class="foot-col-title">Hỗ trợ</span>
+              <a href="maker-space.html">Maker Space</a>
+              <a href="faq.html">Hỏi đáp</a>
+              <a href="contact.html">Liên hệ</a>
+              <a href="index.html#booking">Đăng ký học thử</a>
+            </div>
+            <div class="foot-col-social">
+              <span class="foot-col-title">Kết nối cùng MechaBot</span>
+              <div class="foot-social">
+                <a class="social-ico social-fb" href="#" aria-label="Facebook" target="_blank" rel="noopener"><span>f</span></a>
+                <a class="social-ico social-yt" href="#" aria-label="YouTube" target="_blank" rel="noopener"><span>▶</span></a>
+                <a class="social-ico social-tiktok" href="#" aria-label="TikTok" target="_blank" rel="noopener"><span>TT</span></a>
+                <a class="social-ico social-zalo" href="#" aria-label="Zalo OA" target="_blank" rel="noopener"><span>Z</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="foot-contact-row">
+          <div><b>Địa chỉ</b>Cơ sở 1: Chúc Sơn, Chương Mỹ, Hà Nội<br />Cơ sở 2: Biển Xanh 49, Vinhomes Ocean Park 2, Văn Giang, Hưng Yên</div>
+          <div><b>Điện thoại liên hệ</b><span class="foot-copy" data-copy="0362 750 092"><a href="tel:0362750092">0362 750 092</a><span class="foot-copy-tooltip">Đã sao chép!</span></span></div>
+          <div><b>Email</b><span class="foot-copy" data-copy="mechabot4702@gmail.com"><a href="mailto:mechabot4702@gmail.com">mechabot4702@gmail.com</a><span class="foot-copy-tooltip">Đã sao chép!</span></span></div>
+        </div>
+
+        <div class="foot-bottom">
+          <span>© 2026 MechaBot STEAM Academy. All rights reserved.</span>
+          <div class="foot-legal">
+            <a href="terms.html">Điều khoản sử dụng</a><span class="foot-legal-sep">|</span>
+            <a href="privacy.html">Quyền riêng tư</a><span class="foot-legal-sep">|</span>
+            <a href="refund.html">Chính sách hoàn phí</a>
+          </div>
+        </div>
+      </div>
+      <button class="scroll-top" id="scrollTopBtn" type="button" aria-label="Lên đầu trang">↑</button>
+    </footer>
+
+    <script src="competition-data.js"></script>
+    <script src="competition.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
