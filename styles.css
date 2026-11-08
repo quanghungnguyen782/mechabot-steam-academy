@@ -1423,3 +1423,20 @@ footer{
   .intro-video-frame{width:100%; max-width:320px;}
   .intro-video-copy{width:100%;}
 }
+
+/* ---------- FACILITY GALLERY (trang chủ · Cơ sở MechaBot) ---------- */
+.facility-gallery{display:grid; grid-template-columns:2fr 1fr 1fr; gap:16px; margin-top:40px; height:360px;}
+.facility-gallery figure{position:relative; margin:0; overflow:hidden; border-radius:20px; background:var(--paper); box-shadow:0 10px 26px rgba(15,23,42,.08);}
+.facility-gallery img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .5s ease;}
+.facility-gallery figure:hover img{transform:scale(1.03);}
+.facility-gallery figcaption{
+  position:absolute; left:12px; bottom:12px; font-size:13px; font-weight:700; color:#fff; line-height:1.3;
+  background:rgba(11,18,32,.66); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); padding:6px 12px; border-radius:999px;
+}
+@media(max-width:760px){
+  .facility-gallery{grid-template-columns:1fr 1fr; height:auto; gap:12px;}
+  .facility-gallery .fg-main{grid-column:1 / -1; aspect-ratio:16/9;}
+  .facility-gallery figure:not(.fg-main){aspect-ratio:4/5;}
+  .facility-gallery figcaption{font-size:12px; left:8px; bottom:8px; padding:5px 10px;}
+}
+@media (prefers-reduced-motion: reduce){.facility-gallery img{transition:none;}}
