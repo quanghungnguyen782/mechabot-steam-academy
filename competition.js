@@ -99,7 +99,6 @@
         <a class="comp-program-link" href="${esc(p.href)}" aria-label="${esc(p.name)} – Khám phá lộ trình">
           <div class="comp-program-media">
             <img src="${esc(p.image)}" alt="${esc(p.imageAlt)}" loading="lazy" decoding="async" />
-            ${p.age ? `<span class="comp-program-age">${esc(p.age)}</span>` : ''}
           </div>
           <div class="comp-program-body">
             <span class="comp-program-ico" aria-hidden="true">${p.icon}</span>
