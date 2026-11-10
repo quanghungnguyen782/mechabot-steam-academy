@@ -144,14 +144,14 @@ window.MECHABOT_COMPETITION = {
     {
       id: 'smart-city',
       code: '04',
-      name: 'Smart City Autonomous Mission',
+      name: 'Urban Autonomous Mission',
       difficulty: 4,
       arena: 'city',
-      objective: 'Robot hoàn thành chuỗi nhiệm vụ trong mô hình thành phố thông minh.',
+      objective: 'Robot hoàn thành chuỗi nhiệm vụ trong mô hình đô thị mô phỏng.',
       skills: ['Tích hợp đa cảm biến', 'Lập trình chuỗi nhiệm vụ', 'Chiến thuật & quản lý thời gian'],
       duration: null,
       mission:
-        'Thử thách tổng hợp trên sa bàn Smart City: robot tuân thủ đèn tín hiệu, dò đường, tránh vật cản, giao hàng và đỗ xe vào vị trí — tất cả trong một lượt chạy. Đây là bài kiểm tra mức độ sẵn sàng thi đấu của học sinh.',
+        'Thử thách tổng hợp trên sa bàn mô phỏng đô thị: robot tuân thủ đèn tín hiệu, dò đường, tránh vật cản, giao hàng và đỗ xe vào vị trí — tất cả trong một lượt chạy. Đây là bài kiểm tra mức độ sẵn sàng thi đấu của học sinh.',
       technical: ['Kết hợp nhiều loại cảm biến trên cùng một robot', 'Hoạt động tự hành trong suốt lượt chạy', 'Chương trình chia module theo từng nhiệm vụ'],
       rules: [],
       scoring: [],

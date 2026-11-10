@@ -76,80 +76,45 @@
 }
 
 /* =========================== 1. HERO =========================== */
-.comp-hero{
-  position:relative; overflow:hidden; color:#fff; padding:148px 0 64px;
-  background:
-    radial-gradient(ellipse 55% 60% at 78% 38%, rgba(56,189,248,.16), transparent 70%),
-    radial-gradient(ellipse 60% 70% at 0% 0%, rgba(37,99,235,.28), transparent 65%),
-    var(--c-dark);
+/* Hero now reuses the standard course-hero/course-hero-light template (styles.css) for
+   consistency with the other program pages — see course-hero-* rules there. */
+.comp-hero-media-duo{overflow:visible;}
+.comp-hero-media-duo .comp-hero-media-accent{
+  position:absolute; z-index:2; right:-22px; bottom:-26px; width:48%; max-width:220px;
+  height:auto; aspect-ratio:4/3; object-fit:cover; border-radius:16px;
+  border:4px solid #fff; box-shadow:0 20px 40px -14px rgba(15,23,42,.4);
 }
-.comp-hero::after{ /* đường kẻ kỹ thuật phân tách cuối hero */
-  content:''; position:absolute; left:0; right:0; bottom:0; height:1px;
-  background:linear-gradient(90deg, transparent, var(--c-line-dark-strong), transparent);
+@media(max-width:860px){
+  .comp-hero-media-duo .comp-hero-media-accent{right:12px; bottom:-20px; width:42%; max-width:160px;}
 }
-.comp-hero-glow{display:none;}
-.comp-hero-inner{position:relative; display:grid; grid-template-columns:minmax(0,1.18fr) minmax(0,1fr); gap:56px; align-items:center;}
-.comp-hero h1{font-size:clamp(34px, 4.3vw, 58px); line-height:1.1; font-weight:800; letter-spacing:-.028em;}
-.comp-h1-line{display:block;}
-.comp-hero-tagline{
-  display:flex; align-items:center; gap:12px; margin-top:20px;
-  font-family:var(--c-font-tech); font-size:clamp(13px, 1.2vw, 15px); font-weight:500; letter-spacing:.22em; text-transform:uppercase; color:var(--c-orange-soft);
-}
-.comp-hero-tagline::before{content:''; width:28px; height:1.5px; background:var(--orange); flex-shrink:0;}
-.comp-hero-desc{margin-top:20px; font-size:17px; line-height:1.75; color:var(--c-text-dark); max-width:34em;}
-.comp-hero-ctas{display:flex; flex-wrap:wrap; gap:12px; margin-top:34px;}
-.comp-hero-facts{display:flex; margin-top:44px; max-width:580px; border-top:1px solid var(--c-line-dark);}
-.comp-hero-facts li{flex:1; display:flex; flex-direction:column; padding:20px 20px 0 0;}
-.comp-hero-facts li + li{padding-left:20px; border-left:1px solid var(--c-line-dark);}
-.comp-hero-facts b{font-family:var(--c-font-tech); font-size:34px; font-weight:700; line-height:1; color:#fff;}
-.comp-hero-facts span{font-size:13.5px; color:var(--c-muted-dark); margin-top:8px; line-height:1.4;}
+.comp-hero-ctas{display:flex; flex-wrap:wrap; gap:13px; margin-top:28px;}
+.comp-hero-ctas .btn{flex:1 1 220px; justify-content:center; align-items:center; gap:9px; text-align:center; height:52px; border-radius:999px;}
+.comp-hero-ctas .btn svg{width:17px; height:17px; flex-shrink:0;}
 
-.comp-hero-visual{position:relative; padding:18px; --b:22px;}
-.comp-hero-visual::before{ /* circuit lines phía sau khung ảnh */
-  content:''; position:absolute; inset:-30px -60px -30px -30px; pointer-events:none; opacity:.55;
-  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='560' height='420' fill='none' stroke='%2338BDF8' stroke-opacity='.35' stroke-width='1'%3E%3Cpath d='M0 60h120l30 30h140M560 110H430l-24 24H300M0 360h90l26-26h150M560 320H450l-30 30H330M200 0v40l20 20M420 420v-44l-18-18'/%3E%3Ccircle cx='290' cy='90' r='3' fill='%2338BDF8'/%3E%3Ccircle cx='300' cy='134' r='3' fill='%2338BDF8'/%3E%3Ccircle cx='266' cy='334' r='3' fill='%2338BDF8'/%3E%3Ccircle cx='330' cy='350' r='3' fill='%2338BDF8'/%3E%3C/svg%3E") center/contain no-repeat;
-}
-.comp-hero-frame{
-  position:relative; border-radius:var(--c-radius); overflow:hidden; aspect-ratio:3/2;
-  border:1px solid var(--c-line-dark-strong); background:var(--c-dark-2);
-  box-shadow:0 40px 80px -20px rgba(0,0,0,.6), 0 0 0 8px rgba(148,178,255,.05);
-}
-.comp-hero-frame img{width:100%; height:100%; object-fit:cover;}
-.comp-hero-frame::after{content:''; position:absolute; inset:0; background:linear-gradient(180deg, transparent 60%, rgba(8,16,34,.55));}
-.comp-hero-frame::before{ /* corner brackets */
-  content:''; position:absolute; inset:10px; z-index:2; pointer-events:none; opacity:.8;
-  background:
-    linear-gradient(var(--c-cyan),var(--c-cyan)) top left / var(--b) 2px no-repeat,
-    linear-gradient(var(--c-cyan),var(--c-cyan)) top left / 2px var(--b) no-repeat,
-    linear-gradient(var(--c-cyan),var(--c-cyan)) bottom right / var(--b) 2px no-repeat,
-    linear-gradient(var(--c-cyan),var(--c-cyan)) bottom right / 2px var(--b) no-repeat;
-}
-.comp-hud{
-  position:absolute; z-index:3; display:inline-flex; align-items:center; gap:8px;
-  font-family:var(--c-font-tech); font-size:11px; font-weight:700; letter-spacing:.16em; color:#E2E8F5;
-  background:rgba(8,16,34,.72); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px);
-  border:1px solid var(--c-line-dark-strong); padding:7px 12px; border-radius:8px;
-}
-.comp-hud-tl{top:22px; left:22px;}
-.comp-hud-br{bottom:22px; right:22px;}
-.comp-live-dot{width:7px; height:7px; border-radius:50%; background:var(--green); box-shadow:0 0 0 3px rgba(34,197,94,.25);}
-
-/* Journey strip */
+/* Journey strip (sits on white background below the Hero) */
+.comp-journey-sec{padding-top:0;}
+.comp-journey-head{text-align:center; max-width:640px; margin:0 auto 30px;}
+.comp-journey-head h2{font-size:clamp(24px, 3vw, 36px); font-weight:800; letter-spacing:-.02em; line-height:1.2; margin-bottom:11px; color:var(--ink);}
+.comp-journey-head p{font-size:15.5px; line-height:1.6; color:var(--text-soft);}
 .comp-journey{
-  position:relative; display:grid; grid-template-columns:repeat(5,1fr); margin-top:72px;
-  border:1px solid var(--c-line-dark); border-radius:var(--c-radius); background:rgba(13,23,48,.6);
-  backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px);
+  position:relative; display:grid; grid-template-columns:repeat(5,1fr);
+  border:1px solid var(--c-line-dark); border-radius:var(--c-radius); background:var(--c-dark-card);
+  box-shadow:0 24px 50px -24px rgba(15,23,42,.3);
 }
-.comp-journey li{position:relative; display:flex; flex-direction:column; align-items:center; text-align:center; gap:6px; padding:22px 12px;}
+.comp-journey li{
+  position:relative; display:flex; flex-direction:column; align-items:center; text-align:center; gap:6px; padding:22px 12px;
+  transition-delay:var(--d,0ms);
+}
 .comp-journey li + li{border-left:1px solid var(--c-line-dark);}
-.comp-journey li + li::before{
-  content:''; position:absolute; left:-5px; top:50%; width:9px; height:9px; transform:translateY(-50%) rotate(45deg);
-  background:var(--c-dark-2); border-top:1.5px solid var(--c-cyan); border-right:1.5px solid var(--c-cyan);
+.comp-journey li + li::before{ /* chevron connector */
+  content:''; position:absolute; left:-7px; top:50%; width:8px; height:8px; transform:translateY(-50%) rotate(45deg);
+  border-top:1.5px solid var(--c-cyan); border-right:1.5px solid var(--c-cyan); opacity:.7;
 }
 .comp-journey-ico{font-size:22px; line-height:1;}
-.comp-journey b{font-family:var(--c-font-tech); font-size:15px; font-weight:700; letter-spacing:.12em; text-transform:uppercase;}
-.comp-journey li:last-child b{color:var(--c-orange-soft);}
+.comp-journey b{font-family:var(--c-font-tech); font-size:15px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:#fff;}
 .comp-journey span:last-child{font-size:13px; color:var(--c-muted-dark);}
+.comp-journey-last{background:linear-gradient(180deg, rgba(249,115,22,.1), transparent 70%); border-radius:0 var(--c-radius) var(--c-radius) 0;}
+.comp-journey-last b{color:var(--c-orange-soft);}
 
 /* =========================== 2. PROGRAMS =========================== */
 .comp-programs{background:#fff;}
@@ -213,7 +178,7 @@ a:hover .comp-card-cta span{transform:translateX(3px); background:color-mix(in s
   content:''; position:absolute; left:0; right:0; top:0; height:1px;
   background:linear-gradient(90deg, transparent, var(--c-cyan) 50%, transparent); opacity:.5;
 }
-.comp-arena-bg{ /* ảnh sa bàn Smart City: rõ ở góc phải, mờ dần vào nội dung */
+.comp-arena-bg{ /* ảnh sa bàn thi đấu: rõ ở góc phải, mờ dần vào nội dung */
   position:absolute; top:0; right:0; width:58%; height:520px; pointer-events:none; opacity:.32;
   background:url('assets/competition/arena-driving.webp') center/cover no-repeat;
   mask-image:radial-gradient(ellipse 80% 80% at 80% 20%, #000 10%, transparent 75%);
@@ -444,8 +409,6 @@ a:hover .comp-card-cta span{transform:translateX(3px); background:color-mix(in s
   .comp-stage-card{padding:22px 18px;}
 }
 @media (max-width:1024px){
-  .comp-hero-inner{grid-template-columns:1fr; gap:44px;}
-  .comp-hero-copy, .comp-hero-visual{max-width:680px;}
   .comp-program-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
   .comp-program-card, .comp-program-card:nth-child(4){grid-column:span 1;}
   .comp-program-card:nth-child(5){grid-column:1 / -1;}
@@ -467,23 +430,9 @@ a:hover .comp-card-cta span{transform:translateX(3px); background:color-mix(in s
 }
 @media (max-width:640px){
   .comp-page main .container{padding:0 18px;}
-  .comp-hero{padding:118px 0 48px;}
-  .comp-hero h1{font-size:clamp(30px, 8.6vw, 36px);}
-  .comp-hero-desc{font-size:15.5px;}
-  .comp-hero-tagline{font-size:12px; letter-spacing:.14em; gap:10px;}
-  .comp-hero-tagline::before{width:18px;}
   .comp-hero-ctas{flex-direction:column; align-items:stretch; margin-top:28px;}
-  .comp-hero-ctas .btn, .comp-final-ctas .btn{width:100%; justify-content:center; white-space:normal; text-align:center; line-height:1.3;}
-  .comp-hero-facts{margin-top:32px;}
-  .comp-hero-facts li{padding-right:12px;}
-  .comp-hero-facts li + li{padding-left:12px;}
-  .comp-hero-facts b{font-size:28px;}
-  .comp-hero-facts span{font-size:12.5px;}
-  .comp-hero-visual{padding:0;}
-  .comp-hero-visual::before{display:none;}
-  .comp-hud{font-size:9.5px; padding:5px 9px;}
-  .comp-hud-tl{top:12px; left:12px;} .comp-hud-br{bottom:12px; right:12px;}
-  .comp-journey{grid-template-columns:1fr; margin-top:40px;}
+  .comp-hero-ctas .btn, .comp-final-ctas .btn{flex:none; width:100%; justify-content:center; white-space:normal; text-align:center; line-height:1.3;}
+  .comp-journey{grid-template-columns:1fr;}
   .comp-journey li{flex-direction:row; justify-content:flex-start; text-align:left; gap:14px; padding:14px 18px;}
   .comp-journey li + li{border-left:none; border-top:1px solid var(--c-line-dark);}
   .comp-journey li + li::before{left:27px; top:-5px; transform:rotate(135deg);}
