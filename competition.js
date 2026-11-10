@@ -15,6 +15,10 @@
   const diffLabel = (n) => DATA.difficultyLabels[n] || '';
   const challengeUrl = (c) => `challenge.html?id=${encodeURIComponent(c.id)}`;
 
+  // Tạm tắt điều hướng sang trang chi tiết từng chương trình (nội dung đang được cập nhật).
+  // Đổi lại thành true khi nội dung các trang vex-robotics.html, wro.html, v.v. đã sẵn sàng.
+  const PROGRAM_DETAIL_LINKS_ENABLED = false;
+
   /* ---------- Arena illustrations (inline SVG, không cần ảnh) ---------- */
   let svgSeq = 0;
   function arenaSVG(type, { animate = true } = {}) {
@@ -92,11 +96,14 @@
   function renderPrograms() {
     const el = $('#programGrid');
     if (!el) return;
+    const tag = PROGRAM_DETAIL_LINKS_ENABLED ? 'a' : 'div';
     el.innerHTML = DATA.programs
       .map(
         (p, i) => `
       <article class="comp-program-card accent-${esc(p.accent)} reveal" style="--d:${i * 70}ms">
-        <a class="comp-program-link" href="${esc(p.href)}" aria-label="${esc(p.name)} – Khám phá lộ trình">
+        <${tag} class="comp-program-link${PROGRAM_DETAIL_LINKS_ENABLED ? '' : ' comp-program-link-disabled'}"${
+          PROGRAM_DETAIL_LINKS_ENABLED ? ` href="${esc(p.href)}"` : ''
+        } aria-label="${esc(p.name)} – Khám phá lộ trình">
           <div class="comp-program-media">
             <img src="${esc(p.image)}" alt="${esc(p.imageAlt)}" loading="lazy" decoding="async" />
           </div>
@@ -107,16 +114,23 @@
             <ul class="comp-skill-list">${p.skills.map((s) => `<li>${esc(s)}</li>`).join('')}</ul>
             <span class="comp-card-cta">Khám phá lộ trình <span aria-hidden="true">→</span></span>
           </div>
-        </a>
+        </${tag}>
       </article>`
       )
       .join('');
   }
 
   /* ---------- 3. Challenge cards ---------- */
-  const challengeCard = (c, i = 0) => `
+  // Tạm ẩn CTA "Xem thử thách" và tắt điều hướng sang challenge.html (sa bàn thật chưa sẵn sàng).
+  // Đổi lại thành true khi nội dung thử thách đã sẵn sàng.
+  const CHALLENGE_DETAIL_LINKS_ENABLED = false;
+  const challengeCard = (c, i = 0) => {
+    const tag = CHALLENGE_DETAIL_LINKS_ENABLED ? 'a' : 'div';
+    return `
     <article class="comp-challenge-card reveal" style="--d:${i * 80}ms">
-      <a href="${challengeUrl(c)}" class="comp-challenge-link" aria-label="${esc(c.name)} – Xem thử thách">
+      <${tag} class="comp-challenge-link${CHALLENGE_DETAIL_LINKS_ENABLED ? '' : ' comp-challenge-link-disabled'}"${
+      CHALLENGE_DETAIL_LINKS_ENABLED ? ` href="${challengeUrl(c)}"` : ''
+    } aria-label="${esc(c.name)} – Xem thử thách">
         <div class="comp-challenge-media">
           ${arenaSVG(c.arena)}
           <span class="comp-challenge-code">CHALLENGE ${esc(c.code)}</span>
@@ -128,10 +142,11 @@
           <p>${esc(c.objective)}</p>
           <ul class="comp-chip-list" aria-label="Kỹ năng cần có">${c.skills.map((s) => `<li>${esc(s)}</li>`).join('')}</ul>
           ${c.duration ? `<p class="comp-challenge-time">⏱ ${esc(c.duration)}</p>` : ''}
-          <span class="comp-card-cta">Xem thử thách <span aria-hidden="true">→</span></span>
+          ${CHALLENGE_DETAIL_LINKS_ENABLED ? `<span class="comp-card-cta">Xem thử thách <span aria-hidden="true">→</span></span>` : ''}
         </div>
-      </a>
+      </${tag}>
     </article>`;
+  };
 
   function renderChallenges() {
     const el = $('#challengeGrid');
@@ -265,7 +280,15 @@
   }
 
   /* ---------- 6. Gallery ---------- */
+  // Tạm ẩn cả mục "Dấu ấn của những kỹ sư nhí" (chưa có nguồn ảnh/video chính thức).
+  // Đổi lại thành true khi đã sẵn sàng công bố — dữ liệu gallery/galleryPending vẫn giữ nguyên bên dưới.
+  const GALLERY_SECTION_ENABLED = false;
   function renderGallery() {
+    const section = document.getElementById('dau-an');
+    if (!GALLERY_SECTION_ENABLED) {
+      if (section) section.style.display = 'none';
+      return;
+    }
     const el = $('#gallery');
     if (!el) return;
     // Ô đầu tiên chiếm 2x2; nếu số ô còn lại lẻ, ô media cuối được kéo rộng để lưới không bị hở
